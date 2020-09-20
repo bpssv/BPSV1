@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/commonStyle.css">
+    <link rel="stylesheet" href="css/refined.css">
+    <title>I am ejs</title>
+    <style>
+        .contain-body {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+
+        .header-underline h5:before {
+            content: '';
+            background: #56a0d3;
+            width: 57px;
+            height: 2px;
+            position: absolute;
+            bottom: 85px;
+            transform: translateX(200%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron custom-jumbotron d-flex justify-content-center align-items-end">
+        <h1>
+            Apply To BPS
+        </h1>
+    </div>
+    <nav class="nav nav-pills d-md-flex justify-content-center nav-heading mb-4 d-none">
+        <p class="text-center p-1 m-1">Admissions FAQ!</p>
+        <p class="text-center p-1 m-1">Application Process</p>
+        <p class="text-center p-1 m-1">Explore Campus</p>
+    </nav>
+    <div class="contain-body">
+        <div class="m-2">
+            <div class="text-center">
+                <h3>
+                    We hold the key to unlocking your child’s potential
+                </h3>
+            </div>
+            <div>
+                <p>
+                    Bharti Public School’s application period begins one year in advance of a child’s anticipated entry. We accept applications to all grades, but for those that are not main entry points, space is dependent on attrition. For your convenience, we have laid down our admissions process and all supplemental documents required as listed below.
+                </p>
+                
+            </div>
+            <div class="py-5 px-2">
+                <h4 style="font-size: 3rem;">STEPS TO APPLY TO BPS</h4>
+            </div>
+            <div class="">
+
+                <div class="py-2 px-2">
+                    <h4 style="font-size: 3rem;">Admissions FAQ</h4>
+                </div>
+                <div>
+                    <div id="accordionExample">
+                        <div class="my-1" id="headingOne">
+                            <a class="btn btn-block text-left custom-faq-font font-weight-bold p-3" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="myFunction.call(this)">
+                                <svg width="0.875em" height="0.875em" viewBox="0 0 16 16" class="bi bi-chevron-down mr-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                </svg> 
+                                Fill an Online Application Form through “Parents Apply”
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+                            <div class="card-body">
+                                Alternatively, you can submit the application along with the supporting documents:
+                                <ul>
+                                    <li>
+                                        Birth Certificate
+                                    </li>
+                                    <li>
+                                        Address Proof (Aadhar card of father, mother and child)
+                                    </li>
+                                    <li>
+                                        2 Passport size photograph of father and mother
+                                    </li>
+                                    <li>
+                                        3 Passport size photograph of child
+                                    </li>
+                                    <li>
+                                        Medical FItness of child
+                                    </li>
+                                    <li>
+                                        Copy of form filled on “Parents Apply”
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-5 pb-2">
+                    <h2 class="font-blue-on-hover">Join Bharti Parivaar Today!</h2>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-around">
+                    <button style="min-width: 14rem;" class="btn btn-primary m-3 custom-button">Forms & Certificates</button>
+                    <button style="min-width: 14rem;" class="btn btn-primary m-3 custom-button">Download Admissions Brochure</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function myFunction() {
+            console.log(this);
+            if (!$(this).hasClass("faq-vistited")) {
+                $(this).addClass("custom-faq-font-focus")
+                $(this).addClass("faq-vistited")
+                $(this).removeClass("custom-faq-font")
+
+
+            } else {
+                $(this).addClass("custom-faq-font")
+                $(this).removeClass("faq-vistited")
+                $(this).removeClass("custom-faq-font-focus")
+            }
+        }
+    </script>
+</body>
+
+</html>

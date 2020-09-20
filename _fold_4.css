@@ -1,0 +1,18 @@
+._fold_4 {
+    padding: 3rem 1rem;
+    background: #ffffffa1;
+}
+
+.statistics-slider img {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+.slick-dots {
+    z-index: 2;
+}
