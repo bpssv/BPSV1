@@ -73,8 +73,14 @@
             }
         } */
         
+        .header-brand {
+            width: 8rem;
+            height: 5rem;
+            margin-top: 0.25rem;
+        }
+        
         .body-wrap {
-            overflow-x: hidden;
+            overflow: hidden;
             position: relative;
             margin: 0;
             /* margin: 0.75rem; */
@@ -83,6 +89,14 @@
         @media screen and (min-width: 768px) {
             .body-wrap {
                 margin: 0.75rem;
+            }
+            .header-brand {
+                width: 9rem;
+                height: 5rem;
+            }
+            .header-title-text h1 {
+                padding-top: 1rem !important;
+                font-size: 7vw !important;
             }
         }
         
@@ -115,6 +129,11 @@
         .title-strip {
             -webkit-animation-name: mymove;
             animation-name: mymove
+        }
+        
+        .header-title-text h1 {
+            font-size: 10vw;
+            padding-top: 10rem;
         }
         
         @keyframes mymove {
@@ -193,7 +212,7 @@
             background: var(--blue) !important;
             top: 0;
             width: 100%;
-            min-height: 7rem;
+            height: 6.2rem;
             z-index: 3;
             transform: translateY(-100%);
             animation: sticky-slide-down .4s ease .25s forwards;
@@ -368,12 +387,17 @@
     </div>
 
     <div id="myHeader" style="position: absolute; background: transparent; z-index: 3;" class="d-flex w-100 px-3">
-        <div class="pl-1 pt-1" style="width: 165px; height: 90px;">
-            <a> <img width="100%" height="100%" alt="" src="./logo.png"> </a>
+        <div class="header-brand pl-1 pt-1">
+            <a>
+                <picture>
+                    <source media="(min-width:768px)" srcset="./logo.png">
+                    <!-- <source media="(min-width:465px)" srcset="img_white_flower.jpg"> -->
+                    <img width="100%" height="100%" alt="" src="./logo-md.png"> </a>
+            </picture>
         </div>
         <div class=" d-flex flex-column w-100">
-            <div class="mt-2">
-                <ul class="top-nav-bar-items">
+            <div class="d-flex justify-content-end mt-4 mt-md-2">
+                <ul class="d-none d-md-flex top-nav-bar-items">
                     <li class="top-nav-bar-item " id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a class="dropdown-item dropdown-toggle" href="">Quicklinks&nbsp;</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <!-- <a class="dropdown-item" href="#">Forms & Certificates</a>
@@ -401,20 +425,21 @@
                         <a class="dropdown-item" href="">MyBharti</a></li>
 
 
-                    <li class="top-nav-bar-item"><a style="vertical-align: middle;" class="mx-4" href="/search"><i class="fa fa-search text-white"></i></a></li>
+
 
 
                 </ul>
-
+                <li style="list-style: none;" class="top-nav-bar-item"><a style="vertical-align: middle;" class="mx-4" href="/search"><i class="fa fa-search text-white"></i></a></li>
+                <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
+                    <i class="fa fa-bars text-white"></i>
+                </button>
             </div>
             <div class="header-container mt-2">
                 <div class="d-flex justify-content-end">
 
                     <div class="header-column">
-                        <nav class="navbar navbar-expand-xl ">
-                            <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
-                                <i class="fa fa-bars text-white"></i>
-                            </button>
+                        <nav class="navbar navbar-expand-lg ">
+
                             <div class="collapse navbar-collapse" id="navbarText">
 
                                 <ul class="navbar-nav mr-auto">
@@ -1003,8 +1028,8 @@
 
 
             <div style="padding-top: 25%;" class="text-center">
-                <header class="">
-                    <h1 class="text-white fadeInUp delay-2s animated fast" style="font-size: 7vw;">Your Journey Starts Here</h1>
+                <header class="header-title-text">
+                    <h1 class="text-white fadeInUp delay-2s animated fast">Your Journey Starts Here</h1>
                     <div class="expore-btn  delay-3s animated">
                         <button type="button" style="letter-spacing: 3px; box-shadow: inset 0 0 0 0.14286em transparent;" class="explore"><span> Explore our Campus</span></button>
                     </div>
