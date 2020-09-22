@@ -1,13 +1,13 @@
 ._feature_box {
     flex-basis: 100%;
-    min-height: 420px;
+    min-height: 450px;
     /* background-color: cadetblue; */
     transition: flex-basis 0.4s, opacity 0.5s;
 }
 
 @media screen and (min-width: 1024px) {
     figure._fold_3_overlay img {
-        max-height: 390px;
+        max-height: 490px;
     }
     figure._fold_3_overlay figcaption {
         padding-top: 4rem !important;
@@ -35,14 +35,14 @@
 
 @media screen and (min-width: 676px) and (max-width: 1024px) {
     figure._fold_3_overlay img {
-        min-height: 370px;
+        min-height: 420px;
     }
     figure._fold_3_overlay figcaption {
-        padding-top: 6rem !important;
+        padding-top: 4rem !important;
     }
     ._feature_box {
         flex-basis: 50%;
-        max-height: 370px;
+        max-height: 420px;
         /* background-color: cadetblue; */
     }
 }
@@ -192,6 +192,7 @@ figure._fold_3_overlay:hover figcaption {
 
 figure._fold_3_overlay img {
     position: absolute;
+    object-fit: cover;
 }
 
 figure._fold_3_overlay {
