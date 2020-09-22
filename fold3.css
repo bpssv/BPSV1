@@ -1,7 +1,7 @@
 ._feature_box {
     flex-basis: 100%;
     min-height: 420px;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     transition: flex-basis 0.4s, opacity 0.5s;
 }
 
