@@ -22,5 +22,6 @@
     position: relative;
 }
 
-
+.news-text {
+    font-size: 0.875rem;
 }
