@@ -1550,24 +1550,24 @@
             $(document).ready(function() {
                 var controller = new ScrollMagic.Controller();
 
-                // $("._fold_1").each(function() {
-                //     var tl = new TimelineMax();
-                //     var child = $(this).find("#home_media");
-                //     // var child1 = $(this).find("._fold_2");
-                //     tl.to(child, 1, {
-                //         y: -180,
-                //         ease: Linear.easeNone
-                //     });
+                $("._fold_1").each(function() {
+                    var tl = new TimelineMax();
+                    var child = $(this).find("#home_media");
+                    // var child1 = $(this).find("._fold_2");
+                    tl.to(child, 0.1, {
+                        height: 0,
+                        ease: Linear.easeNone
+                    });
 
 
 
-                //     var scene = new ScrollMagic.Scene({
-                //             triggerElement: this,
-                //             triggerHook: 0.1,
-                //             duration: "100%"
-                //         }).setTween(tl)
-                //         .addTo(controller);
-                // });
+                    var scene = new ScrollMagic.Scene({
+                            triggerElement: this,
+                            triggerHook: 0.01,
+                            duration: "500%"
+                        }).setTween(tl)
+                        .addTo(controller);
+                });
 
 
                 let timeLine = [1980, 1981, 1995, 1998, 2004, 2005, 2009, 2013, 2019, 2020]
