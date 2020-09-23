@@ -6,7 +6,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-    figure._fold_3_overlay img {
+    figure._fold_3_overlay img,
+    figure._fold_3_overlay {
         max-height: 490px;
     }
     figure._fold_3_overlay figcaption {
@@ -20,7 +21,8 @@
 }
 
 @media screen and (min-width: 1750px) {
-    figure._fold_3_overlay img {
+    figure._fold_3_overlay img,
+    figure._fold_3_overlay {
         max-height: 490px;
     }
     figure._fold_3_overlay figcaption {
@@ -34,7 +36,8 @@
 }
 
 @media screen and (min-width: 676px) and (max-width: 1024px) {
-    figure._fold_3_overlay img {
+    figure._fold_3_overlay img,
+    figure._fold_3_overlay {
         min-height: 420px;
     }
     figure._fold_3_overlay figcaption {
@@ -197,7 +200,7 @@ figure._fold_3_overlay img {
 
 figure._fold_3_overlay {
     position: relative;
-    /* min-height: 320px; */
+    min-height: 450px;
     height: 100%;
     z-index: 1;
     background-size: cover;
