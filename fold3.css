@@ -196,6 +196,7 @@ figure._fold_3_overlay:hover figcaption {
 figure._fold_3_overlay img {
     position: absolute;
     object-fit: cover;
+    filter: brightness(0.80);
 }
 
 figure._fold_3_overlay {
@@ -221,7 +222,8 @@ figure._fold_3_overlay {
 
 figure._fold_3_overlay:before {
     content: '';
-    background: rgba(48, 63, 159, 0.87);
+    /* background: rgba(48, 63, 159, 0.87); */
+    background: rgb(51, 52, 99, 0.92);
     height: 100%;
     width: 100%;
     top: 0;

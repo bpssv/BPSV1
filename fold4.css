@@ -9,10 +9,31 @@
     margin: 0 auto;
 }
 
+.stat-text1 {
+    font-family: 'Julius Sans One';
+    font-weight: 600;
+}
+
+.stat-text2 {
+    font-family: 'sofiaPro';
+}
+
 .slick-slide {
     height: auto;
 }
 
 .slick-dots {
     z-index: 2;
+}
+
+._fold_4 h1:before {
+    content: '';
+    background: rgb(40, 53, 147);
+    width: 120px;
+    height: 2px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateX(92%);
+    -ms-transform: translateX(92%);
+ 
 }

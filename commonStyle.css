@@ -1,20 +1,20 @@
 @font-face {
     font-family: Bebas;
-    src: url(font/Bebas-Neue-Cyrillic.ttf);
+    src: url('font/Bebas-Neue-Cyrillic.ttf');
 }
 
 @font-face {
     font-family: Julias-San;
-    src: url(font/JuliusSansOne-Regular.ttf);
+    src: url('font/JuliusSansOne-Regular.ttf');
 }
 
 @font-face {
     font-family: sofiaPro;
-    src: url(font/sofiapro-light.otf);
+    src: url('font/sofiapro-light.otf');
 }
 
 body {
-    font-family: sofiaPro;
+    font-family: sofiaPro !important;
 }
 
 p,
@@ -34,6 +34,32 @@ h5,
 h6 {
     font-family: Julias-San;
 }
+
+p.fixP {
+    font-family: 'Julius Sans One';
+    font-size: 40px;
+    /* font-weight: 600;
+    text-align: justify;
+    text-transform: uppercase; */
+}
+
+ section,
+        section p,
+        section h1,
+        section h2,
+        section h3,
+        section h4,
+        section h5,
+        section h6,
+        section span {
+            /* font-family: 'Julius Sans One', sans-serif; */
+            font-family: Julias-San;
+        } */
+        /* body {
+            font-family: sofia-pro, sans-serif;
+            font-style: normal;
+            font-weight: 100;
+        }
 
 @media screen and (min-width: 73.75rem) {
     .contain {
