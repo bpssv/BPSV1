@@ -64,6 +64,7 @@ a.slide-arrow:hover {
     background: #fff;
     width: 250px;
     height: 2px;
+        margin-bottom: -5px;
     position: absolute;
     /* top: 11%;
     left: 32%; */
