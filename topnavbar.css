@@ -26,13 +26,17 @@
 }
 
 .dropdown-menu {
-    top: 2.5rem;
+    top: 3rem;
     left: auto;
     font-size: 14px;
     border-radius: 0;
     transition: background 0.3s, box-shadow 0.3s, color 0.3s;
     background: var(--blue);
     /* background: linear-gradient(45deg, black, transparent) var(--grey); */
+}
+
+.list-group-item {
+border: 0;
 }
 
 .dropdown-item {

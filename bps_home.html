@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bharti Public School</title>
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -63,7 +64,7 @@
             overflow: hidden;
             position: relative;
             margin: 0;
-            background: #ffffffa1;
+            /* background: #ffffffa1; */
             /* margin: 0.75rem; */
         }
         
@@ -72,7 +73,7 @@
                 margin: 0.75rem;
             }
             .header-brand {
-                width: 11rem;
+                width: 10rem;
                 height: 6rem;
             }
             .header-title-text h1 {
@@ -91,6 +92,7 @@
             width: 100%;
             /* height: 100%; */
             overflow: hidden;
+            object-fit: cover;
         }
         
         .body-wrap .bpsHomeVideoContainer video {
@@ -110,7 +112,10 @@
             position: absolute;
             z-index: 1;
             width: 100%;
-            /* height: 100%; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
         }
         
         .title-strip {
@@ -138,7 +143,7 @@
         
         button.explore {
             cursor: pointer;
-            padding: 0.71429em 1.07143em;
+            padding: 0.81429em 2.07143em;
             font-family: "Roboto Condensed", sans-serif;
             font-size: 0.875em;
             text-transform: uppercase;
@@ -256,9 +261,15 @@
         #box2 {
             left: 0;
             top: 700px;
-            height: 60vw;
+            height: 80vw;
             width: 60vw;
             background: linear-gradient(45deg, #f7f7f7 50%, transparent 50%);
+        }
+
+        @media screen and (max-width:622px ){
+            #box2 {
+                top: 1200px;
+            }
         }
         .arrow {
                 position: relative;
@@ -270,10 +281,11 @@
             }
 
 .bounce {
-  animation: bounce 2s infinite;
+  /* animation: bounce 2s infinite; */
 }
 .bounce:hover {
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
+    animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -281,10 +293,10 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
 }
     </style>
@@ -390,8 +402,9 @@
                 <picture>
                     <source media="(min-width:768px)" srcset="./logo.png">
                     <!-- <source media="(min-width:465px)" srcset="img_white_flower.jpg"> -->
-                    <img width="100%" height="100%" alt="" src="./logo-md.png"> </a>
+                    <img width="100%" height="100%" alt="" src="./logo-md.png"> 
             </picture>
+        </a>
         </div>
         <div class=" d-flex flex-column w-100">
             <div class="d-flex justify-content-end mt-3">
@@ -723,8 +736,9 @@
                 <picture>
                     <source media="(min-width:768px)" srcset="./logo.png">
                     <!-- <source media="(min-width:465px)" srcset="img_white_flower.jpg"> -->
-                    <img width="100%" height="100%" alt="" src="./logo-md.png"> </a>
+                    <img width="100%" height="100%" alt="" src="./logo-md.png">
             </picture>
+        </a>
         </div>
         <div class=" d-flex flex-column w-100">
           
@@ -1032,15 +1046,16 @@
     <div class="body-wrap">
 
         <div class="home-wrap-container">
-             <div style="padding-top: 15%;" class="text-center">
-                <header class="header-title-text">
+             <div class="text-center">
+                <header class="header-title-text mb-5">
                     <h1 class="text-white fadeInUp delay-2s animated fast">Your Journey Starts Here</h1>
                     <div class="expore-btn  delay-3s animated">
                         <button type="button" style="letter-spacing: 3px; box-shadow: inset 0 0 0 0.14286em transparent;" class="explore"><span> Explore Campus</span></button>
                     </div>
-                    <div class="arrow bounce">
+                    <div class="arrow mb-3 bounce">
                         <a style="cursor: pointer;" onclick="gotoPos()">
-                            <i class="fa fa-angle-double-down fa-3x text-white" aria-hidden="true"></i>
+                            <!-- <i class="fa fa-angle-double-down fa-3x text-white" aria-hidden="true"></i> -->
+                            <img width="100%" src="./down.png" alt="">
                         </a>
                        
                     </div>
@@ -1058,11 +1073,11 @@
             <div class="d-flex justify-content-center align-items-center">
                 <section class="text-center m-5">
                     <!-- <section></section> -->
-                    <h1 style="font-family: 'Julius Sans One';
+                    <h1 style="
                     font-size: 40px;
                     text-transform: uppercase;"  class="my-4" data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-offset="0">PRIDE in Everything We Do</h1>
+                    data-aos-offset="0"><span>PRIDE</span><br> in Everything We Do</h1>
                     <p  style="font-family: 'sofiaPro'; font-size: 18px;" class="my-5" data-aos="fade-right" data-aos-duration="2000">At BPS, our Core Values of Positivity, Resilience, Integrity, Determination and Empowerment are more than mere words. Our students and faculty live and breathe them every day. Our values set BPS’ students apart and send them out into
                         the world as confident and capable leaders of the 21st century.
                     </p>
@@ -1165,7 +1180,7 @@
                 </div>
 
             </div>
-            <div style="position: absolute; z-index: -1;" id="box3" data-scroll-speed="6"></div>
+            <!-- <div style="position: absolute; z-index: -1;" id="box3" data-scroll-speed="6"></div> -->
         </div>
 
         <div data-aos="fade-up" data-aos-duration="1000" class="_fold_4">
@@ -1233,178 +1248,6 @@
             </section>
 
         </div>
-
-        <section class="_fold_5">
-            <header class="mt-5 mb-3">
-                <h1 class="text-center">Our Story</h1>
-            </header>
-            <section class="cd-horizontal-timeline">
-                <div class="timeline">
-                    <div class="events-wrapper">
-                        <div class="events">
-                            <ol style="list-style: none;">
-                               
-                                <li><a  id="0" href="#0" data-date="16/01/2014" class="selected">1980</a></li>
-                                <li><a  id="1" href="#0" data-date="28/02/2014">1981</a></li>
-                                <li><a  id="2" href="#0" data-date="20/04/2014">1995</a></li>
-                                <li><a  id="3" href="#0" data-date="20/05/2014">1998</a></li>
-                                <li><a  id="4" href="#0" data-date="09/07/2014">2004</a></li>
-                                <li><a  id="5" href="#0" data-date="30/08/2014">2005</a></li>
-                                <li><a  id="6" href="#0" data-date="15/09/2014">2009</a></li>
-                                <li><a  id="7" href="#0" data-date="01/11/2014">2013</a></li>
-                                <li><a  id="8" href="#0" data-date="10/12/2014">2019</a></li>
-                                <li><a  id="9" href="#0" data-date="19/01/2015">2020</a></li>
-        
-                            </ol>
-            
-                            <span class="filling-line" aria-hidden="true"></span>
-                        </div> <!-- .events -->
-                    </div> <!-- .events-wrapper -->
-                    </section>
-
-             
-            <div id="richHistory" class="d-flex richHistory">
-                <div class="history-track">
-                    <div class="d-flex  flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1.JPG">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">Our Founding Fathers
-                            </h5>
-                            <div class="slide-text"> 1980 was the year, when sharing a common passion for teaching, Dr. S.L. Batra & Sh. H.C.B. Bharti opened the doors of BPS to their first batch of students.</div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1980-old building.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">School Shed</h5>
-                            <div class="slide-text">The indefatigable efforts of the founders reaped fruits and within seven years, BPS moved to Swasthya Vihar – its present dwelling. It was a humble brick ‘n’ mortar structure that became home to faculty and students alike.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_1980-Founder-1-ConvertImage (1).jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title"> State Teachers Award to the Founder</h5>
-                            <div class="slide-text"> For his unparalleled dedication and selfless devotion towards academia, the founder-director, Dr. S.L. Batra was bestowed with the prestigious State Teachers’ Award. </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1990.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">Inauguration of School Campus at Swasthya Vihar
-                            </h5>
-                            <div class="slide-text"> From 1980 to 1998, the school saw a meteoric rise from a humble structure to the present day state-of-the-art green campus. With changing times, the campus became more modern and functional in approach.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1995.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">BPS opens its second branch at Mayur Vihar </h5>
-                            <div class="slide-text"> BPS continued to flourish in leaps and bounds; unveiled its another branch at Mayur Vihar in 2004. The imposing structure is a testimony of the hard work of the think tank.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1998.JPG">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">Silver Jubilee Celebrations at the National Stadium
-
-                            </h5>
-                            <div class="slide-text"> Sunita Godara, National Marathon Champion facilitated the annual sports function at the National Stadium with participation of all students at BPS.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2004.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">BPS inaugurates its third branch, Prakriti at Noida
-
-                            </h5>
-                            <div class="slide-text"> The Bharti Group of Schools takes a stride and inaugurates Prakriti, a K-12 school with learner-centred curriculum and interdisciplinary learning methods</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2013-Teachers State Award.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title"> National Award given to Dr. Savita Arora
-
-                            </h5>
-                            <div class="slide-text"> Our Principal, Dr. Savita Arora was the recipient of the prestigious National Award for Teachers and was facilitated by President, Pranab Mukherjee.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2006_2.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">BPS unveils its sports arena, BPSEA
-
-                            </h5>
-                            <div class="slide-text"> The Bharti Pro Sports Excellence Arena (BPSEA) boasts of a dedicated athletic-track, indoor cricket pitch, basketball and volleyball courts</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-track">
-                    <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/43.jpg">
-                        </div>
-                        <div class="history-content px-2 pt-3">
-                            <h5 class="slide-title">School operations go ONLINE!
-
-                            </h5>
-                            <div class="slide-text"> As BPS celebrates its 40th year anniversary, its operations including academics and activities go digital!</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="d-flex justify-content-center">
-                <a style="cursor: pointer;" class="m-2 text-dark timeline-prev">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
-                      </svg>
-                </a>
-                <a style="cursor: pointer;" class="m-2 text-dark timeline-next">
-                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5A.5.5 0 0 0 4 8z"/>
-                      </svg>
-                </a>
-            </div>
-
-        </section>
         <section class="_fold_6">
             <header class="mt-5 mb-4 py-3">
                 <h1 class="pt-3 text-center text-white">News & Announcements</h1>
@@ -1467,6 +1310,173 @@
 
             </div>
         </section>
+        <section class="_fold_5">
+            <header class="mt-5 mb-5">
+                <h1 class="text-center">Our Story</h1>
+            </header>
+            <section class="slick-timeline-dots">
+                <div class="timeline">
+                    <div class="dots-container">
+                        <div class="events">
+                            <ol style="list-style: none;">
+                               
+                                <li><a  id="0" href="#0" data-date="16/01/2014" class="selected">1980</a></li>
+                                <li><a  id="1" href="#0" data-date="28/02/2014">1981</a></li>
+                                <li><a  id="2" href="#0" data-date="20/04/2014">1995</a></li>
+                                <li><a  id="3" href="#0" data-date="20/05/2014">1998</a></li>
+                                <li><a  id="4" href="#0" data-date="09/07/2014">2004</a></li>
+                                <li><a  id="5" href="#0" data-date="30/08/2014">2005</a></li>
+                                <li><a  id="6" href="#0" data-date="15/09/2014">2009</a></li>
+                                <li><a  id="7" href="#0" data-date="01/11/2014">2013</a></li>
+                                <li><a  id="8" href="#0" data-date="10/12/2014">2019</a></li>
+                                <li><a  id="9" href="#0" data-date="19/01/2015">2020</a></li>
+        
+                            </ol>
+            
+                            <span class="filling-line" aria-hidden="true"></span>
+                        </div> <!-- .events -->
+                    </div> <!-- .dots-container -->
+                </div>
+                    </section>
+
+             
+            <div id="richHistory" class="d-flex richHistory">
+                <div class="history-track">
+                    <div class="d-flex  flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1.JPG">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">Our Founding Fathers
+                            </h5>
+                            <div class="slide-text"> 1980 was the year, when sharing a common passion for teaching, Dr. S.L. Batra & Sh. H.C.B. Bharti opened the doors of BPS to their first batch of students.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1980-old building.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">School Shed</h5>
+                            <div class="slide-text">The indefatigable efforts of the founders reaped fruits and within seven years, BPS moved to Swasthya Vihar – its present dwelling. It was a humble brick ‘n’ mortar structure that became home to faculty and students alike.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_1980-Founder-1-ConvertImage (1).jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title"> State Teachers Award to the Founder</h5>
+                            <div class="slide-text"> For his unparalleled dedication and selfless devotion towards academia, the founder-director, Dr. S.L. Batra was bestowed with the prestigious State Teachers’ Award. </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1990.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">Inauguration of School Campus at Swasthya Vihar
+                            </h5>
+                            <div class="slide-text"> From 1980 to 1998, the school saw a meteoric rise from a humble structure to the present day state-of-the-art green campus. With changing times, the campus became more modern and functional in approach.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1995.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">BPS opens its second branch at Mayur Vihar </h5>
+                            <div class="slide-text"> BPS continued to flourish in leaps and bounds; unveiled its another branch at Mayur Vihar in 2004. The imposing structure is a testimony of the hard work of the think tank.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1998.JPG">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">Silver Jubilee Celebrations at the National Stadium
+
+                            </h5>
+                            <div class="slide-text"> Sunita Godara, National Marathon Champion facilitated the annual sports function at the National Stadium with participation of all students at BPS.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2004.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">BPS inaugurates its third branch, Prakriti at Noida
+
+                            </h5>
+                            <div class="slide-text"> The Bharti Group of Schools takes a stride and inaugurates Prakriti, a K-12 school with learner-centred curriculum and interdisciplinary learning methods</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2013-Teachers State Award.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title"> National Award given to Dr. Savita Arora
+
+                            </h5>
+                            <div class="slide-text"> Our Principal, Dr. Savita Arora was the recipient of the prestigious National Award for Teachers and was facilitated by President, Pranab Mukherjee.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2006_2.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">BPS unveils its sports arena, BPSEA
+
+                            </h5>
+                            <div class="slide-text"> The Bharti Pro Sports Excellence Arena (BPSEA) boasts of a dedicated athletic-track, indoor cricket pitch, basketball and volleyball courts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-track">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/43.jpg">
+                        </div>
+                        <div class="history-content">
+                            <h5 class="slide-title">School operations go ONLINE!
+
+                            </h5>
+                            <div class="slide-text"> As BPS celebrates its 40th year anniversary, its operations including academics and activities go digital!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="d-flex justify-content-center">
+                <a style="cursor: pointer;" class="m-2 text-dark timeline-prev">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+                <a style="cursor: pointer;" class="m-2 text-dark timeline-next">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </section>
+      
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1491,14 +1501,14 @@
 
 
     </div>
-    <footer>
-        <div class="footer-bg">
+    <footer style="background-color: var(--blue);">
+        <div class="footer-bg" >
 
-            <div>
+            <!-- <div>
                 <img style="object-fit: cover;" width="100%" height="100%" src="./school.png" alt="">
-            </div>
-            <div class="_fold_footer row ml-0">
-                <div class="social-icons col-md-4">
+            </div> -->
+            <div class="row mx-0">
+                <div style="z-index: 1;" class="social-icons col-md-4">
                     <h4 class="text-white text-center my-5">Stay Connected</h4>
                     <div class="d-flex justify-content-center">
                         <div>
@@ -1508,12 +1518,15 @@
                             <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
                         </div>
                         <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
                             <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
                 </div>
-                <div class="col-md-4 text-center pt-5">
+                <div style="z-index: 1;" class="col-md-4 text-center pt-5">
                     <div class=" p-3">
 
                         <img src="./logo.png" alt="">
@@ -1529,16 +1542,16 @@
 
                         <!-- <div class="footer-links"> -->
                         <!-- <div class="d-flex "> -->
-                        <a class=" btn btn-outline-light" href="">Explore</a>
-                        <a class="btn btn-outline-light" href="">Apply</a>
-                        <a class="btn btn-outline-light" href="">Contact Us</a>
+                        <a class=" btn btn-outline-light rounded-0" href="">Explore</a>
+                        <a class="btn btn-outline-light rounded-0" href="">Apply</a>
+                        <a class="btn btn-outline-light rounded-0" href="">Contact Us</a>
                         <!-- </div> -->
                         <!-- </div> -->
                     </div>
 
                 </div>
 
-                <div class="acredition col-md-4 text-center">
+                <div style="z-index: 1;" class="acredition col-md-4 text-center">
                     <h4 class="text-white my-5">Accreditation</h4>
                     <div class="d-flex justify-content-center">
                         <div style="width: 150px;">
@@ -1549,17 +1562,25 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="mt-2 py-3">
-                    <p class="text-center text-white"> © 2020 Bharti Public School</p>
-
-                </div>
-
-
-
             </div>
+            <div class="row mx-0 mt-4">
+                <div style="z-index: 1; border-top: 1px solid white;" class="w-100 pt-4 d-flex flex-column flex-md-row justify-content-between">
+                    <div style="flex:1;">
+                        <ul style="list-style: none;" class="d-flex justify-content-around px-0">
+                            <li><a class="text-white" href="#">Directory</a></li>
+                            <li><a class="text-white" href="#">Site Map</a></li>
+                            <li><a class="text-white" href="#">Careers</a></li>
+                          </ul>  
+                    </div>
+                  <div style="z-index: 1; flex: 1;" class="text-white mx-0">
+                    <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
+                  </div>
 
+                  </div>
+            </div>
+            
 
+           
         </div>
 
 
@@ -1710,7 +1731,7 @@
                 // updateOlderEvents($(this));
                 
 				updateFilling(filling_element, Number(event.target.id));
-				// updateVisibleContent($(this), timelineComponents['eventsContent']);
+				// updateVisibleContent($(this), dotComponent['eventsContent']);
 			});
 
                 updateFilling(filling_element, 0);
@@ -1844,8 +1865,15 @@
         }
     </script>
 <script>
+    $( window ).resize(function() {
+    if(window.innerWidth >1000) {
+        // for (i = 0; i < dotComponent['timelineDates'].length; i++) { 
+		//     dotComponent['timelineEvents'].eq(i).css('left', (i+1)*eventsMinDistance+'px');
+		// }
+    }
+});
     jQuery(document).ready(function($){
-	var timelines = $('.cd-horizontal-timeline'),
+	var timelines = $('.slick-timeline-dots'),
 		eventsMinDistance = 100;
 
 	(timelines.length > 0) && initTimeline(timelines);
@@ -1853,41 +1881,35 @@
 	function initTimeline(timelines) {
 		timelines.each(function() {
 			var timeline = $(this),
-				timelineComponents = {};
+				dotComponent = {};
 			//cache timeline components 
-			timelineComponents['timelineWrapper'] = timeline.find('.events-wrapper');
-			timelineComponents['eventsWrapper'] = timelineComponents['timelineWrapper'].children('.events');
-			timelineComponents['fillingLine'] = timelineComponents['eventsWrapper'].children('.filling-line');
-			timelineComponents['timelineEvents'] = timelineComponents['eventsWrapper'].find('a');
-			timelineComponents['timelineDates'] = parseDate(timelineComponents['timelineEvents']);
-			timelineComponents['eventsMinLapse'] = minLapse(timelineComponents['timelineDates']);
+			dotComponent['timelineWrapper'] = timeline.find('.dots-container');
+			dotComponent['eventsWrapper'] = dotComponent['timelineWrapper'].children('.events');
+			dotComponent['fillingLine'] = dotComponent['eventsWrapper'].children('.filling-line');
+			dotComponent['timelineEvents'] = dotComponent['eventsWrapper'].find('a');
+			dotComponent['timelineDates'] = dotComponent['timelineEvents'];
+            if(window.innerWidth > 1000) {
+                 eventsMinDistance = window.innerWidth/(dotComponent['timelineDates'].length+1);
+                eventsMinDistance -= 5;
+            } 
+           
 
-			//assign a left postion to the single events along the timeline
-			setDatePosition(timelineComponents, eventsMinDistance);
+          
+            for (i = 0; i < dotComponent['timelineDates'].length; i++) { 
+		    dotComponent['timelineEvents'].eq(i).css('left', (i+1)*eventsMinDistance+'px');
+		}
 			//assign a width to the timeline
-			var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
-			//the timeline has been initialize - show it
-			timeline.addClass('loaded');
+			var timelineTotWidth = setTimelineWidth(dotComponent, eventsMinDistance);
 
-			//detect click on the next arrow
-			// timelineComponents['timelineNavigation'].on('click', '.next', function(event){
-			// 	event.preventDefault();
-			// 	updateSlide(timelineComponents, timelineTotWidth, 'next');
-			// });
-			//detect click on the prev arrow
-			// timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
-			// 	event.preventDefault();
-			// 	updateSlide(timelineComponents, timelineTotWidth, 'prev');
-			// });
-			//detect click on the a single event - show new event content
-			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
+
+			dotComponent['eventsWrapper'].on('click', 'a', function(event){
 				event.preventDefault();
-				timelineComponents['timelineEvents'].removeClass('selected');
+				dotComponent['timelineEvents'].removeClass('selected');
 				$(this).addClass('selected');
                 document.getElementById(`time${ event.target.id}`).click();
 				// updateOlderEvents($(this));
-				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
-				// updateVisibleContent($(this), timelineComponents['eventsContent']);
+				updateFilling($(this), dotComponent['fillingLine'], timelineTotWidth);
+				// updateVisibleContent($(this), dotComponent['eventsContent']);
 			});
 
             $('.timeline-next').on('click', (event) => {
@@ -1902,29 +1924,10 @@
                    number = 9;
                 } 
                     document.getElementById(`${number%10}`).click();
-                
-               
-                // console.log($('a.selected')[0].id);
+  
             })
 
-			//on swipe, show next/prev event content
-			// timelineComponents['eventsContent'].on('swipeleft', function(){
-			// 	var mq = checkMQ();
-			// 	( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'next');
-			// });
-			// timelineComponents['eventsContent'].on('swiperight', function(){
-			// 	var mq = checkMQ();
-			// 	( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
-			// });
-
-			//keyboard navigation
-			// $(document).keyup(function(event){
-			// 	if(event.which=='37' && elementInViewport(timeline.get(0)) ) {
-			// 		showNewContent(timelineComponents, timelineTotWidth, 'prev');
-			// 	} else if( event.which=='39' && elementInViewport(timeline.get(0))) {
-			// 		showNewContent(timelineComponents, timelineTotWidth, 'next');
-			// 	}
-			// });
+		
 		});
 	}
 
@@ -1940,86 +1943,22 @@
 		setTransformValue(filling.get(0), 'scaleX', scaleValue);
 	}
 
-	function setDatePosition(timelineComponents, min) {
-		for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
-		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
-		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
-		    timelineComponents['timelineEvents'].eq(i).css('left', (i+1)*min+'px');
-		}
-	}
-
-	function setTimelineWidth(timelineComponents, width) {
-		var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length-1]),
-			timeSpanNorm = timeSpan/timelineComponents['eventsMinLapse'],
-			timeSpanNorm = Math.round(timeSpanNorm) + 4,
-			totalWidth = (timelineComponents['timelineDates'].length + 1)*width;
-			console.log(totalWidth);
-		timelineComponents['eventsWrapper'].css('width', totalWidth+'px');
-		updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'], totalWidth);
+	function setTimelineWidth(dotComponent, width) {
+		
+		let	totalWidth = (dotComponent['timelineDates'].length + 1)*width;
+		dotComponent['eventsWrapper'].css('width', totalWidth+'px');
+		updateFilling(dotComponent['timelineEvents'].eq(0), dotComponent['fillingLine'], totalWidth);
 	
 		return totalWidth;
 	}
 
 	
-
-	function updateOlderEvents(event) {
-		event.parent('li').prevAll('li').children('a').addClass('older-event').end().end().nextAll('li').children('a').removeClass('older-event');
-	}
-
-	
-
 	function setTransformValue(element, property, value) {
 		element.style["-webkit-transform"] = property+"("+value+")";
 		element.style["-moz-transform"] = property+"("+value+")";
 		element.style["-ms-transform"] = property+"("+value+")";
 		element.style["-o-transform"] = property+"("+value+")";
 		element.style["transform"] = property+"("+value+")";
-	}
-
-	//based on http://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript
-	function parseDate(events) {
-		var dateArrays = [];
-		events.each(function(){
-			var dateComp = $(this).data('date').split('/'),
-				newDate = new Date(dateComp[2], dateComp[1]-1, dateComp[0]);
-			dateArrays.push(newDate);
-		});
-	    return dateArrays;
-	}
-
-	function parseDate2(events) {
-		var dateArrays = [];
-		events.each(function(){
-			var singleDate = $(this),
-				dateComp = singleDate.data('date').split('T');
-			if( dateComp.length > 1 ) { //both DD/MM/YEAR and time are provided
-				var dayComp = dateComp[0].split('/'),
-					timeComp = dateComp[1].split(':');
-			} else if( dateComp[0].indexOf(':') >=0 ) { //only time is provide
-				var dayComp = ["2000", "0", "0"],
-					timeComp = dateComp[0].split(':');
-			} else { //only DD/MM/YEAR
-				var dayComp = dateComp[0].split('/'),
-					timeComp = ["0", "0"];
-			}
-			var	newDate = new Date(dayComp[2], dayComp[1]-1, dayComp[0], timeComp[0], timeComp[1]);
-			dateArrays.push(newDate);
-		});
-	    return dateArrays;
-	}
-
-	function daydiff(first, second) {
-	    return Math.round((second-first));
-	}
-
-	function minLapse(dates) {
-		//determine the minimum distance among events
-		var dateDistances = [];
-		for (i = 1; i < dates.length; i++) { 
-		    var distance = daydiff(dates[i-1], dates[i]);
-		    dateDistances.push(distance);
-		}
-		return Math.min.apply(null, dateDistances);
 	}
 
 

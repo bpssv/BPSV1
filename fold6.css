@@ -20,6 +20,14 @@
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    min-height: 610px;
+}
+
+@media screen and  (max-width: 540px) {
+    ._fold_6 {
+       
+        min-height: 650px;
+    }
 }
 
 .news-text {
@@ -29,7 +37,7 @@
 }
 
 .news-title {
-    font-family: 'Julius Sans One';
+    /* font-family: 'Julius Sans'; */
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;

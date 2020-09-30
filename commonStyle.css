@@ -35,16 +35,9 @@ h6 {
     font-family: Julias-San;
 }
 
-p.fixP {
-    font-family: 'Julius Sans One';
-    font-size: 40px;
-    /* font-weight: 600;
-    text-align: justify;
-    text-transform: uppercase; */
-}
-
  section,
         section p,
+        p.fixp,
         section h1,
         section h2,
         section h3,

@@ -2,7 +2,7 @@
     content: '';
     background: rgb(40, 53, 147);
     width: 120px;
-    height: 2px;
+    height: 4px;
     position: absolute;
     /* top: 11%;
     left: 32%; */
@@ -10,6 +10,41 @@
    
   
   }
+
+  
+._fold_5::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(-45deg, #f7f7f7 50%, rgba(0, 0, 0, 0.02) 50%);
+    left: 5%;
+    cursor: pointer;
+    -webkit-transform: translate(-50%) skew(40deg) scaleX(1);
+    transform: translate(-50%) skew(40deg) scaleX(1);
+    transition: width .36s cubic-bezier(.175, .885, .32, 1.275);
+}
+a.timeline-next:hover, a.timeline-prev:hover {
+  border-radius: 50%;
+  background-color: var(--blue);
+  box-shadow: -3px 5px 3px 1px rgba(72, 73, 77, 0.271);
+}
+
+a.timeline-next i, a.timeline-prev i {
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 0.50rem;
+}
+
+a.slide-arrow:hover i, a.timeline-next:hover i, a.timeline-prev:hover i {
+background-color: var(--blue);
+border: 2px solid #fff;
+color: #fff;
+box-shadow: -3px 5px 3px 1px rgba(72, 73, 77, 0.271);
+}
   
   
   .filling-line {
@@ -42,10 +77,8 @@
   }
 
   .slide-title {
-    font-family: 'Julius Sans One';
     font-size: 20px;
     font-weight: 600;
-    text-align: justify;
     text-transform: uppercase;
   }
 
@@ -108,6 +141,7 @@
   .richHistory .history-content {
       /* height: 10rem; */
       /* min-height: 290px; */
+      padding: 1rem 2rem;
       min-height: 200px;
       max-height: 300px;
       min-width: 300px;
@@ -133,36 +167,38 @@
      
   } 
   
-  .cd-horizontal-timeline {
-    opacity: 0;
+  .slick-timeline-dots {
+    opacity: 1;
     /* margin: 2em auto; */
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
-  .cd-horizontal-timeline::before {
+  .slick-timeline-dots::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'mobile';
     display: none;
   }
-  .cd-horizontal-timeline.loaded {
-    /* show the timeline after events position has been set (using JavaScript) */
-    opacity: 1;
-  }
-  .cd-horizontal-timeline .timeline {
+ 
+  .slick-timeline-dots .timeline {
     position: relative;
     height: 100px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* width: 90%;
+    max-width: 1200px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    width: 100%;
   }
-  .cd-horizontal-timeline .events-wrapper {
+  .slick-timeline-dots .dots-container {
     position: relative;
     height: 100%;
+    width: 100%;
     /* margin: 0 40px; */
     overflow: auto;
   }
-  .cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+  .slick-timeline-dots .dots-container::after, .slick-timeline-dots .dots-container::before {
     /* these are used to create a shadow effect at the sides of the timeline */
     content: '';
     position: absolute;
@@ -171,16 +207,42 @@
     height: 100%;
     width: 20px;
   }
-  .cd-horizontal-timeline .events-wrapper::before {
-    left: 0;
-    background: #fff;
+  .slick-timeline-dots .dots-container::before {
+    left: 5px;
+    content: '';
+    /* top: 43px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #dfdfdf;
+    background-color: #f8f8f8;
+    -webkit-transition: background-color 0.3s, border-color 0.3s;
+    -moz-transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s; */
   }
-  .cd-horizontal-timeline .events-wrapper::after {
+  .slick-timeline-dots .dots-container::after {
     right: 0;
-    /* background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
-    background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0)); */
+    /* top: 43px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 2px solid #dfdfdf;
+    background-color: #f8f8f8;
+    -webkit-transition: background-color 0.3s, border-color 0.3s;
+    -moz-transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s; */
   }
-  .cd-horizontal-timeline .events {
+  .slick-timeline-dots .events {
     /* this is the grey line/timeline */
     position: absolute;
     z-index: 1;
@@ -193,7 +255,7 @@
     -moz-transition: -moz-transform 0.4s;
     transition: transform 0.4s;
   }
-  .cd-horizontal-timeline .filling-line {
+  .slick-timeline-dots .filling-line {
     /* this is used to create the green line filling the timeline */
     position: absolute;
     z-index: 1;
@@ -216,7 +278,7 @@
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
-  .cd-horizontal-timeline .events a {
+  .slick-timeline-dots .events a {
     position: absolute;
     bottom: 0;
     z-index: 2;
@@ -231,7 +293,7 @@
     -o-transform: translateZ(0);
     transform: translateZ(0);
   }
-  .cd-horizontal-timeline .events a::after {
+  .slick-timeline-dots .events a::after {
     /* this is used to create the event spot */
     content: '';
     position: absolute;
@@ -252,29 +314,29 @@
     -moz-transition: background-color 0.3s, border-color 0.3s;
     transition: background-color 0.3s, border-color 0.3s;
   }
-  .no-touch .cd-horizontal-timeline .events a:hover::after {
+  .no-touch .slick-timeline-dots .events a:hover::after {
     background-color: #7b9d6f;
     border-color: #7b9d6f;
   }
-  .cd-horizontal-timeline .events a.selected {
+  .slick-timeline-dots .events a.selected {
     text-decoration: none;
     pointer-events: none;
   }
-  .cd-horizontal-timeline .events a {
+  .slick-timeline-dots .events a {
     text-decoration: none;
   }
-  .cd-horizontal-timeline .events a.selected::after {
+  .slick-timeline-dots .events a.selected::after {
     background-color: #1d1c74;
     border-color: #939cf1;
   }
-  .cd-horizontal-timeline .events a.older-event::after {
+  .slick-timeline-dots .events a.older-event::after {
     border-color: #7b9d6f;
   }
   @media only screen and (min-width: 1100px) {
-    .cd-horizontal-timeline {
+    .slick-timeline-dots {
       margin: 0 auto;
     }
-    .cd-horizontal-timeline::before {
+    .slick-timeline-dots::before {
       /* never visible - this is used in jQuery to check the current MQ */
       content: 'desktop';
     }

@@ -1,6 +1,6 @@
 ._fold_4 {
     padding: 3rem 1rem;
-    background: #ffffffa1;
+    /* background: #ffffffa1; */
 }
 
 .statistics-slider img {
@@ -10,7 +10,7 @@
 }
 
 .stat-text1 {
-    font-family: 'Julius Sans One';
+    /* font-family: 'Julius Sans One'; */
     font-weight: 600;
 }
 
@@ -26,15 +26,27 @@
     z-index: 2;
 }
 
-._fold_4 h1:before {
+/* ._fold_4 h1:before {
     content: '';
     background: rgb(40, 53, 147);
     width: 120px;
-    height: 2px;
+    height: 4px;
     position: absolute;
     bottom: 50%;
     margin-bottom: -5px;
     transform: translateX(92%);
     -ms-transform: translateX(92%);
+ 
+} */
+
+._fold_4 h1:before {
+    content: '';
+    background: rgb(40, 53, 147);
+    width: 80px;
+    height: 4px;
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 0%;
+    left: calc(50% - 40PX);
  
 }
