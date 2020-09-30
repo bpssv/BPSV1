@@ -17,15 +17,6 @@
     position: relative;
 }
 
-@media screen and (max-width:620px) {
-._fold_2::before {
-   width: 0 !important;
-   
-}
-
-} 
-
-
 
 /* ._fold_2 h1:after {
     content: '';
