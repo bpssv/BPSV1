@@ -6,10 +6,28 @@
 
 .news-content {
     padding: 1rem 2rem;
-    max-height: 15rem;
+    height: 15rem;
     color: #fff;
     background-color: #1f2641;
 }
+
+@media screen and (max-width: 450px) {
+    .news-content {
+        padding: 1rem 2rem;
+        height: 19rem;
+        color: #fff;
+        background-color: #1f2641;
+    }
+}
+
+/* @media screen and (max-width: 766px) and (min-width: 450px) {
+    .news-content {
+        padding: 1rem 2rem;
+        height: 19rem;
+        color: #fff;
+        background-color: #1f2641;
+    }
+} */
 
 .news-track {
     width: 446px;
@@ -21,7 +39,7 @@
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    min-height: 610px;
+    min-height: 630px;
 }
 
 @media screen and  (max-width: 540px) {

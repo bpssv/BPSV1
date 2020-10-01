@@ -8,15 +8,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/commonStyle.css">
+    <link rel="stylesheet" href="./commonStyle.css">
     <link rel="stylesheet" href="css/refined.css">
+    <script src="mcparallax.min.js"></script>
+    <link rel="stylesheet" href="./topnavbar.css">
+    <link rel="stylesheet" href="./dropdownhover.css">
+    <link rel="stylesheet" href="./foldFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>I am ejs</title>
     <style>
         .contain-body {
             max-width: 60rem;
             margin: 0 auto;
         }
-
+        
         .header-underline h5:before {
             content: '';
             background: #56a0d3;
@@ -26,53 +31,429 @@
             bottom: 85px;
             transform: translateX(200%);
         }
+
+        .jumbotron .overlay {
+            
+            position: absolute;
+            top: 0;
+            height: 550px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-image: linear-gradient(to top, rgb(0 0 0 / 36%) 0%, rgb(0 0 0 / 23%) 10%, rgb(0 0 0 / 27%) 30%, rgb(0 0 0 / 50%) 70%, rgb(0 0 0 / 50%) 90%, rgb(0 0 0 / 52%) 100%);
+
+        }
+        .nav-link {
+            color: black;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .header-brand {
+            position: absolute;
+            width: 10rem;
+            height: 6rem;
+            margin-top: 0.25rem;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="jumbotron custom-jumbotron d-flex justify-content-center align-items-end">
-        <h1>
-            Tuition Fees
-        </h1>
+    <div style="position: absolute; background: transparent; z-index: 3;" class="d-flex w-100 px-3">
+        <div class="header-brand pl-4 pt-2">
+            <a>
+                <picture>
+                    <source media="(min-width:768px)" srcset="./logo.png">
+                    <!-- <source media="(min-width:465px)" srcset="img_white_flower.jpg"> -->
+                    <img width="100%" height="100%" alt="" src="./logo-md.png"> 
+            </picture>
+        </a>
+        </div>
+        <div class=" d-flex flex-column w-100">
+            <div class="d-flex justify-content-end mt-3">
+                <ul class="d-none d-md-flex top-nav-bar-items">
+                    <li class="top-nav-bar-item " id="dropdownMenuButton">
+                        <p class="text-white px-3 py-2 mb-0" href="">Quicklinks&nbsp;</p>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <ul class="list-unstyled mx-3">
+                                <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
+                                <li> <a class="dropdown-item" href="#">BPS Bulletin</a></li>
+                                <li> <a class="dropdown-item" href="#">Admission Handbook</a></li>
+
+                                <li> <a class="dropdown-item" href="#">Employment</a></li>
+                            </ul>
+                        </div> </li>
+
+                    <li class="top-nav-bar-item"><a class="dropdown-item" href="">Apply</a> </li>
+                    <li class="top-nav-bar-item">
+                        <a class="dropdown-item" href="">Pay Fees</a>
+                    </li>
+                    <li class="top-nav-bar-item">
+                        <a class="dropdown-item" href="">MyBharti</a></li>
+                     </ul>
+                <li style="list-style: none;" class="top-nav-bar-item"><a style="vertical-align: bottom;" class="mx-4 py-2" href="/search"><i class="fa fa-search text-white"></i></a></li>
+                <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
+                    <i class="fa fa-bars text-white"></i>
+                </button>
+            </div>
+            <div class="header-container">
+                <div class="d-flex justify-content-end">
+
+                    <div class="header-column">
+                        <nav class="navbar navbar-expand-lg ">
+
+                            <div class="collapse navbar-collapse" id="navbarText">
+
+                                <ul class="navbar-nav d-hover mr-auto">
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropbtn dropdown-item">
+                                                About
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300" src="./Dropdown/About Dropdown.jpeg" alt="">
+                                                    </div>
+                                                    <div class="col">
+
+                                                       
+                                                                <p>
+                                                                    Bharti Public School strives to innovate and offer students educational opportunities that are unique, engaging, and relevant to life in the 21st century. Our students explore their multiple interests in a dynamic academic environment while growing within
+                                                                    a nurturing community.
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="./mission.html"> Our Mission</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="./explore-campus.html"> Explore Campus</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="a-rich-history.html"> A Rich History</a>
+                                                            </li>
+                                                          
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="the-bps-difference.html"> The BPS Difference</a>
+                                                            </li>
+                                                            <li class="list-group-item"> <a href="./leadership.html"> Leadership</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropbtn dropdown-item">
+                                                Admissions
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300" src="./Dropdown/Admissions Dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    Learn more about Bharti Public School’s admissions process, find answers to commonly asked questions about the school and submit your application online.
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="addmission-faq.html"> Admission FAQ</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="apply-now.html"> Apply Now!</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="tuition-fees.html"> Tuition Fees</a>
+                                                            </li>
+                                                            
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            
+                                                            <li class="list-group-item">
+                                                                <a href="forms-and-certificates.html">Forms & Certificates</a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                  
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Academics
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300" src="./Dropdown/Academics dropdown.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    At the heart of Bharti Public School’s philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive, rigorous and complemented by opportunities to participate in a wide range of extra-curricular activities
+                                                                    that foster growth and development.
+
+                                                                </p>
+                                                         
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="common-page.html"> Common Page</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="lower-school.html">  Lower School</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="middle-school.html"> Middle School</a>
+                                                            </li>
+                                                          
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                           
+                                                            <li class="list-group-item">
+                                                                <a href="upper-school.html">Upper School</a>
+                                                            </li>
+                                                            <li class="list-group-item"> <a href="student-resources.html"> Student Resources</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Life at BPS
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300" src="./Dropdown/life at BPS_dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+
+                                                        
+                                                                <p>
+                                                                    Bharti Public School creates an atmosphere of innovation and creativity which, by design, always be front and center. The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search
+                                                                    for new and better ideas that have made Bharti Public School into an epitome of academic progress.
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href=""> Common Page</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href=""> Athletics</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="">Creative Arts</a>
+                                                            </li>
+                                                          
+                                                        </ul>
+
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href=""> Community Outreach</a>
+                                                            </li>
+                                                            <li class="list-group-item"> <a href=""> Outdoor Education</a></li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Community
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300" src="./Dropdown/Community dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    The Bharti Public School community, better known as Bharti Parivaar spells growth, impetus and success for the school and its fraternity including our faculty, staff, students, and alumni members.
+
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="">Faculty+</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="">Parents+</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href=""> Students+</a>
+                                                            </li>
+                                                           
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                           
+                                                            <li class="list-group-item">
+                                                                <a href="">Alumni</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Contact
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300" src="./Dropdown/Contact Dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    In case of any questions or concerns, you may contact the school and get your queries answered. The school is consistently engaged in numerous activities and workshops, updates of which can be found on social media
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="">Contact</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="">Employment</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <nav class="nav nav-pills justify-content-center d-md-flex d-none">
-        <p class="text-center p-1 m-1">Admissions FAQ!</p>
-        <p class="text-center p-1 m-1">Application Process</p>
-        <p class="text-center p-1 m-1">Explore Campus</p>
+    <section style="background-image: url(./tuition-fees/banner.jpeg);
+    background-size: cover;" class="jumbotron text-white custom-jumbotron d-flex justify-content-center align-items-end">
+       <div class="overlay"></div>
+       <h1 style="z-index: 1; font-size: 6vw;">
+          <b>Tuition Fees</b>  
+        </h1>
+    </section>
+    <nav class="nav justify-content-center d-md-flex flex-row d-none py-2 bg-light">
+        <a href="" class="nav-link text-center p-1 m-1">Admissions FAQ!</a>
+        <a href="" class="nav-link text-center p-1 m-1">Application Process</a>
+        <a href="" class="nav-link text-center p-1 m-1">Explore Campus</a>
     </nav>
     <div class="contain">
         <div class="m-2">
-            <div class="text-center">
-                <h3>
+            <div class="text-center my-5">
+                <p style="font-size: 30px;">
                     Invest in your child’s future
-                </h3>
+                </p>
             </div>
             <div>
                 <p>
-                    Life at BPS is an investment. When you enroll your child at BPS, you become part of our family. A family that is result-driven, all-star athletics, award-winning theater performances and community outreach. At BPS, your child will experience holistic, hands-on learning that sparks a lifetime of courage, conviction and excellence.
+                    Life at BPS is an investment. When you enroll your child at BPS, you become part of our family. A family that is result-driven, all-star athletics, award-winning theater performances and community outreach. At BPS, your child will experience holistic,
+                    hands-on learning that sparks a lifetime of courage, conviction and excellence.
                 </p>
                 <p>
                     Joining this community will be the most worthy investment you’ll make for your child. At BPS, everything we do is designed to ensure that you see a greater return than you ever imagined — a child who culminates into a leader of the 21st Century!
                 </p>
             </div>
-                
+
         </div>
     </div>
     <div class="container-fluid">
-        <div class="parallex d-flex justify-content-center align-items-center">
+        <section>
+
+        </section>
+        <div class="parallex mcparallax d-flex justify-content-center align-items-center" data-speed="5">
             <div class="" style="width: 22rem;">
                 <h1 class="text-center text-white">Remember when you step foot in BPS, you’re not entering a school, but a community!</h1>
             </div>
-                
-            
-            
+
+
+
         </div>
     </div>
+    <!-- <section>
+        <div class="mcparallax" data-image-src="https://picsum.photos/1920/850/?random" data-speed="5"></div>
+
+        <div class="container container-below-navbar text-white">
+            <h1 class="display-3 text-center font-title font-bold py-5">Text title</h1>
+            <h3 class="text-center font-title font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tempus est, porttitor egestas ante sollicitudin vel.
+            </h3>
+            <h2 class="display-4 text-center font-title font-bold pb-5">Text subtitle</h2>
+        </div>
+    </section> -->
     <div class="contain">
         <div class="m-2">
             <div>
                 <p>
-                    The best education is one that constantly adds value and ventures outside of the classroom. That’s why our faculty is focused on preparing students, not just for this year’s tests, but for all of life’s tests. Our student-centered approach towards teaching creates a safe learning environment where students are encouraged to expand their knowledge and take calculated risks. As a result, they develop the confidence, perseverance and drive to succeed in the world.
+                    The best education is one that constantly adds value and ventures outside of the classroom. That’s why our faculty is focused on preparing students, not just for this year’s tests, but for all of life’s tests. Our student-centered approach towards teaching
+                    creates a safe learning environment where students are encouraged to expand their knowledge and take calculated risks. As a result, they develop the confidence, perseverance and drive to succeed in the world.
                 </p>
                 <p>
                     BPS students graduate having learned to leverage their academic passion, positively impact their community and empower themselves and others. As alumni, they go on to great success and fulfillment because they were taught to think, do and lead at BPS.
@@ -85,9 +466,9 @@
                 <div class="col-md-10">
                     <table class="table table-bordered mb-0 custom-table">
                         <thead>
-                          <tr>
-                            <th class="text-center">Class-wise Tuition Fee Chart on monthly basis in Indian National Rupee (INR):</th>    
-                          </tr>
+                            <tr>
+                                <th class="text-center">Class-wise Tuition Fee Chart on monthly basis in Indian National Rupee (INR):</th>
+                            </tr>
                         </thead>
                     </table>
                     <div class="table-responsive">
@@ -110,38 +491,38 @@
                                     <th class="text-center">600</th>
                                     <th class="text-center">150</th>
                                     <th class="text-center">0</th>
-                                
+
                                 </tr>
-                              </tbody>
+                            </tbody>
                         </table>
-                    </div> 
+                    </div>
                     <div class="card mb-4">
                         <div class="card-body custom-card">
-                          <h5 class="card-title">At the time of New Admission Only (One Time Payment):</h5>
-                          <p class="card-text">Admission Fee : Rs. 200/-</p>
-                          <p class="card-text">Activity Fee : Rs. 30,000/-</p>
+                            <h5 class="card-title">At the time of New Admission Only (One Time Payment):</h5>
+                            <p class="card-text">Admission Fee : Rs. 200/-</p>
+                            <p class="card-text">Activity Fee : Rs. 30,000/-</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card custom-card">
                                 <div class="card-body">
-                                  <h3 class="card-title text-center">Payment Plan Options:</h3>
-                                  <p class="card-text">Option 1.  Yearly Fee Payment</p>
-                                  <div class="card-text">  
-                                      <p class="mb-1">Option 2. Yearly Fee Payment Quarterly Basis (Deadline: 15th of the first month of the quarter.) </p>
-                                      <ul>
-                                          <li>Quarter 1 (January - March)</li>
-                                          <li>Quarter 2 (April - June)</li>
-                                          <li>Quarter 3 (July - September)</li>
-                                          <li>Quarter 4 (October - December)</li>
-                                      </ul>
-                                  </div>
-                                  <p class="card-text">
-                                    Option 3. Monthly Basis (Deadline: 10th of every month)
-                                 </p>
+                                    <h3 class="card-title text-center">Payment Plan Options:</h3>
+                                    <p class="card-text">Option 1. Yearly Fee Payment</p>
+                                    <div class="card-text">
+                                        <p class="mb-1">Option 2. Yearly Fee Payment Quarterly Basis (Deadline: 15th of the first month of the quarter.) </p>
+                                        <ul>
+                                            <li>Quarter 1 (January - March)</li>
+                                            <li>Quarter 2 (April - June)</li>
+                                            <li>Quarter 3 (July - September)</li>
+                                            <li>Quarter 4 (October - December)</li>
+                                        </ul>
+                                    </div>
+                                    <p class="card-text">
+                                        Option 3. Monthly Basis (Deadline: 10th of every month)
+                                    </p>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="col-md-4 py-3">
@@ -150,28 +531,116 @@
                     </div>
                     <div class="pt-3">
                         <h3>Applying for Financial Aid</h3>
-                        <p>We, at BPS believe that all children deserve an exceptional education, regardless of their socio-economic status. To make BPS accessible to the best and brightest students from all backgrounds, we offer tuition and financial assistance at each grade level. Our Financial Aid program is robust and we’re dedicated to extending opportunities for qualified students.
+                        <p>We, at BPS believe that all children deserve an exceptional education, regardless of their socio-economic status. To make BPS accessible to the best and brightest students from all backgrounds, we offer tuition and financial assistance
+                            at each grade level. Our Financial Aid program is robust and we’re dedicated to extending opportunities for qualified students.
                         </p>
                         <p>
                             We realize that this investment in your child's future, while worth the sacrifice, is challenging for many families. Our comprehensive financial aid program, along with flexible payment options, are ways we hope to make BPS education and experience accessible.
                         </p>
                         <p>
-                            Any student who intends to apply for Financial Aid can send us an e-mail at info.sv@bps.edu.in ​along with their formal request and supporting documentation laying out the specific reasons prior to the commencement of the upcoming session. Late application shall not be entertained, barring extraordinary circumstances wherein the student must obtain permission from the Chair.
+                            Any student who intends to apply for Financial Aid can send us an e-mail at info.sv@bps.edu.in ​along with their formal request and supporting documentation laying out the specific reasons prior to the commencement of the upcoming session. Late application
+                            shall not be entertained, barring extraordinary circumstances wherein the student must obtain permission from the Chair.
                         </p>
-                    </div>               
+                    </div>
                 </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
     </div>
-    <div class="contain">
-    
-    </div>
-    
-    
+    <footer style="background-color: var(--blue);">
+        <div class="footer-bg" >
 
-    
-    
+            <!-- <div>
+                <img style="object-fit: cover;" width="100%" height="100%" src="./school.png" alt="">
+            </div> -->
+            <div class="row mx-0">
+                <div style="z-index: 1;" class="social-icons col-md-4">
+                    <h4 class="text-white text-center my-5">Stay Connected</h4>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <a href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="z-index: 1;" class="col-md-4 text-center pt-5">
+                    <div class=" p-3">
+
+                        <img src="./logo.png" alt="">
+
+                    </div>
+                    <div class="footer-title my-4">
+                        <h6><b> Bharti Public School</b></h6>
+                        <h6>Swasthya Vihar</h6>
+                        <p>Near, Metro Station, Vikas Marg, Nirman Vihar, <br>Swasthya Vihar, New Delhi 110092.</p>
+
+                    </div>
+                    <div class="d-flex justify-content-around  text-white">
+
+                        <!-- <div class="footer-links"> -->
+                        <!-- <div class="d-flex "> -->
+                        <a style="min-width: 115px;" class=" btn btn-outline-light rounded-0" href="">Explore</a>
+                        <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Apply</a>
+                        <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Contact Us</a>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+
+                </div>
+
+                <div style="z-index: 1;" class="acredition col-md-4 text-center">
+                    <h4 class="text-white my-5">Accreditation</h4>
+                    <div class="d-flex justify-content-center">
+                        <div style="width: 150px;">
+                            <img width="100%" src="./accreditation/cbse-logo-png-3-1.png" alt="">
+                        </div>
+                        <div class="mt-3" style="width: 150px;">
+                            <img width="100%" src="./accreditation/Last Fold - Accreditation British council.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 mt-4">
+                <div style="z-index: 1; border-top: 1px solid white;" class="w-100 pt-4 d-flex flex-column flex-md-row justify-content-between">
+                    <div style="flex:1;">
+                        <ul style="list-style: none;" class="d-flex justify-content-around px-0">
+                            <li><a class="text-white" href="#">Directory</a></li>
+                            <li><a class="text-white" href="#">Site Map</a></li>
+                            <li><a class="text-white" href="#">Careers</a></li>
+                          </ul>  
+                    </div>
+                  <div style="z-index: 1; flex: 1;" class="text-white mx-0">
+                    <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
+                  </div>
+
+                  </div>
+            </div>
+            
+
+           
+        </div>
+
+
+
+    </footer>
+
+    <div class="contain">
+
+    </div>
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

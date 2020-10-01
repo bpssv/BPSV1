@@ -18,16 +18,13 @@
 }
 
 
-/* ._fold_2 h1:after {
+._fold_2:after {
     content: '';
-    background: #56a0d3;
-    width: 50px;
-    height: 2px;
     position: absolute;
-    bottom: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-} */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
 
 ._fold_2 h1:before {
     content: '';
