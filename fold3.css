@@ -227,7 +227,8 @@ figure._fold_3_overlay {
     overflow: hidden;
 }
 
-figure._fold_3_overlay:before {
+
+figure._fold_3_overlay::before {
     content: '';
     /* background: rgba(48, 63, 159, 0.87); */
     background: rgb(51, 52, 99, 0.92);
