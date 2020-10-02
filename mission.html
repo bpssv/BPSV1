@@ -7,7 +7,7 @@
    
 
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEh4Sl0sibVcOQVnN" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -122,7 +122,7 @@
             color: rgb(153 83 83 / 70%);
         }
         
-        .bps-mission-container>.bps-mission-element .vcenter {
+        .bps-mission-container>.bps-mission-element .title-center {
             position: absolute;
             top: 50%;
             -webkit-transform: translateY(-50%);
@@ -133,7 +133,7 @@
             padding: 30px !important;
         }
         
-        .bps-mission-container>.bps-mission-element .vcenter {
+        .bps-mission-container>.bps-mission-element .title-center {
             position: absolute;
             top: 50%;
             -webkit-transform: translateY(-50%);
@@ -144,7 +144,7 @@
             padding: 30px !important;
         }
         
-        .bps-mission-container>.bps-mission-element>.bps-mission-container .title-clone {
+        .bps-mission-container>.bps-mission-element>.bps-mission-container .title-text {
             margin-top: 0;
             font-weight: normal;
             line-height: 40px;
@@ -155,10 +155,15 @@
             color: #fff;
             margin-bottom: 0;
         }
+
+        .title-center p {
+            font-family: sofiaPro;
+            color: #000;
+        }
         
         @media screen and (max-width: 1050px) {
-            .bps-mission-container>.bps-mission-element>.bps-mission-container .title-clone {
-                font-size: 15px;
+            .bps-mission-container>.bps-mission-element>.bps-mission-container .title-text {
+                font-size: 28px;
             }
         }
         
@@ -201,10 +206,17 @@
         .bps-mission-container>.bps-mission-element:hover:before {
             opacity: 1;
         }
+        .mission-video-container {
+            min-width:420px ;
+        }
         
-        @media screen and (max-width:768) {}
+        @media screen and (max-width:768px) {
+            .mission-video-container {
+            min-width:320px ;
+        }
+        }
         
-        @media (max-width: 799px) {
+        @media (max-width: 1050px) {
             .bps-mission-container>.bps-mission-element {
                 -webkit-box-flex: 1;
                 -ms-flex: 1 1 100%;
@@ -212,9 +224,7 @@
             }
         }
 
-          .body-wrap {
-         margin: 0.75rem;
-        }
+       
     </style>
 </head>
 
@@ -636,28 +646,28 @@
 
         </div>
     </div>
-    <div class="body-wrap">
+   
     
     <div class="contain">
         <div>
-            <div class=" m-5 px-5">
+            <div class=" m-1 px-1 mx-md-5 px-md-5">
                 <h1 style="color: var(--blue);line-height: 20px;
                 letter-spacing: 10px;" class="text-center pb-5">Mission</h1>
-                <h3 style="color: #3562a5;" class="mx-lg-5 px-lg-5 text-center">BPS is an institution that empowers each child with a sound foundation of knowledge and life skills. Believing that education is a process of discovery, we assist them in recognising and unfolding their fullest potential. We are dedicated
+                <h4 style="color: #3562a5;" class=" mx-1 px-1 mx-lg-5 px-lg-5 text-center">BPS is an institution that empowers each child with a sound foundation of knowledge and life skills. Believing that education is a process of discovery, we assist them in recognising and unfolding their fullest potential. We are dedicated
                     to providing holistic education, encompassing the intelectual, emotional, physical, spiritual and social aspect of growth. We take upon the task of not only raising career conscious students but also socially responsible and global
                     citizens.
-                </h3>
+                </h4>
             </div>
-            <section>
+            <section class="mt-5">
                 <h4 class="text-center">PRIDE in Everything We Do
                 </h4>
             </section>
             <div class="d-flex flex-column flex-md-row my-5">
-                <section class="p-4">
+                <section  class="p-4">
                     <p>At BPS, our Core Values of Positivity, Resilience, Integrity, Determination and Empowerment are more than mere words. Our students and faculty live and breathe them every day. Our values set BPS’ students apart and send them out into
                         the world as confident and capable leaders of the 21st century.</p>
                 </section>
-                <div style="min-width:420px ;">
+                <div class="mission-video-container">
                     <video width="100%" height="290" controls>
                         <source src="../10thsept.webm">
                        
@@ -669,18 +679,19 @@
         </div>
 
     </div>
-    <div class="d-flex flex-column flex-lg-row">
+    <div class="body-wrap">
+    <div class="d-flex ">
         <div class="bps-mission-container d-flex w-100 flex-wrap">
-            <section class="bps-mission-element " style="background-image: url('./school.png');">
+            <section class="bps-mission-element " style="background-image: url('./Mission/pride.jpg');">
                 <header role="presentation">
-                    <div class="vcenter">
-                        <h3 class="bps-mission-title">Positivity</h3>
+                    <div class="title-center">
+                        <h4 class="bps-mission-title">Positivity</h4>
 
                     </div>
                 </header>
                 <div class="bps-mission-container">
-                    <div class="vcenter">
-                        <div class="title-clone">Positivity</div>
+                    <div class="title-center">
+                        <div class="title-text">Positivity</div>
                         <p>Be a Positive thinker and focus on the bright side of life with the belief that you can overcome any obstacle and difficulty</p>
 
 
@@ -695,16 +706,16 @@
 
 
             </section>
-            <section class="bps-mission-element " style="background-image: url('./school.png');">
+            <section class="bps-mission-element " style="background-image: url('./Mission/Resilience.JPG');">
                 <header role="presentation">
-                    <div class="vcenter">
-                        <h3 class="bps-mission-title">Resilience</h3>
+                    <div class="title-center">
+                        <h4 class="bps-mission-title">Resilience</h4>
 
                     </div>
                 </header>
                 <div class="bps-mission-container">
-                    <div class="vcenter">
-                        <div class="title-clone">Resilience</div>
+                    <div class="title-center">
+                        <div class="title-text">Resilience</div>
                         <p>Recognise your strengths imbibing a strong mental and emotional attitude. Strive for excellence in all that you do - academics, arts, sports, and character. Do not settle for less than your best effort.
                         </p>
 
@@ -720,16 +731,16 @@
 
 
             </section>
-            <section class="bps-mission-element " style="background-image: url('./school.png');">
+            <section class="bps-mission-element " style="background-image: url('Mission/Integrity.jpg');">
                 <header role="presentation">
-                    <div class="vcenter">
-                        <h3 class="bps-mission-title">Integrity</h3>
+                    <div class="title-center">
+                        <h4 class="bps-mission-title">Integrity</h4>
 
                     </div>
                 </header>
                 <div class="bps-mission-container">
-                    <div class="vcenter">
-                        <div class="title-clone">Integrity</div>
+                    <div class="title-center">
+                        <div class="title-text">Integrity</div>
                         <p>Always treat others with kindness and civility. Adhere to your values regardless of the situation. Always be someone of whom you are proud.</p>
 
 
@@ -744,16 +755,16 @@
 
 
             </section>
-            <section class="bps-mission-element " style="background-image: url('./school.png');">
+            <section class="bps-mission-element " style="background-image: url('Mission/determination.jpg');">
                 <header role="presentation">
-                    <div class="vcenter">
-                        <h3 class="bps-mission-title">Determination</h3>
+                    <div class="title-center">
+                        <h4 class="bps-mission-title">Determination</h4>
 
                     </div>
                 </header>
                 <div class="bps-mission-container">
-                    <div class="vcenter">
-                        <div class="title-clone">Determination</div>
+                    <div class="title-center">
+                        <div class="title-text">Determination</div>
                         <p>Do what you love. Follow your passion. Have a firmness of purpose and the resolve to achieve a goal with the resolution to overcome any obstacles.</p>
 
 
@@ -768,16 +779,16 @@
 
 
             </section>
-            <section class="bps-mission-element " style="background-image: url('./school.png');">
+            <section class="bps-mission-element " style="background-image: url('Mission/empowerment.jpg');">
                 <header role="presentation">
-                    <div class="vcenter">
-                        <h3 class="bps-mission-title">Empowerment</h3>
+                    <div class="title-center">
+                        <h4 class="bps-mission-title">Empowerment</h4>
 
                     </div>
                 </header>
                 <div class="bps-mission-container">
-                    <div class="vcenter">
-                        <div class="title-clone">Empowerment</div>
+                    <div class="title-center">
+                        <div class="title-text">Empowerment</div>
                         <p>Control the course of your life and help others realize their abilities and potential. Your words and actions must be uplifting. Always act with empathy.
                         </p>
 
