@@ -46,14 +46,10 @@ h6 {
         section h5,
         section h6,
         section span {
-            /* font-family: 'Julius Sans One', sans-serif; */
+          
             font-family: Julias-San;
-        } */
-        /* body {
-            font-family: sofia-pro, sans-serif;
-            font-style: normal;
-            font-weight: 100;
-        }
+        } 
+
 
 @media screen and (min-width: 73.75rem) {
     .contain {
@@ -148,7 +144,7 @@ h6 {
     }
     .contain,
     .contain--small {
-        max-width: 78.75rem;
+        max-width: 62.75rem;
         margin-left: auto;
         margin-right: auto;
         padding: 1rem .75rem;

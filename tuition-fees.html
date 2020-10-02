@@ -17,10 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>I am ejs</title>
     <style>
-        .contain-body {
-            max-width: 60rem;
-            margin: 0 auto;
-        }
+        
         
         .header-underline h5:before {
             content: '';
@@ -33,14 +30,21 @@
         }
 
         .jumbotron .overlay {
-            
             position: absolute;
-            top: 0;
+            top: 0.75rem;
+            width: calc(100% - 1.5rem);
             height: 550px;
-            width: 100%;
             background-color: rgba(0, 0, 0, 0.1);
             background-image: linear-gradient(to top, rgb(0 0 0 / 36%) 0%, rgb(0 0 0 / 23%) 10%, rgb(0 0 0 / 27%) 30%, rgb(0 0 0 / 50%) 70%, rgb(0 0 0 / 50%) 90%, rgb(0 0 0 / 52%) 100%);
 
+        }
+
+        @media screen and (max-width: 768px) {
+            .jumbotron .overlay {
+            width: 100%;
+           
+            top: 0;
+            }
         }
         .nav-link {
             color: black;
@@ -54,19 +58,112 @@
             height: 6rem;
             margin-top: 0.25rem;
         }
+        /* .body-wrap {
+         
+        } */
 
     </style>
 </head>
 
 <body>
-    <div style="position: absolute; background: transparent; z-index: 3;" class="d-flex w-100 px-3">
-        <div class="header-brand pl-4 pt-2">
+    <div id="mySidenav" class="sidenav">
+
+        <div>
+            <div class="Menu">
+
+                <section class="fsElement fsNavigation fsList nav-utility-mobile" id="fsEl_2502" data-use-new="true">
+
+                    <header class="d-flex justify-content-between mx-3">
+
+                        <div>
+                            <figure class="fsImage">
+                                <picture><img alt="Bharti Public School" src="./logo.png"></picture>
+                            </figure>
+                        </div>
+
+                        <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times fa-2x text-white"></i></a></div>
+
+                    </header>
+                </section>
+                <div class="accordion mx-4 my-4" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h4 class="d-flex justify-content-between mb-0">
+                                <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            QuickLinks
+                          </button>
+                                <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-chevron-down fa-xs"></i>
+                          </button>
+
+                            </h4>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul class="list-unstyled mx-3">
+                                    <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
+                                    <li> <a class="dropdown-item" href="#">BPS Bulletin</a></li>
+                                    <li> <a class="dropdown-item" href="#">Admission Handbook</a></li>
+                                    <li> <a class="dropdown-item" href="#">Employment</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h4 class="d-flex justify-content-between mb-0">
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            About
+                          </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="fa fa-chevron-down fa-xs"></i>
+                          </button>
+
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h4 class="d-flex justify-content-between mb-0">
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Addmission
+                          </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="fa fa-chevron-down fa-xs"></i>
+                          </button>
+
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="body-wrap">
+        
+    <div style="position: absolute; background: transparent; z-index: 3; width: 98%;" class="d-flex px3">
+        <div class="header-brand pl-4 pt-3">
             <a>
-                <picture>
-                    <source media="(min-width:768px)" srcset="./logo.png">
-                    <!-- <source media="(min-width:465px)" srcset="img_white_flower.jpg"> -->
-                    <img width="100%" height="100%" alt="" src="./logo-md.png"> 
-            </picture>
+                <img width="140" height="90" alt="" src="./logo.png"> 
         </a>
         </div>
         <div class=" d-flex flex-column w-100">
@@ -113,14 +210,13 @@
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300" src="./Dropdown/About Dropdown.jpeg" alt="">
+                                                        <img width="300"  src="./Dropdown/About Dropdown.jpeg" alt="">
                                                     </div>
                                                     <div class="col">
 
                                                        
                                                                 <p>
-                                                                    Bharti Public School strives to innovate and offer students educational opportunities that are unique, engaging, and relevant to life in the 21st century. Our students explore their multiple interests in a dynamic academic environment while growing within
-                                                                    a nurturing community.
+                                                                    Established in 1980, Bharti Public School offers students educational opportunities that are unique and relevant to 21st century life. Our roots are local, but reach has gone global!
 
                                                                 </p>
                                                           
@@ -161,7 +257,7 @@
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300" src="./Dropdown/Admissions Dropdown.JPG" alt="">
+                                                        <img width="300"  src="./Dropdown/Admissions Dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
                                                        
@@ -209,14 +305,12 @@
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300" src="./Dropdown/Academics dropdown.jpg" alt="">
+                                                        <img width="300"  src="./Dropdown/Academics dropdown.jpg" alt="">
                                                     </div>
                                                     <div class="col">
                                                        
                                                                 <p>
-                                                                    At the heart of Bharti Public School’s philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive, rigorous and complemented by opportunities to participate in a wide range of extra-curricular activities
-                                                                    that foster growth and development.
-
+                                                                    At the heart of our philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive and complemented by a wide range of extra-curricular activities that foster growth and development.
                                                                 </p>
                                                          
                                                     </div>
@@ -259,15 +353,13 @@
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300" src="./Dropdown/life at BPS_dropdown.JPG" alt="">
+                                                        <img width="300"  src="./Dropdown/life at BPS_dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
 
                                                         
                                                                 <p>
-                                                                    Bharti Public School creates an atmosphere of innovation and creativity which, by design, always be front and center. The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search
-                                                                    for new and better ideas that have made Bharti Public School into an epitome of academic progress.
-
+                                                                    The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search for new and better ideas that have made Bharti Public School into an epitome of academic progress.
                                                                 </p>
                                                           
                                                     </div>
@@ -309,7 +401,7 @@
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300" src="./Dropdown/Community dropdown.JPG" alt="">
+                                                        <img width="300"  src="./Dropdown/Community dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
                                                        
@@ -355,7 +447,7 @@
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300" src="./Dropdown/Contact Dropdown.JPG" alt="">
+                                                        <img width="300"  src="./Dropdown/Contact Dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
                                                        
@@ -393,42 +485,56 @@
 
         </div>
     </div>
-    <section style="background-image: url(./tuition-fees/banner.jpeg);
+
+
+
+    <div style="background-image: url(./tuition-fees/banner.jpeg);
     background-size: cover;" class="jumbotron text-white custom-jumbotron d-flex justify-content-center align-items-end">
        <div class="overlay"></div>
-       <h1 style="z-index: 1; font-size: 6vw;">
-          <b>Tuition Fees</b>  
+       <h1 style="z-index: 1; font-size: 7vw; line-height: 20px;
+       letter-spacing: 10px;">
+          Tuition Fees
         </h1>
-    </section>
+    </div>
     <nav class="nav justify-content-center d-md-flex flex-row d-none py-2 bg-light">
         <a href="" class="nav-link text-center p-1 m-1">Admissions FAQ!</a>
         <a href="" class="nav-link text-center p-1 m-1">Application Process</a>
         <a href="" class="nav-link text-center p-1 m-1">Explore Campus</a>
     </nav>
     <div class="contain">
-        <div class="m-2">
-            <div class="text-center my-5">
-                <p style="font-size: 30px;">
-                    Invest in your child’s future
-                </p>
+        <div class="container-fluid">
+            <div class="row">
+          
+                <div class="col">
+                    <div class="m-2">
+                        <div class="text-center my-5">
+                            <p style="font-size: 30px;">
+                                Invest in your child’s future
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Life at BPS is an investment. When you enroll your child at BPS, you become part of our family. A family that is result-driven, all-star athletics, award-winning theater performances and community outreach. At BPS, your child will experience holistic,
+                                hands-on learning that sparks a lifetime of courage, conviction and excellence.
+                            </p>
+                            <p>
+                                Joining this community will be the most worthy investment you’ll make for your child. At BPS, everything we do is designed to ensure that you see a greater return than you ever imagined — a child who culminates into a leader of the 21st Century!
+                            </p>
+                        </div>
+            
+                    </div>
+            
+                  
+                </div>
+              
             </div>
-            <div>
-                <p>
-                    Life at BPS is an investment. When you enroll your child at BPS, you become part of our family. A family that is result-driven, all-star athletics, award-winning theater performances and community outreach. At BPS, your child will experience holistic,
-                    hands-on learning that sparks a lifetime of courage, conviction and excellence.
-                </p>
-                <p>
-                    Joining this community will be the most worthy investment you’ll make for your child. At BPS, everything we do is designed to ensure that you see a greater return than you ever imagined — a child who culminates into a leader of the 21st Century!
-                </p>
-            </div>
-
         </div>
+       
     </div>
-    <div class="container-fluid">
-        <section>
-
-        </section>
-        <div class="parallex mcparallax d-flex justify-content-center align-items-center" data-speed="5">
+   
+    
+       
+        <div id="parallax" class="parallex mcparallax d-flex justify-content-center align-items-center" data-speed="5">
             <div class="" style="width: 22rem;">
                 <h1 class="text-center text-white">Remember when you step foot in BPS, you’re not entering a school, but a community!</h1>
             </div>
@@ -436,34 +542,35 @@
 
 
         </div>
-    </div>
-    <!-- <section>
-        <div class="mcparallax" data-image-src="https://picsum.photos/1920/850/?random" data-speed="5"></div>
-
-        <div class="container container-below-navbar text-white">
-            <h1 class="display-3 text-center font-title font-bold py-5">Text title</h1>
-            <h3 class="text-center font-title font-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tempus est, porttitor egestas ante sollicitudin vel.
-            </h3>
-            <h2 class="display-4 text-center font-title font-bold pb-5">Text subtitle</h2>
-        </div>
-    </section> -->
+    
+   
     <div class="contain">
-        <div class="m-2">
-            <div>
-                <p>
-                    The best education is one that constantly adds value and ventures outside of the classroom. That’s why our faculty is focused on preparing students, not just for this year’s tests, but for all of life’s tests. Our student-centered approach towards teaching
-                    creates a safe learning environment where students are encouraged to expand their knowledge and take calculated risks. As a result, they develop the confidence, perseverance and drive to succeed in the world.
-                </p>
-                <p>
-                    BPS students graduate having learned to leverage their academic passion, positively impact their community and empower themselves and others. As alumni, they go on to great success and fulfillment because they were taught to think, do and lead at BPS.
-                </p>
-            </div>
-        </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
+          
+                <div class="col">
+                    <div class="">
+                        <div>
+                            <p>
+                                The best education is one that constantly adds value and ventures outside of the classroom. That’s why our faculty is focused on preparing students, not just for this year’s tests, but for all of life’s tests. Our student-centered approach towards teaching
+                                creates a safe learning environment where students are encouraged to expand their knowledge and take calculated risks. As a result, they develop the confidence, perseverance and drive to succeed in the world.
+                            </p>
+                            <p>
+                                BPS students graduate having learned to leverage their academic passion, positively impact their community and empower themselves and others. As alumni, they go on to great success and fulfillment because they were taught to think, do and lead at BPS.
+                            </p>
+                        </div>
+                    </div>
+               
+                 
+                </div>
+              
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col">
                     <table class="table table-bordered mb-0 custom-table">
                         <thead>
                             <tr>
@@ -543,17 +650,18 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-1"></div>
+              
             </div>
+          
         </div>
     </div>
+   
     <footer style="background-image: url(./bg_footer.jpg);
-    background-size: cover;">
+    background-size: cover;
+    background-position: center;">
         <div class="footer-bg" >
 
-            <!-- <div>
-                <img style="object-fit: cover;" width="100%" height="100%" src="./school.png" alt="">
-            </div> -->
+          
             <div class="row mx-0">
                 <div style="z-index: 1;" class="social-icons col-md-4">
                     <h4 class="text-white text-center my-5">Stay Connected</h4>
@@ -579,13 +687,13 @@
                         <img src="./logo.png" alt="">
 
                     </div>
-                    <div class="footer-title my-4">
-                        <h6><b> Bharti Public School</b></h6>
-                        <h6>Swasthya Vihar</h6>
+                    <div class="footer-title my-5">
+                        <!-- <h6><b> Bharti Public School</b></h6>
+                        <h6>Swasthya Vihar</h6> -->
                         <p>Near, Metro Station, Vikas Marg, Nirman Vihar, <br>Swasthya Vihar, New Delhi 110092.</p>
 
                     </div>
-                    <div class="d-flex justify-content-around  text-white">
+                    <div class="d-flex justify-content-around  text-white mt-2">
 
                         <!-- <div class="footer-links"> -->
                         <!-- <div class="d-flex "> -->
@@ -611,15 +719,17 @@
                 </div>
             </div>
             <div class="row mx-0 mt-4">
-                <div style="z-index: 1" class="w-100 pt-4 d-flex flex-column flex-md-row justify-content-between">
-                    <div style="flex:1;">
+                <div style="z-index: 1" class="w-100 pt-4 px-5 mx-0 ml-md-3 mr-md-5 d-flex flex-column flex-md-row justify-content-between">
+                    <div style="flex:2;">
                         <ul style="list-style: none;" class="d-flex justify-content-around px-0">
-                            <li><a class="text-white" href="#">Directory</a></li>
-                            <li><a class="text-white" href="#">Site Map</a></li>
-                            <li><a class="text-white" href="#">Careers</a></li>
+                            <li><a class="text-white p-2" href="#">Directory</a></li>
+                            <li style="border-right: 1px solid #fff;"></li>
+                            <li><a class="text-white p-2" href="#">Site Map</a></li>
+                            <li style="border-right: 1px solid #fff;"></li>
+                            <li><a class="text-white p-2" href="#">Careers</a></li>
                           </ul>  
                     </div>
-                  <div style="z-index: 1; flex: 3;" class="text-white mx-0">
+                  <div style="z-index: 1; flex: 5;" class="text-white mx-0">
                     <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
                   </div>
 
@@ -629,12 +739,23 @@
 
            
         </div>
-
+        <div class="mr-2 mb-2" style="display: inline;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        right: 0;">
+            <a  style=" cursor: pointer;"  onclick="gotoTop()">
+                <div class="d-flex flex-column">
+                    <i class="fa fa-angle-double-up fa-2x text-white mx-3"></i>
+                    <span style="font-size: 10px;" class="text-white">Take me up</span>
+                </div>
+              
+            </a>
+           
+        </div>
 
 
     </footer>
-    <div class="contain">
-
     </div>
 
 
@@ -646,6 +767,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
+
+
+            $(document).ready(function() {
+                console.log(window.innerWidth);
+                 if(window.innerWidth < 768) {
+                     document.getElementById('parallax').classList.remove('mcparallax');
+                     document.getElementById('parallax').removeAttribute('data-speed')
+                 }
+            }
+            )
+
+        function openNav() {
+            console.log("open sidenav");
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+        function gotoTop() {
+            window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: 0
+  });
+      
+        }
+
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
         function myFunction() {
             console.log(this);
             if (!$(this).hasClass("faq-vistited")) {
