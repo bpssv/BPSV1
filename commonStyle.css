@@ -50,6 +50,24 @@ h6 {
             font-family: Julias-San;
         } 
 
+        .f-16 {
+            font-size: 16px;
+
+        }
+        .f-18 {
+            font-size: 18px;
+
+        }
+        .f-20 {
+            font-size: 20px;
+
+        }
+        .f-30 {
+            font-size: 30px; 
+        }
+        .f-40 {
+            font-size: 40px; 
+        }
 
 @media screen and (min-width: 73.75rem) {
     .contain {
@@ -83,7 +101,7 @@ h6 {
     max-width: 78.75rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 48px 0;
+    padding: 48px 1rem;
 }
 
 @media screen and (min-width: 73.75rem) {
