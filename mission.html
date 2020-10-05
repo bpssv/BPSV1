@@ -1,38 +1,56 @@
+
+
+        <!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharti Public School</title>
-   
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEh4Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" href="./animate.css">
-    <link rel="stylesheet" href="./foldFooter.css">
-    <link rel="stylesheet" href="./commonStyle.css">
-    <link rel="stylesheet" href="./topnavbar.css">
-    <link rel="stylesheet" href="./dropdownhover.css"> 
-
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="commonStyle.css">
+    <link rel="stylesheet" href="css/refined.css">
+    <link rel="stylesheet" href="topnavbar.css">
+    <link rel="stylesheet" href="dropdownhover.css">
+    <link rel="stylesheet" href="foldFooter.css">
+    <title>I am ejs</title>
     <style>
-        /* picture {
-            position: relative;
-        } */
         
-         :root {
+        .header-underline h5:before {
+            content: '';
+            background: #56a0d3;
+            width: 57px;
+            height: 2px;
+            position: absolute;
+            bottom: 85px;
+            transform: translateX(200%);
+        }
+        .nav-link {
+            color: black;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .jumbotron .overlay {
+            position: absolute;
+            top: 0.75rem;
+            width: calc(100% - 1.5rem);
+            height: 550px;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-image: linear-gradient(to top, rgb(0 0 0 / 36%) 0%, rgb(0 0 0 / 23%) 10%, rgb(0 0 0 / 27%) 30%, rgb(0 0 0 / 50%) 70%, rgb(0 0 0 / 50%) 90%, rgb(0 0 0 / 52%) 100%);
+
+        }
+
+        :root {
             --color-1: rgba(197, 191, 191, 0.45);
             --color-2: #12312323;
             --color-3: #2334352a;
@@ -223,8 +241,14 @@
                 flex: 1 1 100%;
             }
         }
-
-       
+        
+        @media screen and (max-width: 768px) {
+            .jumbotron .overlay {
+            width: 100%;
+           
+            top: 0;
+            }
+        }
     </style>
 </head>
 
@@ -292,7 +316,7 @@
                                     <li> <a class="dropdown-item" href="the-bps-difference.html">The BPS Difference</a></li>
                                     <li> <a class="dropdown-item" href="a-rich-history.html">A Rich History</a></li>
                                     <li> <a class="dropdown-item" href="leadership.html">Leadership</a></li>
-                                </ul> </div>
+                                </ul>  </div>
                         </div>
                     </div>
                     <div class="card">
@@ -323,7 +347,7 @@
 
         </div>
     </div>
-    <div style="position: relative; background: var(--blue); z-index: 3; width: 100%; height: 120px;" class="d-flex px3">
+    <div style="position: absolute; background: transparent; z-index: 3; width: 98%;" class="d-flex px3">
         <div class="header-brand pl-4 pt-3">
             <a>
                 <img width="140" height="90" alt="" src="./logo.png"> 
@@ -648,8 +672,20 @@
 
         </div>
     </div>
-   
-    
+<div class="body-wrap">
+    <div style="background-image: url(./Mission/determination.jpg);
+    background-size: cover; background-position: center;" class="jumbotron text-white custom-jumbotron d-flex justify-content-center align-items-end">
+       <div class="overlay"></div>
+       <h1 style="z-index: 1; font-size: 7vw; line-height: 20px;
+       letter-spacing: 10px;">
+           Our Mission
+        </h1>
+    </div>
+    <nav class="nav justify-content-center d-md-flex flex-row d-none py-2 bg-light">
+        <a href="" class="nav-link text-center p-1 m-1">Admissions FAQ!</a>
+        <a href="" class="nav-link text-center p-1 m-1">Application Process</a>
+        <a href="" class="nav-link text-center p-1 m-1">Explore Campus</a>
+    </nav>
     <div class="contain f-18">
         <div>
             <div class="">
