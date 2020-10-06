@@ -1,0 +1,613 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+      <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="commonStyle.css">
+    <link rel="stylesheet" href="css/refined.css">
+    <link rel="stylesheet" href="topnavbar.css">
+    <link rel="stylesheet" href="dropdownhover.css">
+    <link rel="stylesheet" href="foldFooter.css">
+    <style>
+        body {
+  margin: 0;
+}
+
+.container_box {
+  width: 100%;
+  height: 100%;
+  background-image: url("./bps-life/OK-IMG_6601.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+}
+
+.container_box::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.432);
+}
+
+.viewsBox {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 1.5rem);
+  height: 100%;
+  display: flex;
+  margin: 0.75rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 80%;
+}
+
+.group_btns {
+  display: flex;
+}
+
+.button {
+    min-width: 450px;
+}
+
+.group_btns .button a {
+  padding: 1em 2em;
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 39px;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 28px;
+  line-height: 31px;
+  text-transform: uppercase;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.group_btns .button a:hover,
+.group_btns .button a:focus {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+
+        <div>
+            <div class="Menu">
+
+                <section class="fsElement fsNavigation fsList nav-utility-mobile" id="fsEl_2502" data-use-new="true">
+
+                    <header class="d-flex justify-content-between mx-3">
+
+                        <div>
+                            <figure class="fsImage">
+                                <picture><img alt="Bharti Public School" src="./logo.png"></picture>
+                            </figure>
+                        </div>
+
+                        <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times fa-2x text-white"></i></a></div>
+
+                    </header>
+                </section>
+                <div class="accordion mx-4 my-4" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h4 class="d-flex justify-content-between mb-0">
+                                <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            QuickLinks
+                          </button>
+                                <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fa fa-chevron-down fa-xs"></i>
+                          </button>
+
+                            </h4>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul class="list-unstyled mx-3">
+                                    <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
+                                    <li> <a class="dropdown-item" href="#">BPS Bulletin</a></li>
+                                    <li> <a class="dropdown-item" href="#">Admission Handbook</a></li>
+                                    <li> <a class="dropdown-item" href="#">Employment</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h4 class="d-flex justify-content-between mb-0">
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            About
+                          </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="fa fa-chevron-down fa-xs"></i>
+                          </button>
+
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <ul class="list-unstyled mx-3">
+                                    <li> <a class="dropdown-item" href="mission.html">Our Mission</a></li>
+                                    <li> <a class="dropdown-item" href="the-bps-difference.html">The BPS Difference</a></li>
+                                    <li> <a class="dropdown-item" href="a-rich-history.html">A Rich History</a></li>
+                                    <li> <a class="dropdown-item" href="leadership.html">Leadership</a></li>
+                                </ul>  </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h4 class="d-flex justify-content-between mb-0">
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Addmission
+                          </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="fa fa-chevron-down fa-xs"></i>
+                          </button>
+
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div style="position: absolute; background: transparent; z-index: 3; width: 98%;" class="d-flex px3">
+        <div class="header-brand pl-4 pt-3">
+            <a>
+                <img width="140" height="90" alt="" src="./logo.png"> 
+        </a>
+        </div>
+        <div class=" d-flex flex-column w-100">
+            <div class="d-flex justify-content-end mt-3">
+                <ul class="d-none d-md-flex top-nav-bar-items">
+                    <li class="top-nav-bar-item " id="dropdownMenuButton">
+                        <p class="text-white px-3 px-3 py-2 mb-0" href="">Quicklinks&nbsp;</p>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <ul class="list-unstyled mx-3">
+                                <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
+                                <li> <a class="dropdown-item" href="#">BPS Bulletin</a></li>
+                                <li> <a class="dropdown-item" href="#">Admission Handbook</a></li>
+
+                                <li> <a class="dropdown-item" href="#">Employment</a></li>
+                            </ul>
+                        </div> </li>
+
+                    <li class="top-nav-bar-item"><a class="dropdown-item" href="">Apply</a> </li>
+                    <li class="top-nav-bar-item">
+                        <a class="dropdown-item" href="">Pay Fees</a>
+                    </li>
+                    <li class="top-nav-bar-item">
+                        <a class="dropdown-item" href="">MyBharti</a></li>
+                     </ul>
+                <li style="list-style: none;" class="top-nav-bar-item"><a style="vertical-align: bottom;" class="mx-4 py-2" href="/search"><i class="fa fa-search text-white"></i></a></li>
+                <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
+                    <i class="fa fa-bars text-white"></i>
+                </button>
+            </div>
+            <div class="header-container">
+                <div class="d-flex justify-content-end">
+
+                    <div class="header-column">
+                        <nav class="navbar navbar-expand-lg ">
+
+                            <div class="collapse navbar-collapse" id="navbarText">
+
+                                <ul class="navbar-nav d-hover mr-auto">
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropbtn dropdown-item">
+                                                About
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300"  src="./Dropdown/About Dropdown.jpeg" alt="">
+                                                    </div>
+                                                    <div class="col">
+
+                                                       
+                                                                <p>
+                                                                    Established in 1980, Bharti Public School offers students educational opportunities that are unique and relevant to 21st century life. Our roots are local, but reach has gone global!
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="./mission.html"> Our Mission</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="./explore-campus.html"> Explore Campus</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="a-rich-history.html"> A Rich History</a>
+                                                            </li>
+                                                          
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="the-bps-difference.html"> The BPS Difference</a>
+                                                            </li>
+                                                            <li class="list-group-item"> <a href="./leadership.html"> Leadership</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropbtn dropdown-item">
+                                                Admissions
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300"  src="./Dropdown/Admissions Dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    Learn more about Bharti Public School’s admissions process, find answers to commonly asked questions about the school and submit your application online.
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="addmission-faq.html"> Admission FAQ</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="apply-now.html"> Apply Now!</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="tuition-fees.html"> Tuition Fees</a>
+                                                            </li>
+                                                            
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            
+                                                            <li class="list-group-item">
+                                                                <a href="forms-and-certificates.html">Forms & Certificates</a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                  
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Academics
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300"  src="./Dropdown/Academics dropdown.jpg" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    At the heart of our philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive and complemented by a wide range of extra-curricular activities that foster growth and development.
+                                                                </p>
+                                                         
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="common-page.html"> Common Page</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="lower-school.html">  Lower School</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="middle-school.html"> Middle School</a>
+                                                            </li>
+                                                          
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                           
+                                                            <li class="list-group-item">
+                                                                <a href="upper-school.html">Upper School</a>
+                                                            </li>
+                                                            <li class="list-group-item"> <a href="student-resources.html"> Student Resources</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Life at BPS
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300"  src="./Dropdown/life at BPS_dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+
+                                                        
+                                                                <p>
+                                                                    The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search for new and better ideas that have made Bharti Public School into an epitome of academic progress.
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href=""> Common Page</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="athletics.html"> Athletics</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href="creative-arts.html">Creative Arts</a>
+                                                            </li>
+                                                          
+                                                        </ul>
+
+                                                    </div>
+                                                    <div class="col">
+
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href=""> Community Outreach</a>
+                                                            </li>
+                                                            <li class="list-group-item"> <a href=""> Outdoor Education</a></li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Community
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300"  src="./Dropdown/Community dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    The Bharti Public School community, better known as Bharti Parivaar spells growth, impetus and success for the school and its fraternity including our faculty, staff, students, and alumni members.
+
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="">Faculty+</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="">Parents+</a></li>
+                                                            <li class="list-group-item">
+                                                                <a href=""> Students+</a>
+                                                            </li>
+                                                           
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                           
+                                                            <li class="list-group-item">
+                                                                <a href="">Alumni</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropdown-item dropbtn">
+                                                Contact
+                                              </a>
+                                            <div class="dropdown-content p-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <img width="300"  src="./Dropdown/Contact Dropdown.JPG" alt="">
+                                                    </div>
+                                                    <div class="col">
+                                                       
+                                                                <p>
+                                                                    In case of any questions or concerns, you may contact the school and get your queries answered. The school is consistently engaged in numerous activities and workshops, updates of which can be found on social media
+
+                                                                </p>
+                                                          
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul class="list-group list-group-flush">
+                                                            <li class="list-group-item">
+                                                                <a href="">Contact</a>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <a href="">Employment</a></li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container_box">
+        <video class="v__container" id="home_media" autoplay muted width="100%" src="https://player.vimeo.com/external/206536059.sd.mp4?s=551efa45c0cdd2d1fb5349a3936bb7f4d7550f4c&profile_id=164&oauth2_token_id=57447761"></video>
+
+
+        <div class="viewsBox">
+            <div class="my-5">
+                <h1 style="font-size: 7vw; line-height: 20px;
+                letter-spacing: 10px;" class="text-white">Life At BPS</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="group_btns flex-wrap">
+                        <div class="button">
+                            <a onmouseover="startvideo(1)" onmouseout="stopvideo()">Athletics </a>
+                        </div>
+                      
+                        <div class="button">
+                            <a onmouseover="startvideo(1)" onmouseout="stopvideo()">Outdoor Education </a>
+                        </div>
+                       
+                    </div>
+                </div>
+              
+            </div>
+            <div class="row pb-5">
+                <div class="col">
+                    <div class="group_btns">
+                        <div class="button">
+                            <a onmouseover="startvideo(2)" onmouseout="stopvideo()">Creative Arts</a>
+                        </div>
+                        <div class="button">
+                            <a onmouseover="startvideo(3)" onmouseout="stopvideo()">Community Outreach</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+
+
+        </div>
+    </div>
+    <script>
+        let vElement = document.getElementById("home_media");
+
+function stopvideo(params) {
+  vElement.pause();
+  anime({
+    targets: "#home_media",
+    opacity: {
+      value: 0,
+      duration: 500
+    },
+    easing: "easeInOutSine"
+  });
+}
+
+function startvideo(params) {
+  console.log(params);
+
+  anime({
+    targets: "#home_media",
+    opacity: {
+      value: 1,
+      duration: 500
+    },
+    // delay: 1000,
+    // direction: 'reverse',
+    easing: "easeInOutSine"
+  });
+  switch (params) {
+    case 2:
+      vElement.setAttribute(
+        "src",
+        "https://player.vimeo.com/external/328465444.sd.mp4?s=f9ccb1200a449bdf2dd10d99e96f0603a24e24d3&profile_id=164&oauth2_token_id=57447761"
+      );
+      break;
+    case 3:
+      vElement.setAttribute(
+        "src",
+        "https://player.vimeo.com/external/293348158.sd.mp4?s=3f9bf052fab34e94fd4f87e891d7594d539f2dcc&profile_id=164&oauth2_token_id=57447761"
+      );
+      break;
+
+    default:
+      vElement.setAttribute(
+        "src",
+        "https://player.vimeo.com/external/206536059.sd.mp4?s=551efa45c0cdd2d1fb5349a3936bb7f4d7550f4c&profile_id=164&oauth2_token_id=57447761"
+      );
+      break;
+  }
+}
+
+    </script>
+</body>
+</html>
