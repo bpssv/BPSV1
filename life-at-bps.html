@@ -26,6 +26,7 @@
 }
 
 .container_box {
+    position: relative;
   width: 100%;
   height: 100%;
   background-image: url("./bps-life/OK-IMG_6601.jpg");
@@ -36,19 +37,22 @@
 }
 
 .container_box::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.432);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
 }
 
 .viewsBox {
   position: absolute;
   top: 0;
-  width: calc(100% - 1.5rem);
+  width: 99%;
   height: 100%;
+  z-index: 1;
   display: flex;
-  margin: 0.75rem;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -59,20 +63,31 @@
   display: flex;
 }
 
-.button {
+
+
+ .button {
+        min-width: 300px;
+    }
+
+@media screen and (min-width: 768px) {
+    .group_btns .button a {
+        font-size: 25px !important;
+        padding: 1em 2em !important;
+    }
+    .button {
     min-width: 450px;
+}
 }
 
 .group_btns .button a {
-  padding: 1em 2em;
+  padding: 0.75em 1em;
   text-decoration: none;
-  font-size: 36px;
   line-height: 39px;
   transition: background 0.3s, color 0.3s;
   position: relative;
   display: block;
   color: #fff;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 31px;
   text-transform: uppercase;
   display: -ms-flexbox;
@@ -93,6 +108,18 @@
   text-decoration: none;
   background: rgba(0, 0, 0, 0.2);
 }
+.v__container {
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    min-height: 100vh;
+    max-height: none;
+    max-width: none;
+    backface-visibility: hidden;
+}
+.body-wrap {
+    position: relative;
+}
 
     </style>
 </head>
@@ -107,7 +134,7 @@
                     <header class="d-flex justify-content-between mx-3">
 
                         <div>
-                            <figure class="fsImage">
+                            <figure class="bgImage">
                                 <picture><img alt="Bharti Public School" src="./logo.png"></picture>
                             </figure>
                         </div>
@@ -193,7 +220,7 @@
     </div>
     <div style="position: absolute; background: transparent; z-index: 3; width: 98%;" class="d-flex px3">
         <div class="header-brand pl-4 pt-3">
-            <a>
+            <a href="bps_home.html">
                 <img width="140" height="90" alt="" src="./logo.png"> 
         </a>
         </div>
@@ -235,7 +262,7 @@
                                 <ul class="navbar-nav d-hover mr-auto">
                                     <li>
                                         <div class="dropdown">
-                                            <a class="dropbtn dropdown-item">
+                                            <a  href="mission.html" class="dropbtn dropdown-item">
                                                 About
                                               </a>
                                             <div class="dropdown-content p-5">
@@ -282,7 +309,7 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                            <a class="dropbtn dropdown-item">
+                                            <a href="addmission-faq.html" class="dropbtn dropdown-item">
                                                 Admissions
                                               </a>
                                             <div class="dropdown-content p-5">
@@ -330,7 +357,7 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                            <a class="dropdown-item dropbtn">
+                                            <a href="common-page.html" class="dropdown-item dropbtn">
                                                 Academics
                                               </a>
                                             <div class="dropdown-content p-5">
@@ -378,7 +405,7 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                            <a class="dropdown-item dropbtn">
+                                            <a href="life-at-bps.html" class="dropdown-item dropbtn">
                                                 Life at BPS
                                               </a>
                                             <div class="dropdown-content p-5">
@@ -398,7 +425,7 @@
 
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href=""> Common Page</a>
+                                                                <a href="life-at-bps.html"> Common Page</a>
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <a href="athletics.html"> Athletics</a></li>
@@ -516,6 +543,7 @@
 
         </div>
     </div>
+    <div class="body-wrap">
     <div class="container_box">
         <video class="v__container" id="home_media" autoplay muted width="100%" src="https://player.vimeo.com/external/206536059.sd.mp4?s=551efa45c0cdd2d1fb5349a3936bb7f4d7550f4c&profile_id=164&oauth2_token_id=57447761"></video>
 
@@ -525,9 +553,9 @@
                 <h1 style="font-size: 7vw; line-height: 20px;
                 letter-spacing: 10px;" class="text-white">Life At BPS</h1>
             </div>
-            <div class="row">
+            <div class="row mx-0">
                 <div class="col">
-                    <div class="group_btns flex-wrap">
+                    <div class="group_btns justify-content-center flex-wrap">
                         <div class="button">
                             <a onmouseover="startvideo(1)" onmouseout="stopvideo()">Athletics </a>
                         </div>
@@ -540,9 +568,9 @@
                 </div>
               
             </div>
-            <div class="row pb-5">
+            <div class="row mx-0 pb-5">
                 <div class="col">
-                    <div class="group_btns">
+                    <div class="group_btns justify-content-center flex-wrap">
                         <div class="button">
                             <a onmouseover="startvideo(2)" onmouseout="stopvideo()">Creative Arts</a>
                         </div>
@@ -556,6 +584,116 @@
 
 
         </div>
+    </div>
+   <div class="mt-2">
+    <footer style="background-image: url(./bg_footer.jpg);
+    background-size: cover;
+    background-position: center;">
+        <div class="footer-bg">
+
+
+            <div class="row mx-0">
+                <div style="z-index: 1;" class="social-icons col-md-4">
+                    <h4 class="text-white text-center my-5">Stay Connected</h4>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <a href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i
+                                    class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i
+                                    class="fa fa-youtube" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="z-index: 1;" class="col-md-4 text-center pt-4">
+                    <div class=" p-3">
+
+                        <img src="./logo.png" alt="">
+
+                    </div>
+                    <div class="footer-title my-5">
+                        <!-- <h6><b> Bharti Public School</b></h6>
+                        <h6>Swasthya Vihar</h6> -->
+                        <p>Near, Metro Station, Vikas Marg, Nirman Vihar, <br>Swasthya Vihar, New Delhi 110092.</p>
+
+                    </div>
+                    <div class="d-flex justify-content-around  text-white mt-2">
+
+                        <!-- <div class="footer-links"> -->
+                        <!-- <div class="d-flex "> -->
+                        <a style="min-width: 115px;" class=" btn btn-outline-light rounded-0" href="">Explore</a>
+                        <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Apply</a>
+                        <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Contact Us</a>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+
+                </div>
+
+                <div style="z-index: 1;" class="acredition col-md-4 text-center">
+                    <h4 class="text-white my-5">Accreditation</h4>
+                    <div class="d-flex justify-content-center">
+                        <div style="width: 150px;">
+                            <img width="100%" src="./accreditation/cbse-logo-png-3-1.png" alt="">
+                        </div>
+                        <div style="width: 150px;">
+                            <img width="100%" src="./accreditation/Last Fold - Accreditation British council.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 mt-4">
+                <div style="z-index: 1"
+                    class="w-100 pt-4 px-5 mx-0 ml-md-3 mr-md-5 d-flex flex-column flex-md-row justify-content-between">
+                    <div style="flex:2;">
+                        <ul style="list-style: none;" class="d-flex justify-content-around px-0">
+                            <li><a class="text-white p-2" href="#">Directory</a></li>
+                            <li style="border-right: 1px solid #fff;"></li>
+                            <li><a class="text-white p-2" href="#">Site Map</a></li>
+                            <li style="border-right: 1px solid #fff;"></li>
+                            <li><a class="text-white p-2" href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div style="z-index: 1; flex: 5;" class="text-white mx-0">
+                        <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="mr-2 mb-2" style="display: inline;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        right: 0;">
+            <a style=" cursor: pointer;" onclick="gotoTop()">
+                <div class="d-flex flex-column">
+                    <i class="fa fa-angle-double-up fa-2x text-white mx-3"></i>
+                    <span style="font-size: 10px;" class="text-white">Take me up</span>
+                </div>
+
+            </a>
+
+        </div>
+
+
+    </footer>
+   </div>
+     
     </div>
     <script>
         let vElement = document.getElementById("home_media");
