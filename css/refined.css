@@ -44,7 +44,9 @@
 }
 
 .font-blue-on-hover:hover {
-    color: blue;
+   
+        color: var(--blue);
+  
 }
 
 .nav-heading{
