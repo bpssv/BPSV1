@@ -1,9 +1,10 @@
 :root {
-  --grey: #363E47;
-  --blue: #28295d;
+  --grey: rgb(54, 62, 71);
+  --blue: rgb(40, 41, 93);
   --green: #62a25d;
   --yellow: rgb(255, 210, 29);
   --orange: #df682d;
+  --blue-transparent: rgba(40, 41, 93, 0.75);
 }
 
 @font-face {
@@ -187,7 +188,7 @@ section span {
   left: 1px;
 }
 
-.u-line-center {
+.u-line-center, .u-line-center-white {
   position: relative;
 }
 
@@ -200,6 +201,20 @@ section span {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: -5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.u-line-center-white h4:before {
+  content: "";
+  background:#fff;
+  width: 80px;
+  height: 0.20rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -8px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -226,3 +241,16 @@ a.explore:hover {
   background: var(--blue);
 }
 
+
+.nav-link {
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+nav.bg-light {
+  height: 50px;
+}
+nav.bg-light a:hover{
+  font-weight: bolder;
+  border-bottom: 3px solid var(--blue);
+}

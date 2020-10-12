@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./fold5.css">
     <link rel="stylesheet" href="./fold6.css">
     <link rel="stylesheet" href="./foldFooter.css">
-    
+
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,26 +41,27 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7&flags=gated"></script>
     <style>
-         :root {
+        :root {
             --grey: #363E47;
             --blue: #28295d;
             --green: #62a25d;
             --yellow: rgb(255, 210, 29);
             --orange: #df682d;
         }
-        
+
         .header-brand {
             position: absolute;
             width: 9rem;
             height: 7rem;
             margin-top: 0.25rem;
         }
+
         .header-brand-sticky {
             width: 9rem;
             height: 4rem;
             margin-top: 0.25rem;
         }
-        
+
         .body-wrap {
             overflow: hidden;
             position: relative;
@@ -68,15 +69,17 @@
             /* background: #ffffffa1; */
             /* margin: 0.75rem; */
         }
-        
+
         @media screen and (min-width: 768px) {
             .body-wrap {
                 margin: 0.75rem;
             }
+
             .header-brand {
                 width: 10rem;
                 height: 6rem;
             }
+
             .header-title-text h1 {
                 /* padding-top: 1rem !important; */
                 font-size: 7vw !important;
@@ -87,7 +90,7 @@
                 letter-spacing: 10px;
             }
         }
-        
+
         .bpsHomeVideoContainer {
             position: relative;
             width: 100%;
@@ -95,7 +98,7 @@
             overflow: hidden;
             object-fit: cover;
         }
-        
+
         .body-wrap .bpsHomeVideoContainer video {
             object-fit: cover;
             display: block;
@@ -108,7 +111,7 @@
             backface-visibility: hidden;
             perspective: 1000;
         }
-        
+
         .home-wrap-container {
             position: absolute;
             z-index: 1;
@@ -118,30 +121,31 @@
             justify-content: center;
             /* align-items: flex-end; */
         }
-        
+
         .title-strip {
             -webkit-animation-name: mymove;
             animation-name: mymove
         }
-        
+
         .header-title-text h1 {
             font-size: 10vw;
             padding-top: 10rem;
         }
-        
+
         @keyframes mymove {
             0% {
                 opacity: 0;
                 filter: blur(10px);
                 transform: scaleX(1.75);
             }
+
             100% {
                 opacity: 1;
                 filter: blur(0);
                 transform: scaleX(1);
             }
         }
-        
+
         button.explore {
             cursor: pointer;
             padding: 0.81429em 2.07143em;
@@ -155,7 +159,7 @@
             font-weight: 700;
             transition: background 0.3s, box-shadow 0.3s, color 0.3s;
         }
-        
+
         button.explore span::after {
             position: absolute;
             left: 0;
@@ -164,11 +168,11 @@
             -moz-transform-origin: left;
             transform-origin: left;
         }
-        
+
         button.explore:hover {
             background: var(--blue);
         }
-        
+
         .loading span {
             width: 25px;
             height: 25px;
@@ -181,15 +185,15 @@
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
         }
-        
+
         .loading :nth-child(2) {
             background-coLor: #000;
             animation-delay: 0.4s;
         }
-        
-      
-      
-        
+
+
+
+
         #box3 {
             right: 0;
             bottom: 1100px;
@@ -197,7 +201,7 @@
             width: 60vw;
             background: linear-gradient(-45deg, #f7f7f7 50%, transparent 50%);
         }
-        
+
         #box2 {
             left: 0;
             top: 700px;
@@ -206,12 +210,75 @@
             background: linear-gradient(45deg, #f7f7f7 50%, transparent 50%);
         }
 
-        @media screen and (max-width:622px ){
+        @media screen and (max-width:622px) {
             #box2 {
                 top: 1300px;
             }
         }
-  
+
+        /*  */
+
+
+        /*  */
+        .searchBar-overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            background-color: var(--blue);
+            opacity: 0.95;
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+
+        .searchBar-overlay-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .searchBar-overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .searchBar-overlay a:hover,
+        .searchBar-overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .searchBar-overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            z-index: 4;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .searchBar-overlay {
+                overflow-y: auto;
+            }
+
+            .searchBar-overlay a {
+                font-size: 20px
+            }
+
+            .searchBar-overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
     </style>
 </head>
 
@@ -231,7 +298,8 @@
                             </figure>
                         </div>
 
-                        <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times fa-2x text-white"></i></a></div>
+                        <div> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i
+                                    class="fa fa-times fa-2x text-white"></i></a></div>
 
                     </header>
                 </section>
@@ -239,17 +307,20 @@
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h4 class="d-flex justify-content-between mb-0">
-                                <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            QuickLinks
-                          </button>
-                                <button class="btn text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <i class="fa fa-chevron-down fa-xs"></i>
-                          </button>
+                                <button class="btn text-white" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    QuickLinks
+                                </button>
+                                <button class="btn text-white" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-chevron-down fa-xs"></i>
+                                </button>
 
                             </h4>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul class="list-unstyled mx-3">
                                     <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
@@ -263,42 +334,55 @@
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h4 class="d-flex justify-content-between mb-0">
-                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            About
-                          </button>
-                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <i class="fa fa-chevron-down fa-xs"></i>
-                          </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    About
+                                </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa fa-chevron-down fa-xs"></i>
+                                </button>
 
                             </h4>
                         </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul class="list-unstyled mx-3">
                                     <li> <a class="dropdown-item" href="mission.html">Our Mission</a></li>
-                                    <li> <a class="dropdown-item" href="the-bps-difference.html">The BPS Difference</a></li>
+                                    <li> <a class="dropdown-item" href="the-bps-difference.html">The BPS Difference</a>
+                                    </li>
                                     <li> <a class="dropdown-item" href="a-rich-history.html">A Rich History</a></li>
                                     <li> <a class="dropdown-item" href="leadership.html">Leadership</a></li>
-                                </ul>  </div>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h4 class="d-flex justify-content-between mb-0">
-                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                           admission
-                          </button>
-                                <button class="btn text-white collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <i class="fa fa-chevron-down fa-xs"></i>
-                          </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    admission
+                                </button>
+                                <button class="btn text-white collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa fa-chevron-down fa-xs"></i>
+                                </button>
 
                             </h4>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                them accusamus labore sustainable VHS.
                             </div>
                         </div>
                     </div>
@@ -314,8 +398,8 @@
     <div style="position: absolute; background: transparent; z-index: 3;" class="d-flex w-100 px-3">
         <div class="header-brand pl-4 pt-3">
             <a href="bps_home.html">
-                <img width="140" height="90" alt="" src="./logo.png"> 
-        </a>
+                <img width="140" height="90" alt="" src="./logo.png">
+            </a>
         </div>
         <div class=" d-flex flex-column w-100">
             <div class="d-flex justify-content-end mt-3">
@@ -330,7 +414,8 @@
 
                                 <li> <a class="dropdown-item" href="#">Employment</a></li>
                             </ul>
-                        </div> </li>
+                        </div>
+                    </li>
 
                     <li class="top-nav-bar-item"><a class="dropdown-item" href="">Apply</a> </li>
                     <li class="top-nav-bar-item">
@@ -338,8 +423,9 @@
                     </li>
                     <li class="top-nav-bar-item">
                         <a class="dropdown-item" href="">MyBharti</a></li>
-                     </ul>
-                <li style="list-style: none;" class="top-nav-bar-item"><a style="vertical-align: bottom;" class="mx-4 py-2" href="/search"><i class="fa fa-search text-white"></i></a></li>
+                </ul>
+                <li style="list-style: none;" class="top-nav-bar-item"><a class="mx-2" onclick="openSearchBar()"><i
+                            class="btn fa fa-search text-white"></i></a></li>
                 <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
                     <i class="fa fa-bars text-white"></i>
                 </button>
@@ -355,22 +441,25 @@
                                 <ul class="navbar-nav d-hover mr-auto">
                                     <li>
                                         <div class="dropdown">
-                                            <a  href="mission.html" class="dropbtn dropdown-item">
+                                            <a href="mission.html" class="dropbtn dropdown-item">
                                                 About
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/About Dropdown.jpeg" alt="">
+                                                        <img width="300" src="./Dropdown/About Dropdown.jpeg" alt="">
                                                     </div>
                                                     <div class="col">
 
-                                                       
-                                                                <p>
-                                                                    Established in 1980, Bharti Public School offers students educational opportunities that are unique and relevant to 21st century life. Our roots are local, but reach has gone global!
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            Established in 1980, Bharti Public School offers students
+                                                            educational opportunities that are unique and relevant to
+                                                            21st century life. Our roots are local, but reach has gone
+                                                            global!
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
@@ -382,15 +471,17 @@
                                                             <li class="list-group-item">
                                                                 <a href="a-rich-history.html"> A Rich History</a>
                                                             </li>
-                                                          
+
                                                         </ul>
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href="the-bps-difference.html"> The BPS Difference</a>
+                                                                <a href="the-bps-difference.html"> The BPS
+                                                                    Difference</a>
                                                             </li>
-                                                            <li class="list-group-item"> <a href="./leadership.html"> Leadership</a></li>
+                                                            <li class="list-group-item"> <a href="./leadership.html">
+                                                                    Leadership</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -404,19 +495,22 @@
                                         <div class="dropdown">
                                             <a href="admission-faq.html" class="dropbtn dropdown-item">
                                                 Admissions
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Admissions Dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/Admissions Dropdown.JPG"
+                                                            alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    Learn more about Bharti Public School’s admissions process, find answers to commonly asked questions about the school and submit your application online.
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            Learn more about Bharti Public School’s admissions process,
+                                                            find answers to commonly asked questions about the school
+                                                            and submit your application online.
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
@@ -428,20 +522,21 @@
                                                             <li class="list-group-item">
                                                                 <a href="tuition-fees.html"> Tuition Fees</a>
                                                             </li>
-                                                            
+
 
                                                         </ul>
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
-                                                            
+
                                                             <li class="list-group-item">
-                                                                <a href="forms-and-certificates.html">Forms & Certificates</a>
+                                                                <a href="forms-and-certificates.html">Forms &
+                                                                    Certificates</a>
                                                             </li>
 
                                                         </ul>
                                                     </div>
-                                                  
+
                                                 </div>
 
                                             </div>
@@ -452,39 +547,45 @@
                                         <div class="dropdown">
                                             <a href="common-page.html" class="dropdown-item dropbtn">
                                                 Academics
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Academics dropdown.jpg" alt="">
+                                                        <img width="300" src="./Dropdown/Academics dropdown.jpg" alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    At the heart of our philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive and complemented by a wide range of extra-curricular activities that foster growth and development.
-                                                                </p>
-                                                         
+
+                                                        <p>
+                                                            At the heart of our philosophy is the belief that education
+                                                            must engage more than the mind alone. A BPS education is
+                                                            comprehensive and complemented by a wide range of
+                                                            extra-curricular activities that foster growth and
+                                                            development.
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
 
                                                         <ul class="list-group list-group-flush">
-                                                            
+
                                                             <li class="list-group-item">
-                                                                <a href="lower-school.html">  Lower School</a></li>
+                                                                <a href="lower-school.html"> Lower School</a></li>
                                                             <li class="list-group-item">
                                                                 <a href="middle-school.html"> Middle School</a>
                                                             </li>
-                                                          
+
                                                         </ul>
                                                     </div>
                                                     <div class="col">
 
                                                         <ul class="list-group list-group-flush">
-                                                           
+
                                                             <li class="list-group-item">
                                                                 <a href="upper-school.html">Upper School</a>
                                                             </li>
-                                                            <li class="list-group-item"> <a href="student-resources.html"> Student Resources</a></li>
+                                                            <li class="list-group-item"> <a
+                                                                    href="student-resources.html"> Student Resources</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
 
@@ -498,19 +599,24 @@
                                         <div class="dropdown">
                                             <a href="life-at-bps.html" class="dropdown-item dropbtn">
                                                 Life at BPS
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/life at BPS_dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/life at BPS_dropdown.JPG"
+                                                            alt="">
                                                     </div>
                                                     <div class="col">
 
-                                                        
-                                                                <p>
-                                                                    The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search for new and better ideas that have made Bharti Public School into an epitome of academic progress.
-                                                                </p>
-                                                          
+
+                                                        <p>
+                                                            The pursuit and implementation of new ideas has been a
+                                                            hallmark of the school for more than four decades, resulting
+                                                            in a relentless search for new and better ideas that have
+                                                            made Bharti Public School into an epitome of academic
+                                                            progress.
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
 
@@ -523,7 +629,7 @@
                                                             <li class="list-group-item">
                                                                 <a href="creative-arts.html">Creative Arts</a>
                                                             </li>
-                                                          
+
                                                         </ul>
 
                                                     </div>
@@ -531,9 +637,12 @@
 
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href="community-outreach.html"> Community Outreach</a>
+                                                                <a href="community-outreach.html"> Community
+                                                                    Outreach</a>
                                                             </li>
-                                                            <li class="list-group-item"> <a href="outdoor-education.html"> Outdoor Education</a></li>
+                                                            <li class="list-group-item"> <a
+                                                                    href="outdoor-education.html"> Outdoor Education</a>
+                                                            </li>
                                                         </ul>
 
                                                     </div>
@@ -544,39 +653,42 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                            <a class="dropdown-item dropbtn">
+                                             <a href="community.html" class="dropdown-item dropbtn">
                                                 Community
                                               </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Community dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/Community dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    The Bharti Public School community, better known as Bharti Parivaar spells growth, impetus and success for the school and its fraternity including our faculty, staff, students, and alumni members.
+
+                                                        <p>
+                                                            The Bharti Public School community, better known as Bharti
+                                                            Parivaar spells growth, impetus and success for the school
+                                                            and its fraternity including our faculty, staff, students,
+                                                            and alumni members.
 
 
-                                                                </p>
-                                                          
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href="">Faculty+</a>
+                                                                <a href="faculty.html">Faculty+</a>
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <a href="">Parents+</a></li>
                                                             <li class="list-group-item">
                                                                 <a href=""> Students+</a>
                                                             </li>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
-                                                           
+
                                                             <li class="list-group-item">
                                                                 <a href="">Alumni</a>
                                                             </li>
@@ -592,19 +704,22 @@
                                         <div class="dropdown">
                                             <a class="dropdown-item dropbtn">
                                                 Contact
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Contact Dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/Contact Dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    In case of any questions or concerns, you may contact the school and get your queries answered. The school is consistently engaged in numerous activities and workshops, updates of which can be found on social media
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            In case of any questions or concerns, you may contact the
+                                                            school and get your queries answered. The school is
+                                                            consistently engaged in numerous activities and workshops,
+                                                            updates of which can be found on social media
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
@@ -641,11 +756,11 @@
                     <source media="(min-width:768px)" srcset="./logo.png">
                     <!-- <source media="(min-width:465px)" srcset="img_white_flower.jpg"> -->
                     <img width="100%" height="100%" alt="" src="./logo-md.png">
-            </picture>
-        </a>
+                </picture>
+            </a>
         </div>
         <div class=" d-flex flex-column w-100">
-          
+
             <div class="header-container mt-3">
                 <div class="d-flex justify-content-end">
 
@@ -657,23 +772,27 @@
                                 <ul class="navbar-nav d-hover mr-auto">
                                     <li>
                                         <div class="dropdown">
-                                            <a  href="mission.html" class="dropbtn dropdown-item">
+                                            <a href="mission.html" class="dropbtn dropdown-item">
                                                 About
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/About Dropdown.jpeg" alt="">
+                                                        <img width="300" src="./Dropdown/About Dropdown.jpeg" alt="">
                                                     </div>
                                                     <div class="col">
 
-                                                       
-                                                                <p>
-                                                                    Bharti Public School strives to innovate and offer students educational opportunities that are unique, engaging, and relevant to life in the 21st century. Our students explore their multiple interests in a dynamic academic environment while growing within
-                                                                    a nurturing community.
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            Bharti Public School strives to innovate and offer students
+                                                            educational opportunities that are unique, engaging, and
+                                                            relevant to life in the 21st century. Our students explore
+                                                            their multiple interests in a dynamic academic environment
+                                                            while growing within
+                                                            a nurturing community.
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
@@ -685,15 +804,17 @@
                                                             <li class="list-group-item">
                                                                 <a href="a-rich-history.html"> A Rich History</a>
                                                             </li>
-                                                          
+
                                                         </ul>
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href="the-bps-difference.html"> The BPS Difference</a>
+                                                                <a href="the-bps-difference.html"> The BPS
+                                                                    Difference</a>
                                                             </li>
-                                                            <li class="list-group-item"> <a href="./leadership.html"> Leadership</a></li>
+                                                            <li class="list-group-item"> <a href="./leadership.html">
+                                                                    Leadership</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -707,19 +828,22 @@
                                         <div class="dropdown">
                                             <a href="admission-faq.html" class="dropbtn dropdown-item">
                                                 Admissions
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Admissions Dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/Admissions Dropdown.JPG"
+                                                            alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    Learn more about Bharti Public School’s admissions process, find answers to commonly asked questions about the school and submit your application online.
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            Learn more about Bharti Public School’s admissions process,
+                                                            find answers to commonly asked questions about the school
+                                                            and submit your application online.
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
@@ -731,20 +855,21 @@
                                                             <li class="list-group-item">
                                                                 <a href="tuition-fees.html"> Tuition Fees</a>
                                                             </li>
-                                                            
+
 
                                                         </ul>
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
-                                                            
+
                                                             <li class="list-group-item">
-                                                                <a href="forms-and-certificates.html">Forms & Certificates</a>
+                                                                <a href="forms-and-certificates.html">Forms &
+                                                                    Certificates</a>
                                                             </li>
 
                                                         </ul>
                                                     </div>
-                                                  
+
                                                 </div>
 
                                             </div>
@@ -755,41 +880,47 @@
                                         <div class="dropdown">
                                             <a href="common-page.html" class="dropdown-item dropbtn">
                                                 Academics
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Academics dropdown.jpg" alt="">
+                                                        <img width="300" src="./Dropdown/Academics dropdown.jpg" alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    At the heart of Bharti Public School’s philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive, rigorous and complemented by opportunities to participate in a wide range of extra-curricular activities
-                                                                    that foster growth and development.
 
-                                                                </p>
-                                                         
+                                                        <p>
+                                                            At the heart of Bharti Public School’s philosophy is the
+                                                            belief that education must engage more than the mind alone.
+                                                            A BPS education is comprehensive, rigorous and complemented
+                                                            by opportunities to participate in a wide range of
+                                                            extra-curricular activities
+                                                            that foster growth and development.
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
 
                                                         <ul class="list-group list-group-flush">
-                                                            
+
                                                             <li class="list-group-item">
-                                                                <a href="lower-school.html">  Lower School</a></li>
+                                                                <a href="lower-school.html"> Lower School</a></li>
                                                             <li class="list-group-item">
                                                                 <a href="middle-school.html"> Middle School</a>
                                                             </li>
-                                                          
+
                                                         </ul>
                                                     </div>
                                                     <div class="col">
 
                                                         <ul class="list-group list-group-flush">
-                                                           
+
                                                             <li class="list-group-item">
                                                                 <a href="upper-school.html">Upper School</a>
                                                             </li>
-                                                            <li class="list-group-item"> <a href="student-resources.html"> Student Resources</a></li>
+                                                            <li class="list-group-item"> <a
+                                                                    href="student-resources.html"> Student Resources</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
 
@@ -803,21 +934,27 @@
                                         <div class="dropdown">
                                             <a href="life-at-bps.html" class="dropdown-item dropbtn">
                                                 Life at BPS
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/life at BPS_dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/life at BPS_dropdown.JPG"
+                                                            alt="">
                                                     </div>
                                                     <div class="col">
 
-                                                        
-                                                                <p>
-                                                                    Bharti Public School creates an atmosphere of innovation and creativity which, by design, always be front and center. The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search
-                                                                    for new and better ideas that have made Bharti Public School into an epitome of academic progress.
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            Bharti Public School creates an atmosphere of innovation and
+                                                            creativity which, by design, always be front and center. The
+                                                            pursuit and implementation of new ideas has been a hallmark
+                                                            of the school for more than four decades, resulting in a
+                                                            relentless search
+                                                            for new and better ideas that have made Bharti Public School
+                                                            into an epitome of academic progress.
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
 
@@ -830,7 +967,7 @@
                                                             <li class="list-group-item">
                                                                 <a href="creative-arts.html">Creative Arts</a>
                                                             </li>
-                                                          
+
                                                         </ul>
 
                                                     </div>
@@ -838,9 +975,12 @@
 
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href="community-outreach.html"> Community Outreach</a>
+                                                                <a href="community-outreach.html"> Community
+                                                                    Outreach</a>
                                                             </li>
-                                                            <li class="list-group-item"> <a href="outdoor-education.html"> Outdoor Education</a></li>
+                                                            <li class="list-group-item"> <a
+                                                                    href="outdoor-education.html"> Outdoor Education</a>
+                                                            </li>
                                                         </ul>
 
                                                     </div>
@@ -851,39 +991,42 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                            <a class="dropdown-item dropbtn">
+                                             <a href="community.html" class="dropdown-item dropbtn">
                                                 Community
                                               </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Community dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/Community dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    The Bharti Public School community, better known as Bharti Parivaar spells growth, impetus and success for the school and its fraternity including our faculty, staff, students, and alumni members.
+
+                                                        <p>
+                                                            The Bharti Public School community, better known as Bharti
+                                                            Parivaar spells growth, impetus and success for the school
+                                                            and its fraternity including our faculty, staff, students,
+                                                            and alumni members.
 
 
-                                                                </p>
-                                                          
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href="">Faculty+</a>
+                                                                <a href="faculty.html">Faculty+</a>
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <a href="">Parents+</a></li>
                                                             <li class="list-group-item">
                                                                 <a href=""> Students+</a>
                                                             </li>
-                                                           
+
                                                         </ul>
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
-                                                           
+
                                                             <li class="list-group-item">
                                                                 <a href="">Alumni</a>
                                                             </li>
@@ -899,19 +1042,22 @@
                                         <div class="dropdown">
                                             <a class="dropdown-item dropbtn">
                                                 Contact
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <img width="300"  src="./Dropdown/Contact Dropdown.JPG" alt="">
+                                                        <img width="300" src="./Dropdown/Contact Dropdown.JPG" alt="">
                                                     </div>
                                                     <div class="col">
-                                                       
-                                                                <p>
-                                                                    In case of any questions or concerns, you may contact the school and get your queries answered. The school is consistently engaged in numerous activities and workshops, updates of which can be found on social media
 
-                                                                </p>
-                                                          
+                                                        <p>
+                                                            In case of any questions or concerns, you may contact the
+                                                            school and get your queries answered. The school is
+                                                            consistently engaged in numerous activities and workshops,
+                                                            updates of which can be found on social media
+
+                                                        </p>
+
                                                     </div>
                                                     <div class="col">
                                                         <ul class="list-group list-group-flush">
@@ -930,11 +1076,12 @@
                                         </div>
 
                                     </li>
-                                 
+
                                 </ul>
-                              
+
                             </div>
-                            <a style="vertical-align: bottom;" class="navbar-toggler d-block d-lg-none mx-2 py-2" href="/search"><i class="fa fa-search text-white"></i></a>
+                            <a style="vertical-align: bottom;" class="navbar-toggler d-block d-lg-none mx-2 py-2"
+                                href="/search"><i class="fa fa-search text-white"></i></a>
                             <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
                                 <i class="fa fa-bars text-white"></i>
                             </button>
@@ -945,21 +1092,50 @@
 
         </div>
     </div>
+    <!-- <div class="searchf searchopenn">
+        <a href="#" class="searchclose"><i class="fa fa-times"></i></a>
+          <div class="searchbox">
+              <div class="input-group-append">
+                  <i class="fa fa-search insearch"></i>
+                </div>
+              <input type="text" placeholder="Search here..." class="form-control">
+             
+          </div>
+      </div> -->
+    <div id="searchBar" class="searchBar-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSearchBar()">&times;</a>
+        <div class="searchBar-overlay-content">
+            <div class="searchbox">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search here..." aria-label="Search here..."
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append bg-light rounded-right ">
+                        <i class="btn fa fa-search fa-2x "></i>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
     <div class="body-wrap">
 
         <div class="home-wrap-container align-items-lg-end align-items-center">
-             <div class="text-center">
+            <div class="text-center">
                 <header class="header-title-text mb-5">
                     <h1 class="text-white fadeInUp delay-2s animated fast">Your Journey Starts Here</h1>
                     <div class="expore-btn  delay-3s animated">
-                        <button type="button" style="letter-spacing: 3px; box-shadow: inset 0 0 0 0.14286em transparent;" class="explore"><span> Explore Campus</span></button>
+                        <button type="button"
+                            style="letter-spacing: 3px; box-shadow: inset 0 0 0 0.14286em transparent;"
+                            class="explore"><span> Explore Campus</span></button>
                     </div>
                     <div class="arrow mb-3 bounce">
                         <a style="cursor: pointer;" onclick="gotoPos()">
                             <!-- <i class="fa fa-angle-double-down fa-3x text-white" aria-hidden="true"></i> -->
                             <img width="100%" src="./down.png" alt="">
                         </a>
-                       
+
                     </div>
 
                 </header>
@@ -982,13 +1158,16 @@
                     <!-- <section></section> -->
                     <h1 style="
                     font-size: 40px;
-                    text-transform: uppercase;"  class="my-4" data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-offset="0"><span>PRIDE</span><br> in Everything We Do</h1>
-                    <p  style="font-family: 'sofiaPro'; font-size: 18px;" class="my-5" data-aos="fade-right" data-aos-duration="2000">At BPS, our Core Values of Positivity, Resilience, Integrity, Determination and Empowerment are more than mere words. Our students and faculty live and breathe them every day. Our values set BPS’ students apart and send them out into
+                    text-transform: uppercase;" class="my-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                        data-aos-offset="0"><span>PRIDE</span><br> in Everything We Do</h1>
+                    <p style="font-family: 'sofiaPro'; font-size: 18px;" class="my-5" data-aos="fade-right"
+                        data-aos-duration="2000">At BPS, our Core Values of Positivity, Resilience, Integrity,
+                        Determination and Empowerment are more than mere words. Our students and faculty live and
+                        breathe them every day. Our values set BPS’ students apart and send them out into
                         the world as confident and capable leaders of the 21st century.
                     </p>
-                    <h5 class="my-5" data-aos="fade-left" data-aos-duration="2000"><a style="text-decoration: none;" href="">Learn more about BPS PRIDE</a></h5>
+                    <h5 class="my-5" data-aos="fade-left" data-aos-duration="2000"><a style="text-decoration: none;"
+                            href="">Learn more about BPS PRIDE</a></h5>
                 </section>
             </div>
             <div style="position: absolute; z-index: -1;" id="box2" data-scroll-speed="20"></div>
@@ -997,14 +1176,19 @@
         <div class="_fold_3">
             <div class="d-flex flex-wrap">
                 <div class="_feature_box">
-                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Community_2.JPG" alt="">
+                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Community_2.JPG"
+                            alt="">
                         <p class="fixp">Learning</p>
                         <figcaption>
                             <div>
                                 <p class="my-2">
-                                    Our students are at the heart of Bharti Public School. Our teachers are dedicated, internationally experienced professionals and as a CBSE Board school, with world-class amenities our highly motivated students acquire attitudes for a holistic development
+                                    Our students are at the heart of Bharti Public School. Our teachers are dedicated,
+                                    internationally experienced professionals and as a CBSE Board school, with
+                                    world-class amenities our highly motivated students acquire attitudes for a holistic
+                                    development
                                     to meet the growing demands of the 21st century.</p>
-                                <button type="button"  style="border-radius:0;" class="btn btn-outline-light my-2">LEARN MORE</button>
+                                <button type="button" style="border-radius:0;" class="btn btn-outline-light my-2">LEARN
+                                    MORE</button>
 
                             </div>
                         </figcaption>
@@ -1016,9 +1200,12 @@
                         <p class="fixp">Arts</p>
                         <figcaption>
                             <div style="z-index: 5;">
-                                <p class="my-2"> The Arts thrive at Bharti Public School. Guided by talented and creative faculty, our students are taught foundational skills while also being challenged to express their own artistic vision. They imagine, create, and express
+                                <p class="my-2"> The Arts thrive at Bharti Public School. Guided by talented and
+                                    creative faculty, our students are taught foundational skills while also being
+                                    challenged to express their own artistic vision. They imagine, create, and express
                                     through various clubs, debates and cultural events.</p>
-                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN MORE</button>
+                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN
+                                    MORE</button>
 
                             </div>
                         </figcaption>
@@ -1027,13 +1214,18 @@
                 </div>
 
                 <div class="_feature_box">
-                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Athletics.jpg" alt="">
+                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Athletics.jpg"
+                            alt="">
                         <p class="fixp">Athletics</p>
                         <figcaption>
                             <div style="z-index: 5;">
-                                <p class="my-2">BPS encourages every student to participate in different competitive sports. The Bharti Pro Sports Excellence Arena (BPSEA) boasts of a dedicated athletic-track, indoor cricket pitch, basketball and volleyball courts where
-                                    student-athletes are challenged to learn and develop new skills, and achieve common goals.</p>
-                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN MORE</button>
+                                <p class="my-2">BPS encourages every student to participate in different competitive
+                                    sports. The Bharti Pro Sports Excellence Arena (BPSEA) boasts of a dedicated
+                                    athletic-track, indoor cricket pitch, basketball and volleyball courts where
+                                    student-athletes are challenged to learn and develop new skills, and achieve common
+                                    goals.</p>
+                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN
+                                    MORE</button>
 
                             </div>
                         </figcaption>
@@ -1041,14 +1233,18 @@
 
                 </div>
                 <div class="_feature_box">
-                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Learning.jpg" alt="">
+                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Learning.jpg"
+                            alt="">
                         <p class="fixp">Campus</p>
                         <figcaption>
                             <div style="z-index: 5;">
-                                <p class="my-2">Beautiful and functional, BPS stands out among schools in East Delhi with its exciting, purpose-built facilities. It is a citadel of learning that reflects through its vitality in classrooms, energy on the playgrounds and
+                                <p class="my-2">Beautiful and functional, BPS stands out among schools in East Delhi
+                                    with its exciting, purpose-built facilities. It is a citadel of learning that
+                                    reflects through its vitality in classrooms, energy on the playgrounds and
                                     state-of-the-art infrastructure, reflecting the spirit of our extraordinary school.
                                 </p>
-                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN MORE</button>
+                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN
+                                    MORE</button>
 
                             </div>
                         </figcaption>
@@ -1056,14 +1252,19 @@
 
                 </div>
                 <div class="_feature_box">
-                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Campus_2.jpg" alt="">
+                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/Campus_2.jpg"
+                            alt="">
                         <p class="fixp">Community</p>
                         <figcaption>
                             <div style="z-index: 5;">
-                                <p class="my-2">Our Community defines our success. From first steps until well after graduation, the BPS community remains a supportive, caring and diverse part of school life. Join us, get involved and experience everything a top school
-                                    in Delhi has to offer, from volunteer opportunities to exciting events and initiatives.
+                                <p class="my-2">Our Community defines our success. From first steps until well after
+                                    graduation, the BPS community remains a supportive, caring and diverse part of
+                                    school life. Join us, get involved and experience everything a top school
+                                    in Delhi has to offer, from volunteer opportunities to exciting events and
+                                    initiatives.
                                 </p>
-                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN MORE</button>
+                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN
+                                    MORE</button>
 
                             </div>
                         </figcaption>
@@ -1071,14 +1272,18 @@
 
                 </div>
                 <div class="_feature_box">
-                    <figure class="_fold_3_overlay"> <img width="100%" height="100%" src="./3rdFold/OutdoorEducation.jpg" alt="">
+                    <figure class="_fold_3_overlay"> <img width="100%" height="100%"
+                            src="./3rdFold/OutdoorEducation.jpg" alt="">
                         <p class="fixp">Outdoor Education</p>
                         <figcaption>
                             <div style="z-index: 5;">
-                                <p class="my-2">BPS’s outdoor education department, has run more than 20 outdoor expeditions and day trips each year for over a decade. Taking learning outside the classroom and into the society, BPS has a strong holistic focus incorporated
+                                <p class="my-2">BPS’s outdoor education department, has run more than 20 outdoor
+                                    expeditions and day trips each year for over a decade. Taking learning outside the
+                                    classroom and into the society, BPS has a strong holistic focus incorporated
                                     into all its programs.
                                 </p>
-                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN MORE</button>
+                                <button type="button" class="btn btn-outline-light my-2" style="border-radius:0;">LEARN
+                                    MORE</button>
 
                             </div>
                         </figcaption>
@@ -1101,7 +1306,8 @@
 
                             <div class="">
                                 <figure class="">
-                                    <picture class="text-center"><img height="200" alt="" id="" role="presentation" src="./stats/classroom_moving-icon.gif"></picture>
+                                    <picture class="text-center"><img height="200" alt="" id="" role="presentation"
+                                            src="./stats/classroom_moving-icon.gif"></picture>
                                 </figure>
 
                             </div>
@@ -1114,7 +1320,8 @@
 
                             <div class="fsElementHeaderContent">
                                 <figure class="fsImage">
-                                    <picture class="text-center"><img width="200" height="200" alt="" id="" role="presentation" src="./stats/student_moving-icon.gif"></picture>
+                                    <picture class="text-center"><img width="200" height="200" alt="" id=""
+                                            role="presentation" src="./stats/student_moving-icon.gif"></picture>
                                 </figure>
 
                             </div>
@@ -1127,7 +1334,8 @@
 
                             <div class="fsElementHeaderContent">
                                 <figure class="fsImage">
-                                    <picture><img width="200" height="200" alt="" id="" role="presentation" src="./stats/money_moving-icon.gif" width="94"></picture>
+                                    <picture><img width="200" height="200" alt="" id="" role="presentation"
+                                            src="./stats/money_moving-icon.gif" width="94"></picture>
                                 </figure>
 
                             </div>
@@ -1140,7 +1348,8 @@
 
                             <div class="fsElementHeaderContent">
                                 <figure class="fsImage">
-                                    <picture><img width="200" height="200" alt="" id="" role="presentation" src="./stats/trophy_moving-icon.gif"></picture>
+                                    <picture><img width="200" height="200" alt="" id="" role="presentation"
+                                            src="./stats/trophy_moving-icon.gif"></picture>
                                 </figure>
 
 
@@ -1166,7 +1375,8 @@
                     <div class="news-content">
                         <h5 class="news-title">Our Founding Fathers
                         </h5>
-                        <div class="news-text"> 1980 was the year, when sharing a common passion for teaching, Dr. S.L. Batra & Sh. H.C.B. Bharti opened the doors of BPS to their first batch of students.</div>
+                        <div class="news-text"> 1980 was the year, when sharing a common passion for teaching, Dr. S.L.
+                            Batra & Sh. H.C.B. Bharti opened the doors of BPS to their first batch of students.</div>
                     </div>
                 </div>
 
@@ -1175,17 +1385,22 @@
                     </div>
                     <div class="news-content">
                         <h5 class="news-title">School Shed</h5>
-                        <div class="news-text">The indefatigable efforts of the founders reaped fruits and within seven years, BPS moved to Swasthya Vihar – its present dwelling. It was a humble brick ‘n’ mortar structure that became home to faculty and students alike.
+                        <div class="news-text">The indefatigable efforts of the founders reaped fruits and within seven
+                            years, BPS moved to Swasthya Vihar – its present dwelling. It was a humble brick ‘n’ mortar
+                            structure that became home to faculty and students alike.
                         </div>
                     </div>
                 </div>
 
                 <div class="news-track">
-                    <div class="news-image"><img width="100%" height="100%" src="./Richhistory/OK_1980-Founder-1-ConvertImage (1).jpg">
+                    <div class="news-image"><img width="100%" height="100%"
+                            src="./Richhistory/OK_1980-Founder-1-ConvertImage (1).jpg">
                     </div>
                     <div class="news-content">
                         <h5 class="news-title"> State Teachers Award to the Founder</h5>
-                        <div class="news-text"> For his unparalleled dedication and selfless devotion towards academia, the founder-director, Dr. S.L. Batra was bestowed with the prestigious State Teachers’ Award. </div>
+                        <div class="news-text"> For his unparalleled dedication and selfless devotion towards academia,
+                            the founder-director, Dr. S.L. Batra was bestowed with the prestigious State Teachers’
+                            Award. </div>
                     </div>
                 </div>
 
@@ -1195,7 +1410,9 @@
                     <div class="news-content">
                         <h5 class="news-title">Inauguration of School Campus at Swasthya Vihar
                         </h5>
-                        <div class="news-text"> From 1980 to 1998, the school saw a meteoric rise from a humble structure to the present day state-of-the-art green campus. With changing times, the campus became more modern and functional in approach.</div>
+                        <div class="news-text"> From 1980 to 1998, the school saw a meteoric rise from a humble
+                            structure to the present day state-of-the-art green campus. With changing times, the campus
+                            became more modern and functional in approach.</div>
                     </div>
                 </div>
 
@@ -1207,7 +1424,8 @@
                         <h5 class="news-title">School operations go ONLINE!
 
                         </h5>
-                        <div class="news-text"> As BPS celebrates its 40th year anniversary, its operations including academics and activities go digital!</div>
+                        <div class="news-text"> As BPS celebrates its 40th year anniversary, its operations including
+                            academics and activities go digital!</div>
                     </div>
                 </div>
 
@@ -1226,27 +1444,27 @@
                     <div class="dots-container">
                         <div class="events">
                             <ol style="list-style: none;">
-                               
-                                <li><a  id="0" href="#0" data-date="16/01/2014" class="selected">1980</a></li>
-                                <li><a  id="1" href="#0" data-date="28/02/2014">1981</a></li>
-                                <li><a  id="2" href="#0" data-date="20/04/2014">1995</a></li>
-                                <li><a  id="3" href="#0" data-date="20/05/2014">1998</a></li>
-                                <li><a  id="4" href="#0" data-date="09/07/2014">2004</a></li>
-                                <li><a  id="5" href="#0" data-date="30/08/2014">2005</a></li>
-                                <li><a  id="6" href="#0" data-date="15/09/2014">2009</a></li>
-                                <li><a  id="7" href="#0" data-date="01/11/2014">2013</a></li>
-                                <li><a  id="8" href="#0" data-date="10/12/2014">2019</a></li>
-                                <li><a  id="9" href="#0" data-date="19/01/2015">2020</a></li>
-        
+
+                                <li><a id="0" href="#0" data-date="16/01/2014" class="selected">1980</a></li>
+                                <li><a id="1" href="#0" data-date="28/02/2014">1981</a></li>
+                                <li><a id="2" href="#0" data-date="20/04/2014">1995</a></li>
+                                <li><a id="3" href="#0" data-date="20/05/2014">1998</a></li>
+                                <li><a id="4" href="#0" data-date="09/07/2014">2004</a></li>
+                                <li><a id="5" href="#0" data-date="30/08/2014">2005</a></li>
+                                <li><a id="6" href="#0" data-date="15/09/2014">2009</a></li>
+                                <li><a id="7" href="#0" data-date="01/11/2014">2013</a></li>
+                                <li><a id="8" href="#0" data-date="10/12/2014">2019</a></li>
+                                <li><a id="9" href="#0" data-date="19/01/2015">2020</a></li>
+
                             </ol>
-            
+
                             <span class="filling-line" aria-hidden="true"></span>
                         </div> <!-- .events -->
                     </div> <!-- .dots-container -->
                 </div>
-                    </section>
+            </section>
 
-             
+
             <div id="richHistory" class="d-flex richHistory">
                 <div class="history-track">
                     <div class="d-flex  flex-column flex-md-row">
@@ -1255,7 +1473,9 @@
                         <div class="history-content">
                             <h5 class="slide-title">Our Founding Fathers
                             </h5>
-                            <div class="slide-text"> 1980 was the year, when sharing a common passion for teaching, Dr. S.L. Batra & Sh. H.C.B. Bharti opened the doors of BPS to their first batch of students.</div>
+                            <div class="slide-text"> 1980 was the year, when sharing a common passion for teaching, Dr.
+                                S.L. Batra & Sh. H.C.B. Bharti opened the doors of BPS to their first batch of students.
+                            </div>
                         </div>
                     </div>
 
@@ -1263,11 +1483,14 @@
 
                 <div class="history-track">
                     <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/1980-old building.jpg">
+                        <div class="slide-image"><img width="100%" height="100%"
+                                src="./Richhistory/1980-old building.jpg">
                         </div>
                         <div class="history-content">
                             <h5 class="slide-title">School Shed</h5>
-                            <div class="slide-text">The indefatigable efforts of the founders reaped fruits and within seven years, BPS moved to Swasthya Vihar – its present dwelling. It was a humble brick ‘n’ mortar structure that became home to faculty and students alike.
+                            <div class="slide-text">The indefatigable efforts of the founders reaped fruits and within
+                                seven years, BPS moved to Swasthya Vihar – its present dwelling. It was a humble brick
+                                ‘n’ mortar structure that became home to faculty and students alike.
                             </div>
                         </div>
                     </div>
@@ -1275,11 +1498,14 @@
 
                 <div class="history-track">
                     <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_1980-Founder-1-ConvertImage (1).jpg">
+                        <div class="slide-image"><img width="100%" height="100%"
+                                src="./Richhistory/OK_1980-Founder-1-ConvertImage (1).jpg">
                         </div>
                         <div class="history-content">
                             <h5 class="slide-title"> State Teachers Award to the Founder</h5>
-                            <div class="slide-text"> For his unparalleled dedication and selfless devotion towards academia, the founder-director, Dr. S.L. Batra was bestowed with the prestigious State Teachers’ Award. </div>
+                            <div class="slide-text"> For his unparalleled dedication and selfless devotion towards
+                                academia, the founder-director, Dr. S.L. Batra was bestowed with the prestigious State
+                                Teachers’ Award. </div>
                         </div>
                     </div>
                 </div>
@@ -1291,7 +1517,9 @@
                         <div class="history-content">
                             <h5 class="slide-title">Inauguration of School Campus at Swasthya Vihar
                             </h5>
-                            <div class="slide-text"> From 1980 to 1998, the school saw a meteoric rise from a humble structure to the present day state-of-the-art green campus. With changing times, the campus became more modern and functional in approach.</div>
+                            <div class="slide-text"> From 1980 to 1998, the school saw a meteoric rise from a humble
+                                structure to the present day state-of-the-art green campus. With changing times, the
+                                campus became more modern and functional in approach.</div>
                         </div>
                     </div>
                 </div>
@@ -1302,7 +1530,9 @@
                         </div>
                         <div class="history-content">
                             <h5 class="slide-title">BPS opens its second branch at Mayur Vihar </h5>
-                            <div class="slide-text"> BPS continued to flourish in leaps and bounds; unveiled its another branch at Mayur Vihar in 2004. The imposing structure is a testimony of the hard work of the think tank.</div>
+                            <div class="slide-text"> BPS continued to flourish in leaps and bounds; unveiled its another
+                                branch at Mayur Vihar in 2004. The imposing structure is a testimony of the hard work of
+                                the think tank.</div>
                         </div>
                     </div>
                 </div>
@@ -1315,7 +1545,8 @@
                             <h5 class="slide-title">Silver Jubilee Celebrations at the National Stadium
 
                             </h5>
-                            <div class="slide-text"> Sunita Godara, National Marathon Champion facilitated the annual sports function at the National Stadium with participation of all students at BPS.</div>
+                            <div class="slide-text"> Sunita Godara, National Marathon Champion facilitated the annual
+                                sports function at the National Stadium with participation of all students at BPS.</div>
                         </div>
                     </div>
                 </div>
@@ -1328,20 +1559,25 @@
                             <h5 class="slide-title">BPS inaugurates its third branch, Prakriti at Noida
 
                             </h5>
-                            <div class="slide-text"> The Bharti Group of Schools takes a stride and inaugurates Prakriti, a K-12 school with learner-centred curriculum and interdisciplinary learning methods</div>
+                            <div class="slide-text"> The Bharti Group of Schools takes a stride and inaugurates
+                                Prakriti, a K-12 school with learner-centred curriculum and interdisciplinary learning
+                                methods</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="history-track">
                     <div class="d-flex flex-column flex-md-row">
-                        <div class="slide-image"><img width="100%" height="100%" src="./Richhistory/OK_2013-Teachers State Award.jpg">
+                        <div class="slide-image"><img width="100%" height="100%"
+                                src="./Richhistory/OK_2013-Teachers State Award.jpg">
                         </div>
                         <div class="history-content">
                             <h5 class="slide-title"> National Award given to Dr. Savita Arora
 
                             </h5>
-                            <div class="slide-text"> Our Principal, Dr. Savita Arora was the recipient of the prestigious National Award for Teachers and was facilitated by President, Pranab Mukherjee.</div>
+                            <div class="slide-text"> Our Principal, Dr. Savita Arora was the recipient of the
+                                prestigious National Award for Teachers and was facilitated by President, Pranab
+                                Mukherjee.</div>
                         </div>
                     </div>
                 </div>
@@ -1354,7 +1590,8 @@
                             <h5 class="slide-title">BPS unveils its sports arena, BPSEA
 
                             </h5>
-                            <div class="slide-text"> The Bharti Pro Sports Excellence Arena (BPSEA) boasts of a dedicated athletic-track, indoor cricket pitch, basketball and volleyball courts</div>
+                            <div class="slide-text"> The Bharti Pro Sports Excellence Arena (BPSEA) boasts of a
+                                dedicated athletic-track, indoor cricket pitch, basketball and volleyball courts</div>
                         </div>
                     </div>
                 </div>
@@ -1367,12 +1604,13 @@
                             <h5 class="slide-title">School operations go ONLINE!
 
                             </h5>
-                            <div class="slide-text"> As BPS celebrates its 40th year anniversary, its operations including academics and activities go digital!</div>
+                            <div class="slide-text"> As BPS celebrates its 40th year anniversary, its operations
+                                including academics and activities go digital!</div>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
             <div class="d-flex justify-content-center">
                 <a style="cursor: pointer;" class="m-2 text-dark timeline-prev">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -1383,17 +1621,18 @@
             </div>
 
         </section>
-      
+
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
                         ...
@@ -1408,42 +1647,46 @@
         <footer style="background-image: url(./bg_footer.jpg);
         background-size: cover;
         background-position: center;">
-            <div class="footer-bg" >
-    
-              
+            <div class="footer-bg">
+
+
                 <div class="row mx-0">
                     <div style="z-index: 1;" class="social-icons col-md-4">
                         <h4 class="text-white text-center my-5">Stay Connected</h4>
                         <div class="d-flex justify-content-center">
                             <div>
-                                <a href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook"
+                                        aria-hidden="true"></i></a>
                             </div>
                             <div>
-                                <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i
+                                        class="fa fa-linkedin" aria-hidden="true"></i></a>
                             </div>
                             <div>
-                                <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i
+                                        class="fa fa-youtube" aria-hidden="true"></i></a>
                             </div>
                             <div>
-                                <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
-    
+
                     </div>
                     <div style="z-index: 1;" class="col-md-4 text-center pt-4">
                         <div class=" p-3">
-    
+
                             <img src="./logo.png" alt="">
-    
+
                         </div>
                         <div class="footer-title my-5">
                             <!-- <h6><b> Bharti Public School</b></h6>
                             <h6>Swasthya Vihar</h6> -->
                             <p>Near, Metro Station, Vikas Marg, Nirman Vihar, <br>Swasthya Vihar, New Delhi 110092.</p>
-    
+
                         </div>
                         <div class="d-flex justify-content-around  text-white mt-2">
-    
+
                             <!-- <div class="footer-links"> -->
                             <!-- <div class="d-flex "> -->
                             <a style="min-width: 115px;" class=" btn btn-outline-light rounded-0" href="">Explore</a>
@@ -1452,9 +1695,9 @@
                             <!-- </div> -->
                             <!-- </div> -->
                         </div>
-    
+
                     </div>
-    
+
                     <div style="z-index: 1;" class="acredition col-md-4 text-center">
                         <h4 class="text-white my-5">Accreditation</h4>
                         <div class="d-flex justify-content-center">
@@ -1462,13 +1705,15 @@
                                 <img width="100%" src="./accreditation/cbse-logo-png-3-1.png" alt="">
                             </div>
                             <div style="width: 150px;">
-                                <img width="100%" src="./accreditation/Last Fold - Accreditation British council.png" alt="">
+                                <img width="100%" src="./accreditation/Last Fold - Accreditation British council.png"
+                                    alt="">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mx-0 mt-4">
-                    <div style="z-index: 1" class="w-100 pt-4 px-5 mx-0 ml-md-3 mr-md-5 d-flex flex-column flex-md-row justify-content-between">
+                    <div style="z-index: 1"
+                        class="w-100 pt-4 px-5 mx-0 ml-md-3 mr-md-5 d-flex flex-column flex-md-row justify-content-between">
                         <div style="flex:2;">
                             <ul style="list-style: none;" class="d-flex justify-content-around px-0">
                                 <li><a class="text-white p-2" href="#">Directory</a></li>
@@ -1476,39 +1721,39 @@
                                 <li><a class="text-white p-2" href="#">Site Map</a></li>
                                 <li style="border-right: 1px solid #fff;"></li>
                                 <li><a class="text-white p-2" href="#">Careers</a></li>
-                              </ul>  
+                            </ul>
                         </div>
-                      <div style="z-index: 1; flex: 5;" class="text-white mx-0">
-                        <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
-                      </div>
-    
-                      </div>
+                        <div style="z-index: 1; flex: 5;" class="text-white mx-0">
+                            <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
+                        </div>
+
+                    </div>
                 </div>
-                
-    
-               
+
+
+
             </div>
             <div class="mr-2 mb-2" style="display: inline;
             position: absolute;
             bottom: 0;
             z-index: 1;
             right: 0;">
-                <a  style=" cursor: pointer;"  onclick="gotoTop()">
+                <a style=" cursor: pointer;" onclick="gotoTop()">
                     <div class="d-flex flex-column">
                         <i class="fa fa-angle-double-up fa-2x text-white mx-3"></i>
                         <span style="font-size: 10px;" class="text-white">Take me up</span>
                     </div>
-                  
+
                 </a>
-               
+
             </div>
-    
-    
+
+
         </footer>
-    
+
 
     </div>
-   
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
@@ -1527,7 +1772,7 @@
         //     ease: "elastic",
         //     force3D: true
         // });
-        (function(){a={_b:0,c:function(){this._b++;return this.b;}};HTMLElement.prototype.pseudoStyle=function(d,e,f){var g="pseudoStyles";var h=document.head||document.getElementsByTagName('head')[0];var i=document.getElementById(g)||document.createElement('style');i.id=g;var j="pseudoStyle"+a.c();this.className+=" "+j;i.innerHTML+=" ."+j+":"+d+"{"+e+":"+f+"}";h.appendChild(i);return this;};})();
+        (function () { a = { _b: 0, c: function () { this._b++; return this.b; } }; HTMLElement.prototype.pseudoStyle = function (d, e, f) { var g = "pseudoStyles"; var h = document.head || document.getElementsByTagName('head')[0]; var i = document.getElementById(g) || document.createElement('style'); i.id = g; var j = "pseudoStyle" + a.c(); this.className += " " + j; i.innerHTML += " ." + j + ":" + d + "{" + e + ":" + f + "}"; h.appendChild(i); return this; }; })();
         gsap.set(".explore", {
             scale: 0.1,
             opacity: 0,
@@ -1542,13 +1787,21 @@
         });
     </script>
     <script>
+
+        function openSearchBar() {
+            document.getElementById("searchBar").style.height = "100%";
+        }
+
+        function closeSearchBar() {
+            document.getElementById("searchBar").style.height = "0%";
+        }
         let scrollyArrow = document.getElementById('fold_2');
         function gotoPos() {
             window.scroll({
-            behavior: 'smooth',
-            left: 0,
-            top: scrollyArrow.offsetTop 
-  });
+                behavior: 'smooth',
+                left: 0,
+                top: scrollyArrow.offsetTop
+            });
         }
         function openNav() {
             console.log("open sidenav");
@@ -1556,11 +1809,11 @@
         }
         function gotoTop() {
             window.scroll({
-            behavior: 'smooth',
-            left: 0,
-            top: 0
-  });
-      
+                behavior: 'smooth',
+                left: 0,
+                top: 0
+            });
+
         }
 
 
@@ -1569,28 +1822,28 @@
         }
 
         function updateFilling(filling, index) {
-		//change .filling-line length according to the selected event
-		var scaleValue = (126*(index + 1))/1200;
-		setTransformValue(filling.get(0), 'scaleX', scaleValue);
-    }
-    
-    function setTransformValue(element, property, value) {
-		element.style["-webkit-transform"] = property+"("+value+")";
-		element.style["-moz-transform"] = property+"("+value+")";
-		element.style["-ms-transform"] = property+"("+value+")";
-		element.style["-o-transform"] = property+"("+value+")";
-		element.style["transform"] = property+"("+value+")";
-	}
+            //change .filling-line length according to the selected event
+            var scaleValue = (126 * (index + 1)) / 1200;
+            setTransformValue(filling.get(0), 'scaleX', scaleValue);
+        }
+
+        function setTransformValue(element, property, value) {
+            element.style["-webkit-transform"] = property + "(" + value + ")";
+            element.style["-moz-transform"] = property + "(" + value + ")";
+            element.style["-ms-transform"] = property + "(" + value + ")";
+            element.style["-o-transform"] = property + "(" + value + ")";
+            element.style["transform"] = property + "(" + value + ")";
+        }
         function getIndex(index) {
             var timeline = $('.richHistory');
             // console.log($(this));
-            let filling_element =  timeline.find('.filling-line');
+            let filling_element = timeline.find('.filling-line');
             updateFilling(filling_element, index);
 
         }
 
-        (function($) {
-            $(document).ready(function() {
+        (function ($) {
+            $(document).ready(function () {
                 // var controller = new ScrollMagic.Controller();
 
                 // $("._fold_1").each(function() {
@@ -1623,7 +1876,7 @@
                     centerMode: true,
                     variableWidth: true,
                     centerPadding: '100px',
-                    customPaging: function(slick, index) {
+                    customPaging: function (slick, index) {
                         return `<span id="time${index}" >` + (timeLine[index]) + '</span>';
                         // <a onclick="getIndex(${index})" data-date="${timeLine[index]}">${timeLine[index]}</a>
                         // ;
@@ -1648,24 +1901,24 @@
                 });
 
                 var timeline = $('.richHistory');
-               let filler = timeline.find('.slick-dots');
-               filler.append(' <span id="filling-line" class="filling-line" aria-hidden="true"></span>');
-                var filling_element =  timeline.find('.filling-line');
+                let filler = timeline.find('.slick-dots');
+                filler.append(' <span id="filling-line" class="filling-line" aria-hidden="true"></span>');
+                var filling_element = timeline.find('.filling-line');
                 let spans = filler.find('span');
 
-                filler.on('click', 'span', function(event){
+                filler.on('click', 'span', function (event) {
                     console.log("xxyyzz", event.target.id);
-				event.preventDefault();
-				spans.removeClass('selected');
-				$(this).addClass('selected');
-                // updateOlderEvents($(this));
-                
-				updateFilling(filling_element, Number(event.target.id));
-				// updateVisibleContent($(this), dotComponent['eventsContent']);
-			});
+                    event.preventDefault();
+                    spans.removeClass('selected');
+                    $(this).addClass('selected');
+                    // updateOlderEvents($(this));
+
+                    updateFilling(filling_element, Number(event.target.id));
+                    // updateVisibleContent($(this), dotComponent['eventsContent']);
+                });
 
                 updateFilling(filling_element, 0);
-              
+
 
                 $('.statistics-slider').slick({
                     effect: 'cube',
@@ -1679,28 +1932,28 @@
                     slidesToShow: 4,
                     slidesToScroll: 4,
                     responsive: [{
-                            breakpoint: 1024,
-                            settings: {
-                                slidesToShow: 3,
-                                slidesToScroll: 3,
-                                infinite: true,
-                                dots: true
-                            }
-                        }, {
-                            breakpoint: 600,
-                            settings: {
-                                dots: true,
-                                slidesToShow: 2,
-                                slidesToScroll: 2
-                            }
-                        }, {
-                            breakpoint: 480,
-                            settings: {
-                                dots: true,
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
                         }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            dots: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    }, {
+                        breakpoint: 480,
+                        settings: {
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
                         // You can unslick at a given breakpoint now by adding:
                         // settings: "unslick"
                         // instead of a settings object
@@ -1713,7 +1966,7 @@
                     slidesToScroll: 3,
                     arrows: true,
                     prevArrow: '<a class="slide-arrow prev-arrow"><i class="fa fa-long-arrow-left text-white" aria-hidden="true"></i></a>',
-    nextArrow: '<a class="slide-arrow next-arrow"><i class="fa fa-long-arrow-right text-white" aria-hidden="true"></i></a>',
+                    nextArrow: '<a class="slide-arrow next-arrow"><i class="fa fa-long-arrow-right text-white" aria-hidden="true"></i></a>',
                     // dots: true,
                     responsive: [{
                         breakpoint: 1120,
@@ -1740,17 +1993,17 @@
         // $('.overlay').addClass('overlay-blue');
     </script>
     <script>
-        $.fn.moveIt = function() {
+        $.fn.moveIt = function () {
             var $window = $(window);
             var instances = [];
 
-            $(this).each(function() {
+            $(this).each(function () {
                 instances.push(new moveItItem($(this)));
             });
 
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 var scrollTop = $window.scrollTop();
-                instances.forEach(function(inst) {
+                instances.forEach(function (inst) {
                     inst.update(scrollTop);
                 });
             }, {
@@ -1758,46 +2011,46 @@
             });
         }
 
-        var moveItItem = function(el) {
+        var moveItItem = function (el) {
             this.el = $(el);
             this.speed = parseInt(this.el.attr('data-scroll-speed'));
         };
 
-        moveItItem.prototype.update = function(scrollTop) {
+        moveItItem.prototype.update = function (scrollTop) {
             this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
         };
 
         // Initialization
-        $(function() {
+        $(function () {
             $('[data-scroll-speed]').moveIt();
         });
     </script>
     <script>
         // AOS.init();
         // below listed default settings
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-  
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 500, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: true, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
-});
-        window.onscroll = function() {
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 500, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+        window.onscroll = function () {
             myFunction()
         };
 
@@ -1819,106 +2072,106 @@ AOS.init({
             }
         }
     </script>
-<script>
-    $( window ).resize(function() {
-    if(window.innerWidth >1000) {
-        // for (i = 0; i < dotComponent['timelineDates'].length; i++) { 
-		//     dotComponent['timelineEvents'].eq(i).css('left', (i+1)*eventsMinDistance+'px');
-		// }
-    }
-});
-    jQuery(document).ready(function($){
-	var timelines = $('.slick-timeline-dots'),
-		eventsMinDistance = 100;
+    <script>
+        $(window).resize(function () {
+            if (window.innerWidth > 1000) {
+                // for (i = 0; i < dotComponent['timelineDates'].length; i++) { 
+                //     dotComponent['timelineEvents'].eq(i).css('left', (i+1)*eventsMinDistance+'px');
+                // }
+            }
+        });
+        jQuery(document).ready(function ($) {
+            var timelines = $('.slick-timeline-dots'),
+                eventsMinDistance = 100;
 
-	(timelines.length > 0) && initTimeline(timelines);
+            (timelines.length > 0) && initTimeline(timelines);
 
-	function initTimeline(timelines) {
-		timelines.each(function() {
-			var timeline = $(this),
-				dotComponent = {};
-			//cache timeline components 
-			dotComponent['timelineWrapper'] = timeline.find('.dots-container');
-			dotComponent['eventsWrapper'] = dotComponent['timelineWrapper'].children('.events');
-			dotComponent['fillingLine'] = dotComponent['eventsWrapper'].children('.filling-line');
-			dotComponent['timelineEvents'] = dotComponent['eventsWrapper'].find('a');
-			dotComponent['timelineDates'] = dotComponent['timelineEvents'];
-            if(window.innerWidth > 1000) {
-                 eventsMinDistance = window.innerWidth/(dotComponent['timelineDates'].length+1);
-                eventsMinDistance -= 5;
-            } 
-           
-
-          
-            for (i = 0; i < dotComponent['timelineDates'].length; i++) { 
-		    dotComponent['timelineEvents'].eq(i).css('left', (i+1)*eventsMinDistance+'px');
-		}
-			//assign a width to the timeline
-			var timelineTotWidth = setTimelineWidth(dotComponent, eventsMinDistance);
+            function initTimeline(timelines) {
+                timelines.each(function () {
+                    var timeline = $(this),
+                        dotComponent = {};
+                    //cache timeline components 
+                    dotComponent['timelineWrapper'] = timeline.find('.dots-container');
+                    dotComponent['eventsWrapper'] = dotComponent['timelineWrapper'].children('.events');
+                    dotComponent['fillingLine'] = dotComponent['eventsWrapper'].children('.filling-line');
+                    dotComponent['timelineEvents'] = dotComponent['eventsWrapper'].find('a');
+                    dotComponent['timelineDates'] = dotComponent['timelineEvents'];
+                    if (window.innerWidth > 1000) {
+                        eventsMinDistance = window.innerWidth / (dotComponent['timelineDates'].length + 1);
+                        eventsMinDistance -= 5;
+                    }
 
 
-			dotComponent['eventsWrapper'].on('click', 'a', function(event){
-				event.preventDefault();
-				dotComponent['timelineEvents'].removeClass('selected');
-				$(this).addClass('selected');
-                document.getElementById(`time${ event.target.id}`).click();
-				// updateOlderEvents($(this));
-				updateFilling($(this), dotComponent['fillingLine'], timelineTotWidth);
-				// updateVisibleContent($(this), dotComponent['eventsContent']);
-			});
 
-            $('.timeline-next').on('click', (event) => {
-                console.log(document.getElementById(`${$('a.selected')[0].id}`));
-                document.getElementById(`${(Number($('a.selected')[0].id) +1)%10}`).click();
-                // console.log($('a.selected')[0].id);
-            })
-            $('.timeline-prev').on('click', (event) => {
-                console.log(document.getElementById(`${$('a.selected')[0].id}`));
-                let number = Number($('a.selected')[0].id) -1;
-                if(number < 0) {
-                   number = 9;
-                } 
-                    document.getElementById(`${number%10}`).click();
-  
-            })
-
-		
-		});
-	}
-
-	
-
-	function updateFilling(selectedEvent, filling, totWidth) {
-		//change .filling-line length according to the selected event
-		var eventStyle = window.getComputedStyle(selectedEvent.get(0), null),
-			eventLeft = eventStyle.getPropertyValue("left"),
-			eventWidth = eventStyle.getPropertyValue("width");
-		eventLeft = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', ''))/2;
-		var scaleValue = eventLeft/totWidth;
-		setTransformValue(filling.get(0), 'scaleX', scaleValue);
-	}
-
-	function setTimelineWidth(dotComponent, width) {
-		
-		let	totalWidth = (dotComponent['timelineDates'].length + 1)*width;
-		dotComponent['eventsWrapper'].css('width', totalWidth+'px');
-		updateFilling(dotComponent['timelineEvents'].eq(0), dotComponent['fillingLine'], totalWidth);
-	
-		return totalWidth;
-	}
-
-	
-	function setTransformValue(element, property, value) {
-		element.style["-webkit-transform"] = property+"("+value+")";
-		element.style["-moz-transform"] = property+"("+value+")";
-		element.style["-ms-transform"] = property+"("+value+")";
-		element.style["-o-transform"] = property+"("+value+")";
-		element.style["transform"] = property+"("+value+")";
-	}
+                    for (i = 0; i < dotComponent['timelineDates'].length; i++) {
+                        dotComponent['timelineEvents'].eq(i).css('left', (i + 1) * eventsMinDistance + 'px');
+                    }
+                    //assign a width to the timeline
+                    var timelineTotWidth = setTimelineWidth(dotComponent, eventsMinDistance);
 
 
-});
-</script>
+                    dotComponent['eventsWrapper'].on('click', 'a', function (event) {
+                        event.preventDefault();
+                        dotComponent['timelineEvents'].removeClass('selected');
+                        $(this).addClass('selected');
+                        document.getElementById(`time${event.target.id}`).click();
+                        // updateOlderEvents($(this));
+                        updateFilling($(this), dotComponent['fillingLine'], timelineTotWidth);
+                        // updateVisibleContent($(this), dotComponent['eventsContent']);
+                    });
+
+                    $('.timeline-next').on('click', (event) => {
+                        console.log(document.getElementById(`${$('a.selected')[0].id}`));
+                        document.getElementById(`${(Number($('a.selected')[0].id) + 1) % 10}`).click();
+                        // console.log($('a.selected')[0].id);
+                    })
+                    $('.timeline-prev').on('click', (event) => {
+                        console.log(document.getElementById(`${$('a.selected')[0].id}`));
+                        let number = Number($('a.selected')[0].id) - 1;
+                        if (number < 0) {
+                            number = 9;
+                        }
+                        document.getElementById(`${number % 10}`).click();
+
+                    })
+
+
+                });
+            }
+
+
+
+            function updateFilling(selectedEvent, filling, totWidth) {
+                //change .filling-line length according to the selected event
+                var eventStyle = window.getComputedStyle(selectedEvent.get(0), null),
+                    eventLeft = eventStyle.getPropertyValue("left"),
+                    eventWidth = eventStyle.getPropertyValue("width");
+                eventLeft = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', '')) / 2;
+                var scaleValue = eventLeft / totWidth;
+                setTransformValue(filling.get(0), 'scaleX', scaleValue);
+            }
+
+            function setTimelineWidth(dotComponent, width) {
+
+                let totalWidth = (dotComponent['timelineDates'].length + 1) * width;
+                dotComponent['eventsWrapper'].css('width', totalWidth + 'px');
+                updateFilling(dotComponent['timelineEvents'].eq(0), dotComponent['fillingLine'], totalWidth);
+
+                return totalWidth;
+            }
+
+
+            function setTransformValue(element, property, value) {
+                element.style["-webkit-transform"] = property + "(" + value + ")";
+                element.style["-moz-transform"] = property + "(" + value + ")";
+                element.style["-ms-transform"] = property + "(" + value + ")";
+                element.style["-o-transform"] = property + "(" + value + ")";
+                element.style["transform"] = property + "(" + value + ")";
+            }
+
+
+        });
+    </script>
 
 
 </body>

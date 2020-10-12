@@ -45,6 +45,27 @@
             width: 100%;
             -webkit-transition: all 0.3s linear;
             transition: all 0.3s linear;
+
+            /* padding: 50px;
+    transform: skew(0deg,-6deg);
+    position: relative;
+    z-index: 2;
+    bottom: -2rem; */
+
+    
+            /* content: '';
+            background: rgb(51, 52, 99, 0.92); */
+            /* background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, transparent), color-stop(50%, rgba(27, 39, 54, 0.8))); */
+            /* background: linear-gradient(to right bottom, transparent 50%, rgb(51, 52, 99, 0.92) 50%); */
+            /* position: absolute;
+            transform: skew(0deg,-3deg);
+            bottom: 100%;
+            left: 0;
+            top: -41px;
+            height: 57px;
+            width: 100%;
+            -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear; */
         }
 
         .card-overlay .pop-btn-text>.fsElementContent {

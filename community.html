@@ -1,20 +1,17 @@
-
-<!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
       <!-- jQuery library -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      <!-- Popper JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  
-      <!-- Latest compiled JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -23,39 +20,109 @@
     <link rel="stylesheet" href="topnavbar.css">
     <link rel="stylesheet" href="dropdownhover.css">
     <link rel="stylesheet" href="foldFooter.css">
-    <title>I am ejs</title>
     <style>
-        
-        .header-underline h5:before {
-            content: '';
-            background: #56a0d3;
-            width: 57px;
-            height: 2px;
-            position: absolute;
-            bottom: 85px;
-            transform: translateX(200%);
-        }
-        
-        .jumbotron .overlay {
-            position: absolute;
-            top: 0.75rem;
-            width: calc(100% - 1.5rem);
-            height: 550px;
-            background-color: rgba(0, 0, 0, 0.1);
-            background-image: linear-gradient(to top, rgb(0 0 0 / 36%) 0%, rgb(0 0 0 / 23%) 10%, rgb(0 0 0 / 27%) 30%, rgb(0 0 0 / 50%) 70%, rgb(0 0 0 / 50%) 90%, rgb(0 0 0 / 52%) 100%);
+        body {
+  margin: 0;
+}
 
-        }
-        
-        @media screen and (max-width: 768px) {
-            .jumbotron .overlay {
-            width: 100%;
-           
-            top: 0;
-            }
-        }
+.container_box {
+    position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("./bps-life/OK-IMG_6601.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+}
+
+.container_box::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+.viewsBox {
+  position: absolute;
+  top: 0;
+  width: 99%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 80%;
+}
+
+.group_btns {
+  display: flex;
+}
+
+
+
+ .button {
+        min-width: 300px;
+    }
+
+@media screen and (min-width: 768px) {
+    .group_btns .button a {
+        font-size: 25px !important;
+        padding: 1em 2em !important;
+    }
+    .button {
+    min-width: 450px;
+}
+}
+
+.group_btns .button a {
+  padding: 0.75em 1em;
+  text-decoration: none;
+  line-height: 39px;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  line-height: 31px;
+  text-transform: uppercase;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.group_btns .button a:hover,
+.group_btns .button a:focus {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+.v__container {
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    min-height: 100vh;
+    max-height: none;
+    max-width: none;
+    backface-visibility: hidden;
+}
+.body-wrap {
+    position: relative;
+}
+
     </style>
 </head>
-
 <body>
     <div id="mySidenav" class="sidenav">
 
@@ -67,7 +134,7 @@
                     <header class="d-flex justify-content-between mx-3">
 
                         <div>
-                            <figure class="fsImage">
+                            <figure class="bgImage">
                                 <picture><img alt="Bharti Public School" src="./logo.png"></picture>
                             </figure>
                         </div>
@@ -120,7 +187,7 @@
                                     <li> <a class="dropdown-item" href="the-bps-difference.html">The BPS Difference</a></li>
                                     <li> <a class="dropdown-item" href="a-rich-history.html">A Rich History</a></li>
                                     <li> <a class="dropdown-item" href="leadership.html">Leadership</a></li>
-                                </ul></div>
+                                </ul>  </div>
                         </div>
                     </div>
                     <div class="card">
@@ -161,7 +228,7 @@
             <div class="d-flex justify-content-end mt-3">
                 <ul class="d-none d-md-flex top-nav-bar-items">
                     <li class="top-nav-bar-item " id="dropdownMenuButton">
-                        <p class="text-white  px-3 py-2 mb-0" href="">Quicklinks&nbsp;</p>
+                        <p class="text-white px-3 px-3 py-2 mb-0" href="">Quicklinks&nbsp;</p>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <ul class="list-unstyled mx-3">
                                 <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
@@ -356,7 +423,7 @@
 
                                                         <ul class="list-group list-group-flush">
                                                             <li class="list-group-item">
-                                                                <a href=""> Common Page</a>
+                                                                <a href="life-at-bps.html"> Common Page</a>
                                                             </li>
                                                             <li class="list-group-item">
                                                                 <a href="athletics.html"> Athletics</a></li>
@@ -474,282 +541,209 @@
 
         </div>
     </div>
-<div class="body-wrap">
-    <div style="background-image: url(./Leadership/Header\ photo\ -\ leader.jpeg);
-    background-size: cover;" class="jumbotron text-white custom-jumbotron d-flex justify-content-center align-items-end">
-       <div class="overlay"></div>
-       <h1 style="z-index: 1; font-size: 7vw; line-height: 20px;
-       letter-spacing: 10px;">
-          Leadership
-        </h1>
-    </div>
-    <nav class="nav justify-content-center d-md-flex flex-row d-none py-2 bg-light">
-        <a href="mission.html" class="nav-link text-center p-1 m-1">Our Mission</a>
-        <a href="the-bps-difference.html" class="nav-link text-center p-1 m-1">The BPS Difference</a>
-        <a href="leadership.html" class="nav-link text-center p-1 m-1">A-Rich History</a>
-        <a href="explore-campus.html" class="nav-link text-center p-1 m-1">Explore Campus</a>
-    </nav>
-</div>
-    <div class="contain">
-        <div>
-            <section class="my-5 u-line">
-                <h2 class="font-weight-bold">Late Shri (Dr.) S.L. Batra
-                </h2>
-                <h3 >Founder Director</h3>
-            </section>
-            <div class="d-flex flex-column flex-md-row">
-              
-               
-                <div class="text-justify f-18">
-                    <p>At BPS, our Core Values of Positivity, Resilience, Integrity, Determination and Empowerment are more than mere words. Our students and faculty live and breathe them every day. Our values set BPS’ students apart and send them out into
-                        the world as confident and capable leaders of the 21st century.</p>
-                        <p>Dr. Batra has a Doctorate in English. He had earned the prestigious State Award and numerous other distinctions for excellence in education.He was instrumental in bringing up the the Bharti Group of Schools from scratch to this prestigious state. His passion for work was iconic. Even severe illness and long periods of hospitalisation could not bog him down. He would spring back each time with a more infectious zest for life and greater commitment to work. Never the one to compromise with his core values of honesty and integrity, his quest for perfection was iconic. A Samaritan, his philanthropic ways had people flocking to him for advice and help and … no one ever returned empty handed.</p>
-                </div>
-                <div class="text-center mx-0 ml-md-4 mb-3">
-                    <img style="min-width: 250px;" width="280" height="320"  src="Leadership/Copy of director sir_2.jpg"  alt="">
-                </div>
-
-            </div>
-            <div class="text-justify f-18">
-               
-                <p>Dr. Batra's leadership at the Bharti Public Group of Schools will be sorely missed. His lofty ideals will, forever, be a source of strength and inspiration for all of us and guide us in all our endeavors. His lofty ideals will, forever, be a source of strength and inspiration for all of us and guide us in all our endeavors</p>
-            </div>
-           
-
-        </div>
-
-        <div>
-            <section class="my-5 u-line">
-                <h2 class="font-weight-bold">Shri H. C. B. Bharti
-
-                </h2>
-                <h3>Chairman</h3>
-            </section>
-            <div class="d-flex flex-column flex-md-row ">
-              
-               
-                <div class="text-justify f-18">
-                    <p>An eminent and widely respected educator, Mr. Bharti is the Chairman of Bharti Public Group of Schools, guiding and counseling on all aspects of the school. Mr H.C.B. Bharti holds three Masters degrees - in Education, Economics and
-                        English. As a passionate educator, a dynamic communicator and a self- motivated individual he sees a career spanning over 50 years. Having taught Economics in the initial stages of his career, he later gave shape to his vision
-                        of inclusive, progressive education by co-founding the prestigious Bharti Public Group of Schools.
-                    </p> 
-                    <p>Under his able stewardship, the BPS group has over the past 40 years established itself as one of the premier schools of NCR. Owing to his efforts, the group can now boast of establishment of three branches at Swasthya Vihar, Mayur Vihar
-                        and Noida.
-                    </p></div>
-                <div class="text-center mx-0 ml-md-4 mb-3">
-                    <img style="min-width: 250px;" width="280" height="320"  src="Leadership/Copy of chairman 2.jpg"  alt="">
-                </div>
-
-            </div>
-            <div class="text-justify f-18">
-              
-                <p>Bearing a progressive and an enthusiastic persona with a flair for mentoring and coaching, he strongly believes that rendering education is the highest service to humanity and delivers it with perfection and devotion. His desire as an
-                    educator is to prepare students for life.
-                </p>
-            </div>
-           
-
-        </div>
-
-        <div>
-            <section class="my-5 u-line">
-                <h2 class="font-weight-bold">Mr. Rajesh Batra</h2>
-                <h3 >Director</h3>
-            </section>
-            <div class="d-flex flex-column flex-md-row ">
-              
-               
-                <div class="text-justify f-18">
-                    <p>Mr. Batra started his career teaching Accountancy to senior students at Bharti Public School, Swasthya Vihar along with handling Administrative affairs of the School. He holds a Masters Degree in Commerce and in Education. Mr. Batra’s
-                        commendable managerial and administration skills have helped the school acquire phenomenal progress and has won itself a niche among the leading schools of East Delhi.</p>
-                        <p>His conviction and passion are to promote the Academic, emotional and social well being of all pupils under his care and he believes in working in synergy with the parent community. As an able administrator he ensures that the school environment
-                            is safe, sustainable and invites innovation providing the best experiential learning resources for the students be it academics or sports.
-                        </p>
-                    </div>
-                <div class="text-center mx-0 ml-md-4 mb-3">
-                    <img style="min-width: 250px;" width="280" height="320"  src="Leadership/Copy of rajesh sir 3_white back.jpg"  alt="">
-                </div>
-
-            </div>
-            <div class="text-justify f-18">
-              
-                <p>His vision is to impart holistic education and create a powerful impact on today’s generation. As an educator and an adventurous global traveler, he has kept myself abreast with the ever changing teaching pedagogies, reinventing, moving
-                    ahead with technology. Mr. Batra has been instrumental in promoting a fair approach in dealing with everyone alike and he is best known for his family-like approach in dealing with all the students, their parents and the teachers.
-                    He is attached to and also has initiated many community service and wellness programmes.
-                </p>
-                <p>
-                    As the Director of BPS he specialises both in institution development and in solving the academic & administrative issues of the institution. He has time-honored a quality – conscious school where Modernity is fortified by Tradition.
-
-                </p>
-            </div>
-           
-
-        </div>
-
-        <div>
-            <section class="my-5 u-line">
-                <h2 class="font-weight-bold">Dr. Savita Arora</h2>
-                <!-- <p style="font-size: 28px;" class="font-weight-bold"></p> -->
-                <h3 >Principal, National Awardee</h3>
-            </section>
-            <div class="d-flex flex-column justify-content-between flex-md-row ">
-              
-               
-                <div class="text-justify f-18">
-                    <p>Dr. Savita Arora, Principal, Bharti Public School, Swasthya Vihar, is a great visionary, a patient listener, a lady of principles and substance. She has been felicitated with the National Teachers Award 2012 by the Hon’ble President
-                        of India for her exemplary and tireless efforts. She feels blessed to be bestowed with the National Award at such a young age. Success to her is not basking in personal glory; but a responsibility to understand the strengths and
-                        needs of her students and teachers. As a Resource Person for CBSE Capacity-Building Programmes on Happy Classroom, Life Skillsvalues and English Core – XII; she is immensely driven to share her expertise and experience with like-minded
-                        teachers
-                    </p>
-                    <p>
-                        She is a dedicated educationist, having an enormous experience of more than three decades. An avid orator and a prolific writer, she has penned down numerous articles and short poems on the issues related to children, who are very close to her heart.
-                    </p> </div>
-                <div class="text-center mx-0 ml-md-4 mb-3">
-                    <img style="min-width: 250px;" width="320" height="320"  src="Leadership/Copy of IMG_3389_pp.jpg"  alt="">
-                </div>
-
-            </div>
-            <div class="text-justify f-18">
-               
-                <p>She sincerely believes that real education lies way beyond the books. For her, education is the name of our Attitude, Actions, Language and Behaviour with others. With this vision, she has embarked on a mission to instill the values and
-                    life skills in the future generation. She has authored a series of books, ‘Dew Drops’- a book on life skills, for classes I to VIII, to inspire and guide the students to lead a purposeful life. Having rich experience of counseling
-                    she has taken numerous ‘Positive Parenting Workshop’ for the parents.
-                </p>
-                <p>
-                    She believes that a Principal is the nucleus of a community called school and is involved in grooming future national builders. She lives with the vision that an Educator does not mean a Sage on the stage; it means a Guide by the side.
-
-                </p>
-            </div>
-           
-
-        </div>
-
-    </div>
-
     <div class="body-wrap">
-  
-        <footer style="background-image: url(./bg_footer.jpg);
-        background-size: cover;
-        background-position: center;">
-            <div class="footer-bg" >
-    
+    <div class="container_box">
+        <video class="v__container" id="home_media" autoplay muted width="100%" src="https://player.vimeo.com/external/206536059.sd.mp4?s=551efa45c0cdd2d1fb5349a3936bb7f4d7550f4c&profile_id=164&oauth2_token_id=57447761"></video>
+
+
+        <div class="viewsBox">
+            <div class="my-5">
+                <h1 style="font-size: 7vw; line-height: 20px;
+                letter-spacing: 10px;" class="text-white">Life At BPS</h1>
+            </div>
+            <div class="row mx-0">
+                <div class="col">
+                    <div class="group_btns justify-content-center flex-wrap">
+                        <div class="button">
+                            <a onmouseover="startvideo(1)" onmouseout="stopvideo()">Athletics </a>
+                        </div>
+                      
+                        <div class="button">
+                            <a onmouseover="startvideo(1)" onmouseout="stopvideo()">Outdoor Education </a>
+                        </div>
+                       
+                    </div>
+                </div>
               
-                <div class="row mx-0">
-                    <div style="z-index: 1;" class="social-icons col-md-4">
-                        <h4 class="text-white text-center my-5">Stay Connected</h4>
-                        <div class="d-flex justify-content-center">
-                            <div>
-                                <a href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                            </div>
-                            <div>
-                                <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </div>
+            </div>
+            <div class="row mx-0 pb-5">
+                <div class="col">
+                    <div class="group_btns justify-content-center flex-wrap">
+                        <div class="button">
+                            <a onmouseover="startvideo(2)" onmouseout="stopvideo()">Creative Arts</a>
                         </div>
-    
-                    </div>
-                    <div style="z-index: 1;" class="col-md-4 text-center pt-4">
-                        <div class=" p-3">
-    
-                            <img src="./logo.png" alt="">
-    
-                        </div>
-                        <div class="footer-title my-5">
-                            <!-- <h6><b> Bharti Public School</b></h6>
-                            <h6>Swasthya Vihar</h6> -->
-                            <p>Near, Metro Station, Vikas Marg, Nirman Vihar, <br>Swasthya Vihar, New Delhi 110092.</p>
-    
-                        </div>
-                        <div class="d-flex justify-content-around  text-white mt-2">
-    
-                            <!-- <div class="footer-links"> -->
-                            <!-- <div class="d-flex "> -->
-                            <a style="min-width: 115px;" class=" btn btn-outline-light rounded-0" href="">Explore</a>
-                            <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Apply</a>
-                            <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Contact Us</a>
-                            <!-- </div> -->
-                            <!-- </div> -->
-                        </div>
-    
-                    </div>
-    
-                    <div style="z-index: 1;" class="acredition col-md-4 text-center">
-                        <h4 class="text-white my-5">Accreditation</h4>
-                        <div class="d-flex justify-content-center">
-                            <div style="width: 150px;">
-                                <img width="100%" src="./accreditation/cbse-logo-png-3-1.png" alt="">
-                            </div>
-                            <div style="width: 150px;">
-                                <img width="100%" src="./accreditation/Last Fold - Accreditation British council.png" alt="">
-                            </div>
+                        <div class="button">
+                            <a onmouseover="startvideo(3)" onmouseout="stopvideo()">Community Outreach</a>
                         </div>
                     </div>
                 </div>
-                <div class="row mx-0 mt-4">
-                    <div style="z-index: 1" class="w-100 pt-4 px-5 mx-0 ml-md-3 mr-md-5 d-flex flex-column flex-md-row justify-content-between">
-                        <div style="flex:2;">
-                            <ul style="list-style: none;" class="d-flex justify-content-around px-0">
-                                <li><a class="text-white p-2" href="#">Directory</a></li>
-                                <li style="border-right: 1px solid #fff;"></li>
-                                <li><a class="text-white p-2" href="#">Site Map</a></li>
-                                <li style="border-right: 1px solid #fff;"></li>
-                                <li><a class="text-white p-2" href="#">Careers</a></li>
-                              </ul>  
-                        </div>
-                      <div style="z-index: 1; flex: 5;" class="text-white mx-0">
-                        <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
-                      </div>
-    
-                      </div>
-                </div>
-                
-    
-               
             </div>
-            <div class="mr-2 mb-2" style="display: inline;
-            position: absolute;
-            bottom: 0;
-            z-index: 1;
-            right: 0;">
-                <a  style=" cursor: pointer;"  onclick="gotoTop()">
-                    <div class="d-flex flex-column">
-                        <i class="fa fa-angle-double-up fa-2x text-white mx-3"></i>
-                        <span style="font-size: 10px;" class="text-white">Take me up</span>
-                    </div>
-                  
-                </a>
-               
-            </div>
-    
-    
-        </footer>
+          
+
+
+        </div>
     </div>
+   <div class="mt-2">
+    <footer style="background-image: url(./bg_footer.jpg);
+    background-size: cover;
+    background-position: center;">
+        <div class="footer-bg">
+
+
+            <div class="row mx-0">
+                <div style="z-index: 1;" class="social-icons col-md-4">
+                    <h4 class="text-white text-center my-5">Stay Connected</h4>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <a href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i
+                                    class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/school/bharti-public-school---india/"><i
+                                    class="fa fa-youtube" aria-hidden="true"></i></a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="z-index: 1;" class="col-md-4 text-center pt-4">
+                    <div class=" p-3">
+
+                        <img src="./logo.png" alt="">
+
+                    </div>
+                    <div class="footer-title my-5">
+                        <!-- <h6><b> Bharti Public School</b></h6>
+                        <h6>Swasthya Vihar</h6> -->
+                        <p>Near, Metro Station, Vikas Marg, Nirman Vihar, <br>Swasthya Vihar, New Delhi 110092.</p>
+
+                    </div>
+                    <div class="d-flex justify-content-around  text-white mt-2">
+
+                        <!-- <div class="footer-links"> -->
+                        <!-- <div class="d-flex "> -->
+                        <a style="min-width: 115px;" class=" btn btn-outline-light rounded-0" href="">Explore</a>
+                        <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Apply</a>
+                        <a style="min-width: 115px;" class="btn btn-outline-light rounded-0" href="">Contact Us</a>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+
+                </div>
+
+                <div style="z-index: 1;" class="acredition col-md-4 text-center">
+                    <h4 class="text-white my-5">Accreditation</h4>
+                    <div class="d-flex justify-content-center">
+                        <div style="width: 150px;">
+                            <img width="100%" src="./accreditation/cbse-logo-png-3-1.png" alt="">
+                        </div>
+                        <div style="width: 150px;">
+                            <img width="100%" src="./accreditation/Last Fold - Accreditation British council.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0 mt-4">
+                <div style="z-index: 1"
+                    class="w-100 pt-4 px-5 mx-0 ml-md-3 mr-md-5 d-flex flex-column flex-md-row justify-content-between">
+                    <div style="flex:2;">
+                        <ul style="list-style: none;" class="d-flex justify-content-around px-0">
+                            <li><a class="text-white p-2" href="#">Directory</a></li>
+                            <li style="border-right: 1px solid #fff;"></li>
+                            <li><a class="text-white p-2" href="#">Site Map</a></li>
+                            <li style="border-right: 1px solid #fff;"></li>
+                            <li><a class="text-white p-2" href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div style="z-index: 1; flex: 5;" class="text-white mx-0">
+                        <p class="text-md-right text-center mr-md-4">© 2020 Bharti Public School</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="mr-2 mb-2" style="display: inline;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        right: 0;">
+            <a style=" cursor: pointer;" onclick="gotoTop()">
+                <div class="d-flex flex-column">
+                    <i class="fa fa-angle-double-up fa-2x text-white mx-3"></i>
+                    <span style="font-size: 10px;" class="text-white">Take me up</span>
+                </div>
+
+            </a>
+
+        </div>
+
+
+    </footer>
+   </div>
      
+    </div>
     <script>
-        function openNav() {
-         console.log("open sidenav");
-         document.getElementById("mySidenav").style.width = "100%";
-     }
-     function gotoTop() {
-         window.scroll({
-         behavior: 'smooth',
-         left: 0,
-         top: 0
-});
-   
-     }
+        let vElement = document.getElementById("home_media");
 
+function stopvideo(params) {
+  vElement.pause();
+  anime({
+    targets: "#home_media",
+    opacity: {
+      value: 0,
+      duration: 500
+    },
+    easing: "easeInOutSine"
+  });
+}
 
-     function closeNav() {
-         document.getElementById("mySidenav").style.width = "0";
-     }
- </script>
-   
+function startvideo(params) {
+  console.log(params);
+
+  anime({
+    targets: "#home_media",
+    opacity: {
+      value: 1,
+      duration: 500
+    },
+    // delay: 1000,
+    // direction: 'reverse',
+    easing: "easeInOutSine"
+  });
+  switch (params) {
+    case 2:
+      vElement.setAttribute(
+        "src",
+        "https://player.vimeo.com/external/328465444.sd.mp4?s=f9ccb1200a449bdf2dd10d99e96f0603a24e24d3&profile_id=164&oauth2_token_id=57447761"
+      );
+      break;
+    case 3:
+      vElement.setAttribute(
+        "src",
+        "https://player.vimeo.com/external/293348158.sd.mp4?s=3f9bf052fab34e94fd4f87e891d7594d539f2dcc&profile_id=164&oauth2_token_id=57447761"
+      );
+      break;
+
+    default:
+      vElement.setAttribute(
+        "src",
+        "https://player.vimeo.com/external/206536059.sd.mp4?s=551efa45c0cdd2d1fb5349a3936bb7f4d7550f4c&profile_id=164&oauth2_token_id=57447761"
+      );
+      break;
+  }
+}
+
+    </script>
 </body>
-
 </html>
