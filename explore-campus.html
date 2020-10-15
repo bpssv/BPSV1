@@ -432,7 +432,7 @@
             justify-content: center;
             /* opacity: 0.5; */
             width: 100%;
-            /* height: 100%; */
+            height: auto;
             transform: scaleX(0);
             background-color: rgb(15 54 93 / 92%);
         }
@@ -441,7 +441,8 @@
             /* padding: 2rem; */
             height: auto;
             transform: scaleX(1);
-            display: block;
+            display: flex;
+            align-items: center;
         }
 
         .overlay-img {
@@ -469,6 +470,8 @@
             top: 30%;
         }
 
+
+
         @media screen and (max-width: 768px) {
 
             .campus-map,
@@ -484,9 +487,14 @@
             }
         }
 
+      
         .legend-item {
+            padding: 0.75rem 1rem;
             min-width: 250px;
+            max-width: 300px;
+           /* flex-basis: 23%; */
             font-size: 1.3rem;
+            /* flex: 1; */
         }
 
         .control-next {
@@ -504,6 +512,75 @@
             top: 0;
             left: -3rem;
         }
+
+        /*  */
+        .tiles:nth-of-type(3n + 1) {
+            background: #064b66;
+        }
+
+        .tiles:nth-of-type(3n + 1):hover {
+            background: #0e83b1;
+        }
+
+        .tileTitle {
+            position: relative;
+           letter-spacing: 0.275rem;
+        }
+
+        .tileTitle:before {
+            position: absolute;
+            top: 50%;
+            right: 1.53846em;
+            font-family: 'FontAwesome';
+            font-size: 65%;
+            content: '\f0d7';
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            transition: text-shadow .3s;
+        }
+
+        .tiles {
+            margin-bottom: 0 !important;
+            background: #0785b7;
+            color: #fff;
+            border-top: 1px solid #fff;
+            height: 4rem;
+            overflow: hidden;
+            transition: background .3s, height 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            /* -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s; */
+        }
+
+        .tiles:nth-of-type(3n + 3):hover {
+            background: #5bc2ea;
+        }
+
+        .tiles:nth-of-type(3n + 2) {
+            background: #238d77;
+        }
+
+        .tiles:nth-of-type(3n + 2):hover {
+            background: #2fb89c;
+        }
+
+        /* .tiles:nth-of-type(3n + 1) {
+            background: #274f75;
+            ;
+        } */
+
+
+
+        .tiles:nth-of-type(3n + 3):hover {
+            background: #14a5df;;
+        }
+
+        .tiles:hover {
+            height: 7rem;
+        }
+
+        /*  */
     </style>
 </head>
 
@@ -620,331 +697,7 @@
         </div>
     </div>
 
-    <!-- <div style="position: relative; z-index: 10; background: var(--blue); z-index: 3; width: 100%; height: 120px;" class="d-flex px3">
-            <div class="header-brand pl-4 pt-3">
-                <a>
-                    <img width="140" height="90" alt="" src="./logo.png"> 
-            </a>
-            </div>
-            <div class=" d-flex flex-column w-100">
-                <div class="d-flex justify-content-end mt-3">
-                    <ul class="d-none d-md-flex top-nav-bar-items">
-                        <li class="top-nav-bar-item " id="dropdownMenuButton">
-                            <p class="text-white px-3 py-2 mb-0" href="">Quicklinks&nbsp;</p>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <ul class="list-unstyled mx-3">
-                                    <li> <a class="dropdown-item" href="#">Forms & Certificates</a></li>
-                                    <li> <a class="dropdown-item" href="#">BPS Bulletin</a></li>
-                                    <li> <a class="dropdown-item" href="#">Admission Handbook</a></li>
-    
-                                    <li> <a class="dropdown-item" href="#">Employment</a></li>
-                                </ul>
-                            </div> </li>
-    
-                        <li class="top-nav-bar-item"><a class="dropdown-item" href="">Apply</a> </li>
-                        <li class="top-nav-bar-item">
-                            <a class="dropdown-item" href="">Pay Fees</a>
-                        </li>
-                        <li class="top-nav-bar-item">
-                            <a class="dropdown-item" href="">MyBharti</a></li>
-                         </ul>
-                    <li style="list-style: none;" class="top-nav-bar-item"><a style="vertical-align: bottom;" class="mx-4 py-2" href="/search"><i class="fa fa-search text-white"></i></a></li>
-                    <button class="navbar-toggler d-block d-lg-none" onclick="openNav()">
-                        <i class="fa fa-bars text-white"></i>
-                    </button>
-                </div>
-                <div class="header-container">
-                    <div class="d-flex justify-content-end">
-    
-                        <div class="header-column">
-                            <nav class="navbar navbar-expand-lg ">
-    
-                                <div class="collapse navbar-collapse" id="navbarText">
-    
-                                    <ul class="navbar-nav d-hover mr-auto">
-                                        <li>
-                                            <div class="dropdown">
-                                                <a class="dropbtn dropdown-item">
-                                                    About
-                                                  </a>
-                                                <div class="dropdown-content p-5">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img width="300"  src="./Dropdown/About Dropdown.jpeg" alt="">
-                                                        </div>
-                                                        <div class="col">
-    
-    
-                                                                    <p>
-                                                                        Established in 1980, Bharti Public School offers students educational opportunities that are unique and relevant to 21st century life. Our roots are local, but reach has gone global!
-    
-                                                                    </p>
-    
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="./mission.html"> Our Mission</a>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <a href="./explore-campus.html"> Explore Campus</a></li>
-                                                                <li class="list-group-item">
-                                                                    <a href="a-rich-history.html"> A Rich History</a>
-                                                                </li>
-    
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="the-bps-difference.html"> The BPS Difference</a>
-                                                                </li>
-                                                                <li class="list-group-item"> <a href="./leadership.html"> Leadership</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-    
-    
-                                                </div>
-                                            </div>
-    
-                                        </li>
-                                        <li>
-                                            <div class="dropdown">
-                                                <a class="dropbtn dropdown-item">
-                                                    Admissions
-                                                  </a>
-                                                <div class="dropdown-content p-5">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img width="300"  src="./Dropdown/Admissions Dropdown.JPG" alt="">
-                                                        </div>
-                                                        <div class="col">
-    
-                                                                    <p>
-                                                                        Learn more about Bharti Public School’s admissions process, find answers to commonly asked questions about the school and submit your application online.
-    
-                                                                    </p>
-    
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="admission-faq.html"> Admission FAQ</a>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <a href="apply-now.html"> Apply Now!</a></li>
-                                                                <li class="list-group-item">
-                                                                    <a href="tuition-fees.html"> Tuition Fees</a>
-                                                                </li>
-    
-    
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-    
-                                                                <li class="list-group-item">
-                                                                    <a href="forms-and-certificates.html">Forms & Certificates</a>
-                                                                </li>
-    
-                                                            </ul>
-                                                        </div>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-    
-                                        </li>
-                                        <li>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropbtn">
-                                                    Academics
-                                                  </a>
-                                                <div class="dropdown-content p-5">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img width="300"  src="./Dropdown/Academics dropdown.jpg" alt="">
-                                                        </div>
-                                                        <div class="col">
-    
-                                                                    <p>
-                                                                        At the heart of our philosophy is the belief that education must engage more than the mind alone. A BPS education is comprehensive and complemented by a wide range of extra-curricular activities that foster growth and development.
-                                                                    </p>
-    
-                                                        </div>
-                                                        <div class="col">
-    
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="common-page.html"> Common Page</a>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <a href="lower-school.html">  Lower School</a></li>
-                                                                <li class="list-group-item">
-                                                                    <a href="middle-school.html"> Middle School</a>
-                                                                </li>
-    
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col">
-    
-                                                            <ul class="list-group list-group-flush">
-    
-                                                                <li class="list-group-item">
-                                                                    <a href="upper-school.html">Upper School</a>
-                                                                </li>
-                                                                <li class="list-group-item"> <a href="student-resources.html"> Student Resources</a></li>
-                                                            </ul>
-                                                        </div>
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-    
-                                        </li>
-                                        <li>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropbtn">
-                                                    Life at BPS
-                                                  </a>
-                                                <div class="dropdown-content p-5">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img width="300"  src="./Dropdown/life at BPS_dropdown.JPG" alt="">
-                                                        </div>
-                                                        <div class="col">
-    
-    
-                                                                    <p>
-                                                                        The pursuit and implementation of new ideas has been a hallmark of the school for more than four decades, resulting in a relentless search for new and better ideas that have made Bharti Public School into an epitome of academic progress.
-                                                                    </p>
-    
-                                                        </div>
-                                                        <div class="col">
-    
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href=""> Common Page</a>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <a href=""> Athletics</a></li>
-                                                                <li class="list-group-item">
-                                                                    <a href="">Creative Arts</a>
-                                                                </li>
-    
-                                                            </ul>
-    
-                                                        </div>
-                                                        <div class="col">
-    
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="community-outreach.html"> Community Outreach</a>
-                                                                </li>
-                                                                <li class="list-group-item"> <a href="outdoor-education.html"> Outdoor Education</a></li>
-                                                            </ul>
-    
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-    
-                                        </li>
-                                        <li>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropbtn">
-                                                    Community
-                                                  </a>
-                                                <div class="dropdown-content p-5">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img width="300"  src="./Dropdown/Community dropdown.JPG" alt="">
-                                                        </div>
-                                                        <div class="col">
-    
-                                                                    <p>
-                                                                        The Bharti Public School community, better known as Bharti Parivaar spells growth, impetus and success for the school and its fraternity including our faculty, staff, students, and alumni members.
-    
-    
-                                                                    </p>
-    
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="faculty.html">Faculty+</a>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <a href="">Parents+</a></li>
-                                                                <li class="list-group-item">
-                                                                    <a href=""> Students+</a>
-                                                                </li>
-    
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-    
-                                                                <li class="list-group-item">
-                                                                    <a href="">Alumni</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-    
-                                        </li>
-                                        <li>
-                                            <div class="dropdown">
-                                                <a class="dropdown-item dropbtn">
-                                                    Contact
-                                                  </a>
-                                                <div class="dropdown-content p-5">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <img width="300"  src="./Dropdown/Contact Dropdown.JPG" alt="">
-                                                        </div>
-                                                        <div class="col">
-    
-                                                                    <p>
-                                                                        In case of any questions or concerns, you may contact the school and get your queries answered. The school is consistently engaged in numerous activities and workshops, updates of which can be found on social media
-    
-                                                                    </p>
-    
-                                                        </div>
-                                                        <div class="col">
-                                                            <ul class="list-group list-group-flush">
-                                                                <li class="list-group-item">
-                                                                    <a href="">Contact</a>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <a href="">Employment</a></li>
-                                                            </ul>
-                                                        </div>
-    
-    
-                                                    </div>
-    
-                                                </div>
-                                            </div>
-    
-                                        </li>
-    
-                                    </ul>
-    
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        </div> -->
+  
     <div id="myHeader" style="position: absolute; background: transparent; z-index: 3;"
         class="header-design-2 w-100 px-3">
         <div class="header-brand-sticky pl-3 pt-1">
@@ -1580,14 +1333,67 @@
 
     </div>
 
-    <div class="body-wrap">
-        <div class="lagend px-3 my-5">
-            <header class="my-5">
+    <div class="body-wrap d-flex flex-column">
+        <div class="d-block d-md-none wrapper">
+            <div class="tiles">
+                <header>
+                    <h2 class="tileTitle m-3">Hello</h2>
+                </header>
+                <section class="px-3">
+                    <p>this is sample application test</p>
+                </section>
+            </div>
+
+            <div class="tiles">
+                <header>
+                    <h2 class="tileTitle m-3">Hello</h2>
+                </header>
+                <section class="px-3">
+                    <p>this is sample application test</p>
+                </section>
+            </div>
+            <div class="tiles">
+                <header>
+                    <h2 class="tileTitle m-3">Hello</h2>
+                </header>
+                <section class="px-3">
+                    <p>this is sample application test</p>
+                </section>
+            </div>
+            <div class="tiles">
+                <header>
+                    <h2 class="tileTitle m-3">Hello</h2>
+                </header>
+                <section class="px-3">
+                    <p>this is sample application test</p>
+                </section>
+            </div>
+            <div class="tiles">
+                <header>
+                    <h2 class="tileTitle m-3">Hello</h2>
+                </header>
+                <section class="px-3">
+                    <p>this is sample application test</p>
+                </section>
+            </div>
+            <div class="tiles">
+                <header>
+                    <h2 class="tileTitle m-3">Hello</h2>
+                </header>
+                <section class="px-3">
+                    <p>this is sample application test</p>
+                </section>
+            </div>
+
+        </div>
+        <div class="d-none d-md-block lagend px-3 my-4">
+            <header class="my-4">
                 <h3>
                     Legend
                 </h3>
             </header>
-            <ol class="d-flex flex-wrap">
+
+            <ol class="d-flex flex-wrap justify-content-center">
 
                 <li class="legend-item">Basketball Court</li>
                 <li class="legend-item">Volleyball Court</li>
@@ -1720,11 +1526,6 @@
     <script>
         $(document).ready(function (e) {
             $('img[usemap]').rwdImageMaps();
-
-            // $('area').on('click', function () {
-            //     alert($(this).attr('alt') + ' clicked');
-            // });
-
         });
 
     </script>

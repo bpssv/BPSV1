@@ -29,18 +29,20 @@
 }
 
 .custom-faq-font:hover {
-    background: #427C9E;
+    /* background: #427C9E; */
+    background: var(--blue);
     color: white;
 }
 
 .custom-faq-font-focus {
     color: #EEEDED;
-    background: #1B2736;
+    background: var(--blue);
     
 }
 .custom-faq-font-focus:hover{
     color: #EEEDED;
-    background: #1B2736;
+    background: var(--blue);
+    /* background: #1B2736; */
 }
 
 .font-blue-on-hover:hover {
@@ -67,7 +69,8 @@
 
 .custom-table {
     color: white;
-    background: #333e48;
+    background: var(--blue);
+    /* background: #333e48; */
     border-color: grey;
 }
 .w-16{
@@ -76,7 +79,8 @@
 }
 
 .custom-card{
-    background: #1B2736;
+    /* background: var(--blue); */
+    background-color:#433e96;
     color: white;
 }
 
