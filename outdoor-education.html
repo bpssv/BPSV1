@@ -5,10 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
@@ -38,7 +39,7 @@
             transform: translateX(200%);
         }
 
-        
+
 
         .jumbotron .overlay {
             position: absolute;
@@ -67,7 +68,27 @@
             }
         }
 
-       
+        .slick-list {
+            width: 100%;
+        }
+
+        .slick-next {
+            right: 40px;
+        }
+
+        .slick-prev {
+            left: 20px;
+            z-index: 1;
+        }
+        .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 1;
+    opacity: .75;
+    color: #3F51B5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
     </style>
 </head>
 
@@ -182,7 +203,9 @@
 
 
         </div>
+
     </div>
+
     <div style="position: absolute; background: transparent; z-index: 3; width: 98%;" class="d-flex px3">
         <div class="header-brand pl-4 pt-3">
             <a href="bps_home.html">
@@ -441,9 +464,9 @@
                                     </li>
                                     <li>
                                         <div class="dropdown">
-                                             <a href="community.html" class="dropdown-item dropbtn">
+                                            <a href="community.html" class="dropdown-item dropbtn">
                                                 Community
-                                              </a>
+                                            </a>
                                             <div class="dropdown-content p-5">
                                                 <div class="row">
                                                     <div class="col">
@@ -537,6 +560,7 @@
 
         </div>
     </div>
+
     <div class="body-wrap">
         <div style="background-image: url(OutdoorEducation/1\ -\ Title\ Banner.jpg);
     background-size: cover; background-position: center;"
@@ -665,10 +689,11 @@
         <div class="row my-5 py-5">
             <div class="col-md-6 mb-2">
                 <div class="col my-2 my-md-0">
-                    <div  class="d-flex flex-column justify-content-center h-100">
+                    <div class="d-flex flex-column justify-content-center h-100">
 
                         <div class="d-flex">
-                            <div class="shadow hover-z-change" style="max-height: 500px; max-width: 300px; transition: all .5s;">
+                            <div class="shadow hover-z-change"
+                                style="max-height: 500px; max-width: 300px; transition: all .5s;">
                                 <img width="100%" src="OutdoorEducation/Gallery 4.JPG" alt="">
                             </div>
                             <div class="shadow hover-z-change" style="top: 6rem;transition: all .5s;
@@ -692,8 +717,8 @@
                         This sets your child on a pathway of self-discovery and learning of the real world. Mental,
                         physical and emotional potential is uncovered that fosters confidence, direction and knowledge
                         making your child an empathetic and global leader of the 21st Century!
-    
-    
+
+
                     </p>
                 </div>
                 <!-- <div  class="d-flex flex-column justify-content-center h-100">
@@ -714,40 +739,64 @@
 
             </div>
         </div>
-      
-        
-     <div class="my-5 pt-5">
-        <div class=" f-20 pb-5 mx-0 mx-md-5">
-            <h3 class="font-weight-bold text-center f-20" style="line-height: 2rem;">
-                <span style="color: var(--green);" class="f-40">“</span>I took a trip to space agencies like NASA, USA to learn about the technology and training
-                provided to astronaut trainees for Mars exploration missions. In the subsequent trip to ISRO,
-                India watching the Live launch of ‘Mangalyaan’ gave me and my fellow classmates goosebumps
-                and an unforgettable experience. I aspire to build rockets one day and these trips have fortified
-                my dreams and brought me a step closer to realizing it. <span style="color: var(--green);vertical-align: text-top;" class="f-40">” </span>
-            </h3>
-        </div>
-     </div>
-     <div  class="d-flex flex-column justify-content-center  flex-md-row justify-content-md-around">
-        <div class="my-2 text-center">
-            <a href="student-resource.html" class="btn explore">Student Resources </a>
-        </div>
-        <div class="my-2 text-center">
-            <a href="apply-now.html" class="btn explore">Apply to BPS!</a>
-        </div>
-        <div class="my-2 text-center">
-            <a href="explore-campus.html" class="btn explore">Explore Campus</a>
-        </div>
-      
-    </div>
 
-  
-              
+
+        <div class="my-5 pt-5">
+            <div class=" f-20 pb-5 mx-0 mx-md-5">
+                <h3 class="font-weight-bold text-center f-20" style="line-height: 2rem;">
+                    <span style="color: var(--green);" class="f-40">“</span>I took a trip to space agencies like NASA,
+                    USA to learn about the technology and training
+                    provided to astronaut trainees for Mars exploration missions. In the subsequent trip to ISRO,
+                    India watching the Live launch of ‘Mangalyaan’ gave me and my fellow classmates goosebumps
+                    and an unforgettable experience. I aspire to build rockets one day and these trips have fortified
+                    my dreams and brought me a step closer to realizing it. <span
+                        style="color: var(--green);vertical-align: text-top;" class="f-40">” </span>
+                </h3>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-center  flex-md-row justify-content-md-around">
+            <div class="my-2 text-center">
+                <a href="student-resource.html" class="btn explore">Student Resources </a>
+            </div>
+            <div class="my-2 text-center">
+                <a href="apply-now.html" class="btn explore">Apply to BPS!</a>
+            </div>
+            <div class="my-2 text-center">
+                <a href="explore-campus.html" class="btn explore">Explore Campus</a>
             </div>
 
+        </div>
 
 
 
     </div>
+
+    <div class="body-wrap">
+        <div class="my-5">
+            <div class="text-center u-line-center">
+                <h3 class="f-40">Gallery</h3>
+            </div>
+        </div>
+
+        <div class="gallery d-flex w-100">
+            <div>
+                <img width="100%" src="./bps-life/Volleyball option - 1.jpg" alt="">
+            </div>
+            <div width="100%" height="100%">
+                <img src="./bps-life/Volleyball option - 1.jpg" alt="">
+            </div>
+            <div width="100%" height="100%">
+                <img src="./bps-life/Volleyball option - 1.jpg" alt="">
+            </div>
+            <div width="100%" height="100%">
+                <img src="./bps-life/Volleyball option - 1.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+
     <div class="body-wrap">
 
         <footer style="background-image: url(./bg_footer.jpg);
@@ -857,18 +906,20 @@
 
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <script>
 
+    <script>
+        $('.gallery').slick({
+            // dots: true,
+            infinite: true,
+            speed: 300,
+            arrows: true,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+        });
     </script>
+
+
 </body>
 
 </html>
