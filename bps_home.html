@@ -1125,8 +1125,7 @@
                 <header class="header-title-text mb-5">
                     <h1 class="text-white fadeInUp delay-2s animated fast">Your Journey Starts Here</h1>
                     <div class="expore  delay-3s animated">
-                        <a type="button"
-                            style="letter-spacing: 3px; box-shadow: inset 0 0 0 0.14286em transparent;"
+                        <a type="button" style="letter-spacing: 3px; box-shadow: inset 0 0 0 0.14286em transparent;"
                             class="btn btn-outline-light rounded-0"><span> EXPLORE CAMPUS</span></a>
                     </div>
                     <div class="arrow mb-3 bounce">
@@ -1654,8 +1653,8 @@
                         <h4 class="text-white text-center my-5">Stay Connected</h4>
                         <div class="d-flex justify-content-center">
                             <div>
-                                <a class="fb" href="https://www.facebook.com/Bhartipublicschooldelhi/"><i class="fa fa-facebook"
-                                        aria-hidden="true"></i></a>
+                                <a class="fb" href="https://www.facebook.com/Bhartipublicschooldelhi/"><i
+                                        class="fa fa-facebook" aria-hidden="true"></i></a>
                             </div>
                             <div>
                                 <a class="ln" href="https://www.linkedin.com/school/bharti-public-school---india/"><i
@@ -1666,8 +1665,8 @@
                                         class="fa fa-youtube" aria-hidden="true"></i></a>
                             </div>
                             <div>
-                                <a class="in" href="https://www.instagram.com/bhartipublicschooldelhi/"><i class="fa fa-instagram"
-                                        aria-hidden="true"></i></a>
+                                <a class="in" href="https://www.instagram.com/bhartipublicschooldelhi/"><i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
@@ -1843,12 +1842,27 @@
 
         (function ($) {
             $(document).ready(function () {
-                $.ajax({
-                url: 'https://r3mm6rz433.execute-api.us-east-1.amazonaws.com/Prod/org/08062a60-1097-11eb-a93e-ef9ba3c2eecb', success: function (result) {
-                    slides = result;
-                    console.log(result);
+                var xhttp;
+                if (window.XMLHttpRequest) {
+                    // code for modern browsers
+                    xhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
-            });
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                      console.log(this.response);
+                    }
+                };
+                xhttp.open("GET", "https://r3mm6rz433.execute-api.us-east-1.amazonaws.com/Prod/org/all", true);
+                xhttp.send();
+                // $.ajax({
+                //     url: 'https://r3mm6rz433.execute-api.us-east-1.amazonaws.com/Prod/org/all', success: function (result) {
+                //         slides = result;
+                //         console.log(result);
+                //     }
+                // });
                 // var controller = new ScrollMagic.Controller();
 
                 // $("._fold_1").each(function() {
